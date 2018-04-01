@@ -141,9 +141,9 @@ For this lab and all subsequent programming assignments, you should start by cre
 
 ## Submit your program for grading to gradescope
 
-It's time to submit your program to gradescope. Go to [www.gradescope.com](www.gradescope.com). Log into our class website. Select this assignment. Then click on the "Submit" button on the bottom right corner.
+It's time to submit your program to gradescope. Go to [www.gradescope.com](www.gradescope.com). Log into your account and navigate to our course site.Select this assignment. Then click on the "Submit" button on the bottom right corner to make a submission.
 
-You will be given the option of directly uploading files from your local machine or submitting the code in a github repo. We recommend that you submit via github as shown in the figure below. This will ensure that our staff sees the version of the code that you submitted for grading on github.
+You will be given the option of directly uploading files from your local machine or submitting the code that is in a github repo. We recommend that you choose the latter option as shown in the figure below. This will ensure that our staff sees the version of code on github that you submitted to gradescope.
 
 ![submit](/lab/lab00/enter-org/gradescope-submission.png){:height="500px"}
 

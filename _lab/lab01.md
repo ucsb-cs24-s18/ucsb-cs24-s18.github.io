@@ -1,13 +1,11 @@
 ---
 layout: lab
 num: lab01
-ready: false
+ready: true
 desc: "Define implement and apply a C++ class  "
 assigned: 2018-04-03 11:00:00.00-7
 due: 2018-04-09 23:59:00.00-7
 ---
-
-<div markdown="1">
 
 # Goals for this lab
 
@@ -17,21 +15,11 @@ By the time you have completed this lab, you should be able to
 * Implement a simple C++ class definition
 * Test a simple C++ class implementation
 
-We assume you already know everything that was covered in Lab00, and we will not repeat instructions given there for basic operations.
+We assume you already know everything that was covered in Lab00, and we will not repeat instructions given there for basic operations. This assignment must be completed individually.
 
 # Step by Step Instructions
 
-## Step 0: Check-in with your mentor
-
-* At the start of every lab, you and your partner should get together with your mentor group and mentor. Your mentor will give you any initial instructions as required for the lab, guiding you on the key learning goals and any challenging aspects that you need to pay special attention to. They will also take your attendance for that lab. This is also a time when you will check in about your progress in the programming assignments. Make sure that you always have the latest version of your code pushed to github before your weekly check-in with your mentor.
-
-* If you reported a different partner to your mentor last week, please update your mentor before you proceed with the rest of the lab
-
-* Choose who will be the pilot for the first part of the lab. The pilot should sit down in front of the computer now. The navigator gets a chair and sits next to the pilot. You should exchange roles after awhile, before the pilot gets tired, and before the navigator gets bored or distracted.
-
-* If your partner shows up late, let your mentor know. Points will be deducted for students who don't show up on time. If you face difficulties with pair programming consult your mentor.
-
-## Step 1a: Do some initial ONE-TIME git configurations (this step has to be done individually)
+## Step 1a: Do some initial ONE-TIME git configurations 
 
 * On separate machines, log onto your account.
 
@@ -45,54 +33,107 @@ We assume you already know everything that was covered in Lab00, and we will not
    git config --global user.email "atriton@cs.ucsb.edu"
 ```
 
-* Next, generate a private/public key pair and upload your public key to your github account. To do this refer to this tutorial: [https://ucsb-cs56-pconrad.github.io/topics/github_ssh_keys/](https://ucsb-cs56-pconrad.github.io/topics/github_ssh_keys/) In the process of setting up your key pair, when asked for a passphrase just press enter. By doing this step you will avoid having to enter a password or passphrase everytime you push your code to git.
+* Next, generate a private/public key pair and upload your public key to your github account. Refer to this tutorial: [https://ucsb-cs56-pconrad.github.io/topics/github_ssh_keys/](https://ucsb-cs56-pconrad.github.io/topics/github_ssh_keys/). In the process of setting up your key pair, when asked for a passphrase **just press enter**. By doing this step you will avoid having to enter a password or passphrase everytime you push your code to git.
 
-* Clone the starter code repo from our class organization to the pilot's local account by typing the following commands
-
-```
-	git clone git@github.com:ucsb-cs24-w18/cs24-w18-lab-starter-code.git
-```
-Note that this repo contains the starter code for all labs and pas (although only the code for lab01 is up to date). So, you don't have to repeat the above step in subsequent labs.
-
-
-## Step 1b: Create a new repo, add your partner as collaborator and clone the git repo that contains the starter code
-
-* Create a repo for this lab on the pilot's github account (just like you did in lab00): To do this, open a browser and navigate to [www.github.com](www.github.com). Log into the pilot's github account. From the drop down menu on the left, select our class organization: ucsb-cs24-w18 and proceed to create a new repo. You may refer to the instructions in lab00. Follow this naming convention: If your github username is jgaucho and your partner's is alily, your should name your repo lab00_agaucho_alily (usernames appear in alphabetical order). Also you must set the visibity of your repo to be 'PRIVATE' when creating it. We will not repeat these instructions in subsequent labs.
-
-* The pilot should add the navigator as a collaborator on github. To do this navigate to the git repo you just created. Choose the settings tab. Then click on the 'Collaborators and teams' option on the left. Scroll all the way down and add the navigator's github account. Then press on the 'Add collaborator' button. Now you and the navigator share the ownership of your git repo. You won't work with your new repo until the end of the lab.
-
-You just have to do a 'git pull' in the starter-code to get the latest code.
-
-* Now navigate to the lab01 directory within the starter-code repo, and do a git pull to get the latest version of the starter code for lab01:
+* Clone the starter code repo from our class organization to your cs24 directory.
 
 ```
-	cd cs24-w18-lab-starter-code
-	git pull
+	git clone git@github.com:ucsb-cs24-s18/cs24-s18-starter-code.git
 ```
 
-You have to do the above step in subsequent labs to get the latest version of the starter code for that lab. In the next lab, we will talk about how to completely integrate git into your work flow. For this lab, you will only use it to upload your latest work at the end of the lab.
+Note that this repo contains the starter code for all labs and programming assignments (although only the code for lab01 is up to date). So, you don't have to repeat the above step in subsequent labs.
 
 
-Note that you must never modify the code in the starter-code repo because you are not the owner of that repo. Instead you copy the files from that repo to your own private repo or directory before you start working  on the assignment.
+## Step 1b: Create a new repo and clone it on your local machine
 
-## Step 2: Create a directory for this lab in the pilot's account and get the starter code
+* Create a repo for this lab just like you did in lab00: To do this, open a browser and navigate to [www.github.com](www.github.com). Log into your github account. From the drop down menu on the left, select our class organization: ucsb-cs24-s18 and proceed to create a new repo using the correct naming convention. You may refer to the instructions in lab00. Also you must set the visibity of your repo to be 'PRIVATE' when creating it. We will not repeat these instructions in subsequent labs.
 
+* Clone the repo on your local machine: Navigate to your repo on github. If your repo is named lab00_jgaucho, then you have to go to to the link:
+[https://github.com/ucsb-cs24-s18/lab00_jgaucho](https://github.com/ucsb-cs24-s18/lab00_jgaucho). Click on the green "clone or download" button. Then click on the address of your repo as shown in the figure below:
 
-* Create a ~/cs24/lab01 directory and make it your current directory:
+![submit](/lab/lab01/clone-repo.png){:height="500px"}
 
-```
-mkdir ~/cs24/lab01
-cd ~/cs24/lab01
-```
-
-* Copy the starter code by typing the following command:
+* In your terminal navigate to your cs24 directory, then paste the address you just copied to the terminal following the git clone command. Here is an example of the steps
 
 ```
-cp ../cs24-w18-lab-starter-code/lab01/* ./
+	cd ~/cs24
+	git clone git@github.com:ucsb-cs24-s18/lab00_jgaucho.git
+```
+
+* The above command will create a new directory with the same name as your git repo. Change into that directory. For our example repo we need to type
+
+```
+	cd lab00_jgaucho
+```
+
+You will write all the code for this assignment in this directory
+
+## Step 1c: Copy the starter code to your repo
+
+Copy the starter code to your git repo directory
+
+```
+	cp ../cs24-s18-starter-code/lab01/* ./
 ```
 You should see two files in your current directory: rugfit1.cpp and rugfit2.cpp
 
-## Step 3: Study a non-OO program, and copy an incomplete OO conversion
+
+## Step 1d: Push your code to github
+
+In furture labs we will refer to all the steps in this section as "push your code to github". What we really mean is that you sync up a current version of your code with your repo on www.github.com. Follow these steps to sync the current version of your code:
+
+* Check the status of the files that changed since the last time you synced your repo. Just type git status as follows:
+
+```
+	git status
+```
+
+You should see the following output:
+
+```
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	rugfit1.cpp
+	rugfit2.cpp
+
+nothing added to commit but untracked files present (use "git add" to track)
+```
+
+* Now add the files that were modified since the last sync using git add
+
+```
+	git add rugfit1.cpp rugfit2.cpp
+```
+OR
+
+```
+	git add .
+```
+
+Type <code>git status</code> again and you should see that two files appear in green. This means they are ready to be "saved" locally as a new version of your project. 
+
+* Save the current version of your code as follows:
+
+```
+	git commit -m "Initial version of lab01"
+```
+
+* Finally sync your latest changes with your repo on www.github.com using git push
+
+```
+	git push origin master
+```
+
+Navigate to your repo and refresh your browser. You should see the two new files that you added to your repo appear in your repo online. 
+
+**Your code is now accessible to the CS24 teaching staff for feedback.** This is the primary reason we are using github in this class. As you write new code in your local repo, repeat the steps in this section to sync your changes with your repo on github.
+
+
+## Step 3: Study a non-OO program
 
 In the rest of this lab, you will finish writing a C++ program that uses an object-oriented (OO) approach to solve exactly the same problems that are solved by rugfit1.cpp - but first study this program to understand the problems and their non-OO solutions:
 
@@ -170,37 +211,26 @@ leftover rug area: 5
 empty floor area: 0
 ```
 
-If errors occur: read the error messages and try to figure out what needs changing. Don't just randomly make changes, but instead really think about the problem and how to fix it. Ask the TA for help only if you are truly stumped, but give it at least 5-10 minutes worth of study first.
+If errors occur: read the error messages and try to figure out what needs changing. Don't just randomly make changes, but instead really think about the problem and how to fix it. Ask a TA or tutor for help only if you are truly stumped, but give it at least 5-10 minutes worth of study first.
 
-## Step 7: Submit rugfit2.cpp, and upload yourfiles to github
+## Step 7: Upload your code to github one last time
 
-Submit Lab01 at https://submit.cs.ucsb.edu/, or use the following command from a CS terminal:
+Hopefully you remembered to sync your local changes to github often as you were completing the assignment.
 
-```
-~submit/submit -p 921 rugfit2.cpp
-```
-
-Be sure to wait for the results of the 4 simple tests.
-If you are working with a partner, be sure that both partners' names are in a comment at the top of the source code file, and be sure to properly form a group for this project in the submit.cs system.
+If you forgot to do so, be sure to follow the steps in section 1d (above) to upload your final code to github
 
 
-Now open a web-browser and upload all your files to your git repo (following the process from lab00)
+## Step 8: Submit your code to gradescope
 
-Don't leave early though ... see challenge problems below.
+Go to our class site on [www.gradescope.com](www.gradescope.com). Navigate to the assignment for this lab and submit your code via github just like you did in lab00.
 
-## Step 8: Lab check off
+You should see a score of 100/100 for this lab.
 
-* Meet with your mentor again to get checked off on the lab
-* Talk to your mentor about any challenges you faced while completing the lab
-* Talk to your mentor abut next steps
+## Step 9: Lab check off
 
-## Evaluation and Grading
-
-Each student must accomplish the following to earn full credit [50 total points] for this lab:
-
-* [50 points] rugfit2.cpp is saved, it has your name(s) in a comment at the top, your program is object-oriented according to the instructions above, it compiles and executes properly, and has been submitted with a score of 50/50 to the submit.cs system.
-
-[1 to 5 points, at the mentor's discretion] The student arrived on time to their lab session, and worked diligently on CS24-related material until dismissed.
+* Meet with any of the TAs/tutors to get checked off on the lab
+* Talk to them about any challenges you faced while completing the lab
+* Talk to them about your next steps
 
 
 You may now attempt the optional extra challenge or work on pa01 (and then return to the challenge problems)
@@ -238,6 +268,4 @@ Rectangle intersection(Rectangle const &other) const;
 
 Both methods refer to another Rectangle object, and both methods promise not to change either object. The first one returns true or false, but the second one returns a Rectangle object that is the intersection (this second version presumably would return a 0-length and 0-width rectangle if the objects do not intersect).
 
-
-
-</div>
+Push  your code to github, but do not resubmit to gradescope. Attempting the extra credit portion of the lab earns you star points which work in magical ways.

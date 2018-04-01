@@ -86,7 +86,7 @@ cd ~/cs24/lab02
 
 <p>Now navigate to your starter-code directory and do a git pull to get the latest version of the code</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>cd ~/cs24/cs24-w18-lab-starter-code/
+<div class="highlighter-rouge"><pre class="highlight"><code>cd ~/cs24/cs24-s18-starter-code/
 git pull
 cd ~/cs24/lab02/
 </code></pre>
@@ -94,7 +94,7 @@ cd ~/cs24/lab02/
 
 <p>Now copy all of the files for this lab from the starter-code directory to your cs24/lab02 directory:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>cp ~/cs24/cs24-w18-lab-starter-code/lab02/* ~/cs24/lab02/
+<div class="highlighter-rouge"><pre class="highlight"><code>cp ~/cs24/cs24-s18-starter-code/lab02/* ~/cs24/lab02/
 </code></pre>
 </div>
 
@@ -356,7 +356,7 @@ Reading symbols from ./buggy...done.
 Type "r" for "run", followed by the command line arguments CS16 A CS24 A+ 
 
 (gdb)r CS16 A CS24 A+ CS32 A
-Starting program: /cs/faculty/dimirza/git/cs24-w18-lab-starter-code/lab02/buggy CS16 A CS24 A+ CS32 A
+Starting program: /cs/faculty/dimirza/git/cs24-s18-starter-code/lab02/buggy CS16 A CS24 A+ CS32 A
 This way the program will run until line 23. Normally, you might have put 
 a cout statement right before this line to examine the values of the arrays 
 and any other local variables. With gdb we can do this at the gdb command 
@@ -384,22 +384,25 @@ courseLetterGrades = {"A", "", "A+", "", "A"}
 numCourses = 3
 result = 2.0750045670802343e-317
 
-You will probably see a different set of values for courseGrades and result 
+</code></pre>
+</div>
+
+<p>You will probably see a different set of values for courseGrades and result 
 because these are uninitialzied. But the other variables should have the
 same values as shown above. We can immediately spot that something went 
 wrong prior to line 23 by looking at the content of courseNames and
 courseLetterGrades. The program should have resulted in courseNames being
-{"CS16", "CS24", "CS32", "", ""} and courseLetterGrades being
-{"A", "A+", "A",  "", ""}. Notice how much easier it is to examine the values
+{“CS16”, “CS24”, “CS32”, “”, “”} and courseLetterGrades being
+{“A”, “A+”, “A”,  “”, “”}. Notice how much easier it is to examine the values
 of your variables at run time with gdb, without having to put additional 
-print statements.
+print statements.</p>
 
-Let's continue for now. Type "l" for list to see the code you are about to execute.
+<p>Let’s continue for now. Type “l” for list to see the code you are about to execute.</p>
 
-(gdb) l
+<div class="highlighter-rouge"><pre class="highlight"><code>(gdb) l
 18	    courseNames[i-1] = string(argv[i]);
 19	    courseLetterGrades[i-1] = string(argv[i+1]);
-20	    cout&lt;&lt;courseNames[i-1] &lt;&lt; "   "&lt;&lt;courseLetterGrades[i-1]&lt;&lt;endl;
+20	    cout&lt;&lt; courseNames[i-1] &lt;&lt; "   "&lt;&lt; courseLetterGrades[i-1]&lt;&lt; endl;
 21	  }
 22	
 23	  assignCourseGrade(numCourses, courseLetterGrades, courseGrades );
@@ -415,60 +418,66 @@ assignCourseGrade (numCourses=2, courseLetterGrades=0x7fffffffde60,
     courseGrades=0x7fffffffdf00) at buggyGPA.cpp:37
 37	    for(int i =0 ; i &lt; numCourses; i++){
 
-gdb is showing you the values of all the parameters passed to the 
-assignCourseGrade function! Print the first 5 elements of courseGrades
-
-(gdb) p courseGrades[0]@5
-$2 = {0, 0, 1.3852388523421298e-309, 5.4322263344105125e-312, 0}
-
-This is the array the function will be modifying. 
-Use "n" for next to just execute the next line
-
-(gdb) n
-38	      if(courseLetterGrades[i]=="A" || courseLetterGrades[i]=="A+"){
-
-You can run the same gdb command as before by pressing enter. 
-In this case if you press enter you gdb will execute the next command.
-
-(gdb) 
-39	        courseGrades[i] = 4.0;
-
-So, the next line gdb is going to execute is line 40. 
-Enter once more to execute this line and you should be back to the beginning
-of the for loop on line 38
-
-(gdb) 
-37	    for(int i =0 ; i &lt; numCourses; i++){
-
-Now print the 5 elements of courseGrades using the commands we learned before. 
-Is it what you expected?
-
-(gdb) p courseGrades[0]@5
-$3 = {4, 0, 1.3852388523421298e-309, 5.4322263344105125e-312, 0}
-
-Element at index 0 has been set to 4 which is what we expected.
-Now let's run the code until we finish executing the for loop.
-You can do this with until
-
-gdb) until
-62	}
-
-gdb always shows you the next line that will be executed. 
-In this case it is the brace that is at the end of the function. 
-We are still in the function, so you can examine the value of courseGrades again
-
-(gdb)p courseGrades[0]@5
-$4 = {4, 0, 4, 5.4322263344105125e-312, 0}
-
-Notice element at index 1 has been set to 0. If courseLetterGrades was properly populated,
-courseGrades would have had 4.0 at index 1. You can now clearly see the consequence 
-of not having courseGrades properly populated.
-
-
 </code></pre>
 </div>
 
-<p>More about breakpoints: Write command break to put a breakpoint on line 28. Now you have two breakpoints set - this new one is number 2. You can disable it by entering “disable 2” (you could also use dis 2). And you can enter “enable 2” (or “ena 2”) to enable the breakpoint again, and “delete 2” (or “d 2”) to delete the breakpoint.</p>
+<p>gdb is showing you the values of all the parameters passed to the 
+assignCourseGrade function! Print the first 5 elements of courseGrades</p>
+
+<p>(gdb) p courseGrades[0]@5
+$2 = {0, 0, 1.3852388523421298e-309, 5.4322263344105125e-312, 0}</p>
+
+<p>This is the array the function will be modifying. 
+Use “n” for next to just execute the next line</p>
+
+<p>(gdb) n
+38	      if(courseLetterGrades[i]==”A” || courseLetterGrades[i]==”A+”){</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>
+You can run the same gdb command as before by pressing enter. 
+In this case if you press enter you gdb will execute the next command.
+
+</code></pre>
+</div>
+<p>(gdb) 
+39	        courseGrades[i] = 4.0;</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>
+So, the next line gdb is going to execute is line 40. 
+Enter once more to execute this line and you should be back to the beginning of the for loop on line 38
+
+</code></pre>
+</div>
+<p>(gdb) 
+37	    for(int i =0 ; i &lt; numCourses; i++){
+```</p>
+
+<p>Now print the 5 elements of courseGrades using the commands we learned before. 
+Is it what you expected?
+<code class="highlighter-rouge">
+(gdb) p courseGrades[0]@5
+$3 = {4, 0, 1.3852388523421298e-309, 5.4322263344105125e-312, 0}
+</code>
+Element at index 0 has been set to 4 which is what we expected.
+Now let’s run the code until we finish executing the for loop.
+You can do this with until</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>gdb) until
+62	}
+</code></pre>
+</div>
+<p>gdb always shows you the next line that will be executed. 
+In this case it is the brace that is at the end of the function. 
+We are still in the function, so you can examine the value of courseGrades again</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>(gdb)p courseGrades[0]@5
+$4 = {4, 0, 4, 5.4322263344105125e-312, 0}
+</code></pre>
+</div>
+
+<p>Notice element at index 1 has been set to 0. If courseLetterGrades was properly populated, courseGrades would have had 4.0 at index 1. You can now clearly see the consequence  of not having courseGrades properly populated.</p>
+
+<p>More about breakpoints: Put a breakpoint on line 28. Now you have two breakpoints set - this new one is number 2. You can disable it by entering “disable 2” (you could also use dis 2). And you can enter “enable 2” (or “ena 2”) to enable the breakpoint again, and “delete 2” (or “d 2”) to delete the breakpoint.</p>
 
 <p>To run your code until the next breakpoint is reached type (c) for continue.</p>
 
@@ -484,11 +493,11 @@ terminate called after throwing an instance of 'std::logic_error'
 Aborted (core dumped)
 </code></pre>
 </div>
+
 <p>Your program may or may not crash but if you see the same error message as I have
 then it has clearly crashed! If you are not able to reproduce the crash don’t worry, just read on.</p>
 
-<p>Notice that when your program crashes, the error message C++ throws at you doesn’t 
-give any clues about which line of code caused it.</p>
+<p>Notice that when your program crashes, the error message C++ throws at you doesn’t give any clues about which line of code caused it.</p>
 
 <p>Now let’s try running the program in gdb</p>
 
@@ -517,14 +526,17 @@ terminate called after throwing an instance of 'std::logic_error'
 Program received signal SIGABRT, Aborted.
 0x00007ffff719e8df in raise () from /lib64/libc.so.6
 
-Looks like an exception was raised somewhere in the C++ library. The std library
+</code></pre>
+</div>
+
+<p>Looks like an exception was raised somewhere in the C++ library. The std library
 is always correct. We need to find which line of our code caused this 
-behavior.
+behavior.</p>
 
-Use the bt (backtrace) command to trace the sequence of function calls that
-resulted in this state
+<p>Use the bt (backtrace) command to trace the sequence of function calls that
+resulted in this state</p>
 
-(gdb) bt
+<div class="highlighter-rouge"><pre class="highlight"><code>(gdb) bt
 #0  0x00007ffff719e8df in raise () from /lib64/libc.so.6
 #1  0x00007ffff71a04da in abort () from /lib64/libc.so.6
 #2  0x00007ffff7ae04fd in __gnu_cxx::__verbose_terminate_handler() ()
@@ -542,12 +554,14 @@ std::allocator&lt;char&gt; &gt;::basic_string(char const*, std::allocator&lt;cha
 from /lib64/libstdc++.so.6
 #9  0x0000000000400e99 in main (argc=2, argv=0x7fffffffe148) at buggyGPA.cpp:19
 (gdb)
+</code></pre>
+</div>
 
-Ah! Looks like the culprit is line 19 of buggyGPA.cpp. That's the line of code
+<p>Ah! Looks like the culprit is line 19 of buggyGPA.cpp. That’s the line of code
 that resulted in the chain of events leading up to the crash.
-Use the list command to examine the code around line 19 of buggyGPA.cpp
+Use the list command to examine the code around line 19 of buggyGPA.cpp</p>
 
-(gdb) l buggyGPA.cpp:19
+<div class="highlighter-rouge"><pre class="highlight"><code>(gdb) l buggyGPA.cpp:19
 
 15	  int numCourses = int(argc/2);
 16	
@@ -556,17 +570,19 @@ Use the list command to examine the code around line 19 of buggyGPA.cpp
 19	    courseLetterGrades[i-1] = string(argv[i+1]); // here is the line that caused the crash
 20	    cout&lt;&lt;courseNames[i-1] &lt;&lt; "   "&lt;&lt;courseLetterGrades[i-1]&lt;&lt;endl;
 21	  }
+</code></pre>
+</div>
 
-Line 19 is: courseLetterGrades[i-1] = string(argv[i+1]);
+<p>Line 19 is: courseLetterGrades[i-1] = string(argv[i+1]);
 Without gdb identifying that this exact line of code caused the program to crash would have 
-been reealllly hard!
+been reealllly hard!</p>
 
-What's more, with gdb you can go back in time (yes its also a time machine!) 9 function calls ago
-and retrieve the values of your local variables right before line 19 was executed.
+<p>What’s more, with gdb you can go back in time (yes its also a time machine!) 9 function calls ago
+and retrieve the values of your local variables right before line 19 was executed.</p>
 
-Use the up command to go back 9 calls to the moment when line 19 was about to be executed.
+<p>Use the up command to go back 9 calls to the moment when line 19 was about to be executed.</p>
 
-(gdb) up 9
+<div class="highlighter-rouge"><pre class="highlight"><code>(gdb) up 9
 #9  0x0000000000400e99 in main (argc=2, argv=0x7fffffffe148) at buggyGPA.cpp:19
 19	    courseLetterGrades[i-1] = string(argv[i+1]);
 
@@ -574,54 +590,30 @@ You can now examine the value of the local variable i
 
 (gdb) p i
 $1 = 1
-
-Look at line 19 again. If i is 1 then i+1 is 2. This means argv[i+1] is an out of
-bound access (argv only has two elements). You can actually print the value of
-argv[i+1] 
-
-(gdb) p argv[i+1]
-$2 = 0x0
-
-In my case it was null - an invalid parameter to the constructor of string class.
-This caused my program to crash!
-
-
 </code></pre>
 </div>
 
-<p>Ok… Now you have all the tools you need in order to find where the bugs in this program are. Your program should be able to handle upto 5 input courses although you may modify it to handle information about an arbitrary number of inputs</p>
+<p>Look at line 19 again. If i is 1 then i+1 is 2. This means argv[i+1] is an out of
+bound access (argv only has two elements). You can actually print the value of
+argv[i+1]</p>
 
-<p>As you find the bugs, modify buggyGPA.cpp to correct for them. Everytime you change the file, you should recompile it and then run.</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>(gdb) p argv[i+1]
+$2 = 0x0
+</code></pre>
+</div>
+
+<p>In my case it was null - an invalid parameter to the constructor of string class.
+This caused my program to crash!</p>
+
+<p>Ok… Now you have a new tool to find bugs in your programs. Debug buggyGPA.cpp so that it can handle upto 5 (or more) input courses. Everytime you change the file, you should recompile it and then run.</p>
 
 <h2 id="step-6-show-off-your-work-and-get-credit-for-this-lab">Step 6: Show off your work and get credit for this lab</h2>
 
 <p>Get your mentor’s attention to inspect your work.</p>
 
-<h2 id="step-7-submit-your-code-on-submitcs">Step 7: Submit your code on submit.cs</h2>
-
-<ul>
-  <li>Both you and your partner should join the same group on submit.cs</li>
-  <li>To submit your code type:</li>
-</ul>
-
-<div class="highlighter-rouge"><pre class="highlight"><code>~submit/submit -p 929 buggyGPA.cpp
-</code></pre>
-</div>
+<h2 id="step-7-submit-your-code-on-gradescope">Step 7: Submit your code on gradescope</h2>
 
 <h2 id="evaluation-and-grading">Evaluation and Grading</h2>
-
-<p>You must accomplish the following to earn full credit [50 total points] for this lab:</p>
-
-<p>[50 points]:</p>
-
-<ul>
-  <li>
-    <p>buggyGPA.cpp is saved, it has your name(s) in a comment at the top, and it compiles and executes properly. Moreover, you can tell the TA where the error happens in buggyGPA.cpp, and can demonstrate how to use make.</p>
-  </li>
-  <li>
-    <p>correct program turned in via submit</p>
-  </li>
-</ul>
 
 
         </div><!-- content -->

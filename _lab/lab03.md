@@ -7,7 +7,7 @@ assigned: 2018-04-17 11:00:00.00-7
 due: 2018-04-23 23:59:00.00-7
 
 ---
-<div markdown="1">
+
 
 # Goals for this lab
 
@@ -41,7 +41,7 @@ Log onto the pilot's account. If the pilot's account is not working, allow the n
 * Now copy all of the files for this lab from the starter-code directory to your git directory:
 
 ```
-cp ~/cs24/cs24-w18-lab-starter-code/lab03/* ./
+cp ~/cs24/cs24-s18-starter-code/lab03/* ./
 ```
 
 Verify you got all the files and try to compile them as follows:

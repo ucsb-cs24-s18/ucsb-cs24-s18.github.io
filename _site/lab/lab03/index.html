@@ -57,53 +57,51 @@
 
 
           </table>
-          <div>
+          <h1 id="goals-for-this-lab">Goals for this lab</h1>
 
-  <h1 id="goals-for-this-lab">Goals for this lab</h1>
+<p>By the time you have completed this lab, you should be able to</p>
 
-  <p>By the time you have completed this lab, you should be able to</p>
+<ul>
+  <li>Explain the meaning of a “self-referential” data structure</li>
+  <li>Create, use and manage memory for simple linked lists</li>
+  <li>Implement functions that process linked lists</li>
+</ul>
 
-  <ul>
-    <li>Explain the meaning of a “self-referential” data structure</li>
-    <li>Create, use and manage memory for simple linked lists</li>
-    <li>Implement functions that process linked lists</li>
-  </ul>
+<h2 id="step-by-step-instructions">Step by Step Instructions</h2>
 
-  <h2 id="step-by-step-instructions">Step by Step Instructions</h2>
+<h2 id="step-1-choose-initial-roles-create-a-directory-and-get-files">Step 1: Choose initial roles, create a directory and get files</h2>
 
-  <h2 id="step-1-choose-initial-roles-create-a-directory-and-get-files">Step 1: Choose initial roles, create a directory and get files</h2>
+<p>Get together with your lab partner, and decide who will be the pilot first. Switch roles after awhile - before either of you gets tired, bored or distracted. If your regular partner is more than 5 minutes late, ask the TA to pair you with someone else for this week.</p>
 
-  <p>Get together with your lab partner, and decide who will be the pilot first. Switch roles after awhile - before either of you gets tired, bored or distracted. If your regular partner is more than 5 minutes late, ask the TA to pair you with someone else for this week.</p>
+<p>Log onto the pilot’s account. If the pilot’s account is not working, allow the navigator to log in instead. You will (both) work in this account for the rest of the lab.</p>
 
-  <p>Log onto the pilot’s account. If the pilot’s account is not working, allow the navigator to log in instead. You will (both) work in this account for the rest of the lab.</p>
+<h2 id="step-1a-create-a-git-repo-add-your-partner-as-collaborator">Step 1a: Create a git repo, add your partner as collaborator</h2>
 
-  <h2 id="step-1a-create-a-git-repo-add-your-partner-as-collaborator">Step 1a: Create a git repo, add your partner as collaborator</h2>
+<ul>
+  <li>
+    <p>Create a repo for this lab on the pilot’s github account following the process described in previous labs and also following the correct naming convention</p>
+  </li>
+  <li>
+    <p>The pilot should add the navigator as a collaborator on github. Navigator accept the invitation to gain joint ownership on the git repo</p>
+  </li>
+</ul>
 
-  <ul>
-    <li>
-      <p>Create a repo for this lab on the pilot’s github account following the process described in previous labs and also following the correct naming convention</p>
-    </li>
-    <li>
-      <p>The pilot should add the navigator as a collaborator on github. Navigator accept the invitation to gain joint ownership on the git repo</p>
-    </li>
-  </ul>
+<h2 id="step-1b-set-up-directory-for-this-lab-see-detailed-instructions-in-previous-labs">Step 1b: Set up directory for this lab (see detailed instructions in previous labs)</h2>
 
-  <h2 id="step-1b-set-up-directory-for-this-lab-see-detailed-instructions-in-previous-labs">Step 1b: Set up directory for this lab (see detailed instructions in previous labs)</h2>
+<ul>
+  <li>Clone your repo in your cs24 directory on CSIL.</li>
+  <li>Navigate to your starter-code directory and do a git pull to get the latest version of the code.</li>
+  <li>Change into your lab03 git directory</li>
+  <li>Now copy all of the files for this lab from the starter-code directory to your git directory:</li>
+</ul>
 
-  <ul>
-    <li>Clone your repo in your cs24 directory on CSIL.</li>
-    <li>Navigate to your starter-code directory and do a git pull to get the latest version of the code.</li>
-    <li>Change into your lab03 git directory</li>
-    <li>Now copy all of the files for this lab from the starter-code directory to your git directory:</li>
-  </ul>
-
-  <div class="highlighter-rouge"><pre class="highlight"><code>cp ~/cs24/cs24-w18-lab-starter-code/lab03/* ./
+<div class="highlighter-rouge"><pre class="highlight"><code>cp ~/cs24/cs24-s18-starter-code/lab03/* ./
 </code></pre>
-  </div>
+</div>
 
-  <p>Verify you got all the files and try to compile them as follows:</p>
+<p>Verify you got all the files and try to compile them as follows:</p>
 
-  <div class="highlighter-rouge"><pre class="highlight"><code>-bash-4.2$ ls
+<div class="highlighter-rouge"><pre class="highlight"><code>-bash-4.2$ ls
 intlist.cpp  intlist.h  Makefile  README.md  testlist.cpp  testrest.cpp
 -bash-4.2$  make all
 g++ -c -g testlist.cpp
@@ -112,25 +110,25 @@ g++ -g -o testlist testlist.o intlist.o
 g++ -c -g testrest.cpp
 g++ -g -o testrest testrest.o intlist.o
 </code></pre>
-  </div>
+</div>
 
-  <p>We will discuss these files in Step 3. But first some practice.</p>
+<p>We will discuss these files in Step 3. But first some practice.</p>
 
-  <h2 id="step-2-practice-using-linked-structures-in-ch-optional">Step 2: Practice using linked structures in ch (Optional)</h2>
+<h2 id="step-2-practice-using-linked-structures-in-ch-optional">Step 2: Practice using linked structures in ch (Optional)</h2>
 
-  <p>Start ch (just type ch on the command line). Then type or copy/paste the one-line structure definition shown below (in bold) at the ch prompt:</p>
+<p>Start ch (just type ch on the command line). Then type or copy/paste the one-line structure definition shown below (in bold) at the ch prompt:</p>
 
-  <div class="highlighter-rouge"><pre class="highlight"><code>ch&gt; struct Node {int info; Node *next;};
+<div class="highlighter-rouge"><pre class="highlight"><code>ch&gt; struct Node {int info; Node *next;};
 </code></pre>
-  </div>
+</div>
 
-  <p>Normally such a definition would be spread over a few lines for clarity, but ch makes that difficult. Below we ask you to write a couple of one-line loops for the same reason.</p>
+<p>Normally such a definition would be spread over a few lines for clarity, but ch makes that difficult. Below we ask you to write a couple of one-line loops for the same reason.</p>
 
-  <p>The structure you just created incorporates a way for an object of its type to point at another object of the same type - it is a self-referential structure. The idea is to point the next field of a Node at another Node, and in this way we can build lists of Nodes, with each one pointing to the next one. We also maintain a separate pointer that points at the first node in the list - often we call this pointer the “list” because it is the way we can access the list’s elements.</p>
+<p>The structure you just created incorporates a way for an object of its type to point at another object of the same type - it is a self-referential structure. The idea is to point the next field of a Node at another Node, and in this way we can build lists of Nodes, with each one pointing to the next one. We also maintain a separate pointer that points at the first node in the list - often we call this pointer the “list” because it is the way we can access the list’s elements.</p>
 
-  <p>But before we do all that, let’s just make a Node object, set it’s fields, and let ch display its contents:</p>
+<p>But before we do all that, let’s just make a Node object, set it’s fields, and let ch display its contents:</p>
 
-  <div class="highlighter-rouge"><pre class="highlight"><code>ch&gt; Node item;
+<div class="highlighter-rouge"><pre class="highlight"><code>ch&gt; Node item;
 ch&gt; item.info = 7;
 7
 ch&gt; item.next = 0; // same as NULL
@@ -139,13 +137,13 @@ ch&gt; item
 .info = 7
 .next = (nil)
 </code></pre>
-  </div>
+</div>
 
-  <p>The Node named item stores a 7 as its information, and its next field (a.k.a. “link”) does not point to anything. (The address 0 is reserved to mean “no address” in C++, and it is also the value of the symbolic constant NULL that is define in <cstdlib>. Notice that ch calls it nil, but that just means the same thing too.) Usually a node with a null link is used to indicate the end of a linked list.</cstdlib></p>
+<p>The Node named item stores a 7 as its information, and its next field (a.k.a. “link”) does not point to anything. (The address 0 is reserved to mean “no address” in C++, and it is also the value of the symbolic constant NULL that is define in <cstdlib>. Notice that ch calls it nil, but that just means the same thing too.) Usually a node with a null link is used to indicate the end of a linked list.</cstdlib></p>
 
-  <p>Now let’s use the structure to build an actual linked list of three integers. First we will declare a pointer named list to point at the first node in the list (or null if the list is empty). We initialize this pointer to a dynamically allocated first node, using the C++ keyword new (which returns a pointer). The remaining steps will create two more nodes, store values in each node, and properly link them all together as a list. Type or copy/paste the stuff in bold:</p>
+<p>Now let’s use the structure to build an actual linked list of three integers. First we will declare a pointer named list to point at the first node in the list (or null if the list is empty). We initialize this pointer to a dynamically allocated first node, using the C++ keyword new (which returns a pointer). The remaining steps will create two more nodes, store values in each node, and properly link them all together as a list. Type or copy/paste the stuff in bold:</p>
 
-  <div class="highlighter-rouge"><pre class="highlight"><code>ch&gt; Node *list = new Node;  // dynamic memory way to create
+<div class="highlighter-rouge"><pre class="highlight"><code>ch&gt; Node *list = new Node;  // dynamic memory way to create
 ch&gt; list-&gt;info = 10; // store 10 in the first list node
 10
 ch&gt; list-&gt;next = new Node; // point first node at new one
@@ -162,70 +160,70 @@ ch&gt; list-&gt;info = 5;  // store 5 in new first node
 ch&gt; list-&gt;next = temp; // connect rest of list to new first
 0x2445c70
 </code></pre>
-  </div>
+</div>
 
-  <p>Of course dealing with list nodes this way is really clumsy. Soon you will learn cleaner ways to build and process a list. For now, see how we can use a for loop and an auxiliary pointer to print the data in such a list:</p>
+<p>Of course dealing with list nodes this way is really clumsy. Soon you will learn cleaner ways to build and process a list. For now, see how we can use a for loop and an auxiliary pointer to print the data in such a list:</p>
 
-  <div class="highlighter-rouge"><pre class="highlight"><code>ch&gt; Node *n;  // a list pointer to use for loop control
+<div class="highlighter-rouge"><pre class="highlight"><code>ch&gt; Node *n;  // a list pointer to use for loop control
 ch&gt; for (n = list; n != 0; n = n-&gt;next) cout &lt;&lt; n-&gt;info &lt;&lt; endl;
 5
 10
 20
 </code></pre>
-  </div>
+</div>
 
-  <p>The for loop continues as long as n points at a node. At the end of each loop iteration, n is changed to point at the next node in the list. Study this loop, and be sure to understand it - discuss it with your partner to make sure you both understand it.</p>
+<p>The for loop continues as long as n points at a node. At the end of each loop iteration, n is changed to point at the next node in the list. Study this loop, and be sure to understand it - discuss it with your partner to make sure you both understand it.</p>
 
-  <p>As one more illustration, let’s use a while loop to count the nodes in a list like this one. Make sure you understand the following loop too, in which the while loop condition is just the node pointer itself – it becomes 0 at the end. ;-)</p>
+<p>As one more illustration, let’s use a while loop to count the nodes in a list like this one. Make sure you understand the following loop too, in which the while loop condition is just the node pointer itself – it becomes 0 at the end. ;-)</p>
 
-  <div class="highlighter-rouge"><pre class="highlight"><code>ch&gt; int count = 0;
+<div class="highlighter-rouge"><pre class="highlight"><code>ch&gt; int count = 0;
 ch&gt; n = list; // start back at beginning
 0x2446550
 ch&gt; while (n) { ++count; n = n-&gt;next; }
 ch&gt; count
 3
 </code></pre>
-  </div>
+</div>
 
-  <p>Since we dynamically allocated the memory for three nodes, we should free that memory before exiting ch and proceeding to Step 3. Also, according to convention, we set the list pointer to null - it is now an empty list:</p>
+<p>Since we dynamically allocated the memory for three nodes, we should free that memory before exiting ch and proceeding to Step 3. Also, according to convention, we set the list pointer to null - it is now an empty list:</p>
 
-  <div class="highlighter-rouge"><pre class="highlight"><code>ch&gt; delete list-&gt;next-&gt;next; // free last node first
+<div class="highlighter-rouge"><pre class="highlight"><code>ch&gt; delete list-&gt;next-&gt;next; // free last node first
 ch&gt; delete list-&gt;next; // then free second one
 ch&gt; delete list; // free first node last
 ch&gt; list = 0; // to indicate the list is empty
 (nil)
 Exit ch.
 </code></pre>
-  </div>
+</div>
 
-  <h2 id="step-3-learn-how-to-encapsulate-list-nodes">Step 3: Learn how to encapsulate list nodes</h2>
+<h2 id="step-3-learn-how-to-encapsulate-list-nodes">Step 3: Learn how to encapsulate list nodes</h2>
 
-  <p>Now that you have a feel for list nodes, you should know that such structures are not usually manipulated directly by application programs - not in C++ anyway (although it is common in C programming). Instead applications normally use objects of a List class, and the class itself is the only part of the program that accesses list nodes.</p>
+<p>Now that you have a feel for list nodes, you should know that such structures are not usually manipulated directly by application programs - not in C++ anyway (although it is common in C programming). Instead applications normally use objects of a List class, and the class itself is the only part of the program that accesses list nodes.</p>
 
-  <p>In the rest of this lab, you will help build such a list class. The class definition is stored in intlist.h - please study it to know its parts:</p>
+<p>In the rest of this lab, you will help build such a list class. The class definition is stored in intlist.h - please study it to know its parts:</p>
 
-  <p>The public declarations show what a client program can do with an IntList object. Notice, however, that the list node structure definition is in the private area. Clients can’t directly use or even refer to such nodes, but all that clients should care about are the values stored in these nodes anyway! Also notice that every list object will have one node pointer, to point at the first node in the list or at 0 if the list is empty.
+<p>The public declarations show what a client program can do with an IntList object. Notice, however, that the list node structure definition is in the private area. Clients can’t directly use or even refer to such nodes, but all that clients should care about are the values stored in these nodes anyway! Also notice that every list object will have one node pointer, to point at the first node in the list or at 0 if the list is empty.
 Now look at intlist.cpp. The functions that you need to implement are marked in that file. Some of the methods of the class are implemented at the bottom of the file - do not change what is done.</p>
 
-  <p>An application file would create IntList objects and use them to solve problems. For this lab, we have two application files, both of which are testing programs - testlist.cpp and testrest.cpp. First look testlist.cpp. Two IntList objects are created; then numbers read from the command line are appended to one of the lists; and finally the methods are tested for each list.</p>
+<p>An application file would create IntList objects and use them to solve problems. For this lab, we have two application files, both of which are testing programs - testlist.cpp and testrest.cpp. First look testlist.cpp. Two IntList objects are created; then numbers read from the command line are appended to one of the lists; and finally the methods are tested for each list.</p>
 
-  <p>You can use the provided Makefile to help you complile the program.</p>
+<p>You can use the provided Makefile to help you complile the program.</p>
 
-  <h2 id="step-4-implement-linked-list-functions">Step 4: Implement linked list functions</h2>
+<h2 id="step-4-implement-linked-list-functions">Step 4: Implement linked list functions</h2>
 
-  <p>First: switch roles between pilot and navigator if you did not already do that. Always stay logged into the original pilot’s account.</p>
+<p>First: switch roles between pilot and navigator if you did not already do that. Always stay logged into the original pilot’s account.</p>
 
-  <p>You should be able to run the program now (assuming you compiled it in Step 3) - it requires you to enter a starter list of integers on the command line:</p>
+<p>You should be able to run the program now (assuming you compiled it in Step 3) - it requires you to enter a starter list of integers on the command line:</p>
 
-  <div class="highlighter-rouge"><pre class="highlight"><code>-bash-4.2$ ./testlist
+<div class="highlighter-rouge"><pre class="highlight"><code>-bash-4.2$ ./testlist
 error: need at least one int arg on command line
 usage: ./testlist int [int ...]
 </code></pre>
-  </div>
+</div>
 
-  <p>Next time we’ll run it properly. The contains method is checked for three values that ought to be in the list, plus one value that should not (the sum). Here is a sample run with initial values of 5, 7, 9 and 11:</p>
+<p>Next time we’ll run it properly. The contains method is checked for three values that ought to be in the list, plus one value that should not (the sum). Here is a sample run with initial values of 5, 7, 9 and 11:</p>
 
-  <div class="highlighter-rouge"><pre class="highlight"><code>./testlist 5 7 9 11
+<div class="highlighter-rouge"><pre class="highlight"><code>./testlist 5 7 9 11
 List 1:
    [5 7 9 11]
    count: 4
@@ -248,25 +246,25 @@ Empty list 2:
    List 2 after insertFirst(3), then insertFirst(1):
    []
 </code></pre>
-  </div>
-  <p>See that append, print and count all work. But the others need to be fixed.</p>
+</div>
+<p>See that append, print and count all work. But the others need to be fixed.</p>
 
-  <p>Use an editor (e.g., emacs or vim) to make the following changes to intlist.cpp - do not change any of the other files.</p>
+<p>Use an editor (e.g., emacs or vim) to make the following changes to intlist.cpp - do not change any of the other files.</p>
 
-  <ul>
-    <li>Fix the comment at the top to show your name(s) and the date.</li>
-    <li>Implement the sum method. See the count method for guidance.</li>
-    <li>Save, and then test your sum implementation - compile and execute testlist again. Verify sum is working before going on.</li>
-    <li>Push your code to github using the “git add .”, “git commit” and “git push “ commands</li>
-    <li>Then implement the contains method, save again and test again.</li>
-    <li>Continue with the other three functions in the same way: implement and test one at time. Don’t implement the copy constructor, destructor and assignment operator yet.</li>
-  </ul>
+<ul>
+  <li>Fix the comment at the top to show your name(s) and the date.</li>
+  <li>Implement the sum method. See the count method for guidance.</li>
+  <li>Save, and then test your sum implementation - compile and execute testlist again. Verify sum is working before going on.</li>
+  <li>Push your code to github using the “git add .”, “git commit” and “git push “ commands</li>
+  <li>Then implement the contains method, save again and test again.</li>
+  <li>Continue with the other three functions in the same way: implement and test one at time. Don’t implement the copy constructor, destructor and assignment operator yet.</li>
+</ul>
 
-  <p>Push your code to github often.</p>
+<p>Push your code to github often.</p>
 
-  <p>Here are correct results for the same sample data as above:</p>
+<p>Here are correct results for the same sample data as above:</p>
 
-  <div class="highlighter-rouge"><pre class="highlight"><code>List 1:
+<div class="highlighter-rouge"><pre class="highlight"><code>List 1:
    [5 7 9 11]
    count: 4
    sum: 32
@@ -288,25 +286,25 @@ Empty list 2:
    List 2 after insertFirst(3), then insertFirst(1):
    [1 3]
 </code></pre>
-  </div>
+</div>
 
-  <p>Ask yourself: What are the value semantics of an IntList object? With just the automatic copy constructor and assignment operator, won’t copies be shallow?</p>
+<p>Ask yourself: What are the value semantics of an IntList object? With just the automatic copy constructor and assignment operator, won’t copies be shallow?</p>
 
-  <p>You will fix this problem by overloading the copy constructor and assignment operator. You should also implement the destructor. However before you begin, examine testrest.cpp. This file tests the functions your are about to implement.</p>
+<p>You will fix this problem by overloading the copy constructor and assignment operator. You should also implement the destructor. However before you begin, examine testrest.cpp. This file tests the functions your are about to implement.</p>
 
-  <p>Run the test program with argument 1 (to test your copy constructor) before implementing the above functions.</p>
+<p>Run the test program with argument 1 (to test your copy constructor) before implementing the above functions.</p>
 
-  <div class="highlighter-rouge"><pre class="highlight"><code>$ ./testrest 1
+<div class="highlighter-rouge"><pre class="highlight"><code>$ ./testrest 1
 Segmentation fault (core dumped)
 </code></pre>
-  </div>
-  <p>Now run the program with the same argument in gdb and try to figure out exactly why it crashed.</p>
+</div>
+<p>Now run the program with the same argument in gdb and try to figure out exactly why it crashed.</p>
 
-  <ul>
-    <li>Implement the copy constructor in intlist.cpp. Compile with make and run <code>$ ./testrest 1</code>. Repeat this process until the test passes. However its not enough to just pass the test. This because when you are writing programs that work with dyanamic data (on the heap), your program could have memory leaks that are not captured by unit tests. To check for leaks you should run your program in valgrind as follows:</li>
-  </ul>
+<ul>
+  <li>Implement the copy constructor in intlist.cpp. Compile with make and run <code>$ ./testrest 1</code>. Repeat this process until the test passes. However its not enough to just pass the test. This because when you are writing programs that work with dyanamic data (on the heap), your program could have memory leaks that are not captured by unit tests. To check for leaks you should run your program in valgrind as follows:</li>
+</ul>
 
-  <div class="highlighter-rouge"><pre class="highlight"><code>$ valgrind --leak-check=full ./testrest 1
+<div class="highlighter-rouge"><pre class="highlight"><code>$ valgrind --leak-check=full ./testrest 1
 ==5414== Memcheck, a memory error detector
 ==5414== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
 ==5414== Using Valgrind-3.12.0 and LibVEX; rerun with -h for copyright info
@@ -323,48 +321,48 @@ PASSED copy constructor tests
 ==5414== For counts of detected and suppressed errors, rerun with: -v
 ==5414== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 </code></pre>
-  </div>
+</div>
 
-  <p>The error summary should show 0 errors as shown above. If you have memory leaks, valgrind will let you know.</p>
+<p>The error summary should show 0 errors as shown above. If you have memory leaks, valgrind will let you know.</p>
 
-  <ul>
-    <li>Implement the destructor, compile and run <code>$ ./testrest 2</code>. 
+<ul>
+  <li>Implement the destructor, compile and run <code>$ ./testrest 2</code>. 
 You should see the following message:</li>
-  </ul>
+</ul>
 
-  <div class="highlighter-rouge"><pre class="highlight"><code>$ ./testrest 2
+<div class="highlighter-rouge"><pre class="highlight"><code>$ ./testrest 2
 Testing destructor, run in valgrind to check for leaks
 </code></pre>
-  </div>
-  <p>Now run it in valgrind to make sure you don’t have any memory leaks</p>
-
-  <ul>
-    <li>Finally implement the overloaded assignment operator in intlist.cpp. To test it run <code>$ ./testrest 3</code>. If it doesn’t crash, run it in valgrind to check for memory leaks</li>
-  </ul>
-
-  <p>Step 5: Submit intlist.cpp</p>
-
-  <p>Submit your code at https://submit.cs.ucsb.edu/, or use the following command from a CS terminal:</p>
-
-  <div class="highlighter-rouge"><pre class="highlight"><code>~submit/submit -p 930 intlist.cpp
-</code></pre>
-  </div>
-
-  <p>If you are working with a partner, be sure that both partners’ names are in a comment at the top of the source code file, and be sure to properly form a group for this project in the submit.cs system.</p>
-
-  <p>Do beware that all parts must be working to earn any points at all from the submit.cs tests.</p>
-
-  <h2 id="evaluation-and-grading">Evaluation and Grading</h2>
-
-  <p>Each student must accomplish the following to earn full credit [50 total points] for this lab:</p>
-
-  <ul>
-    <li>[100 points] intlist.cpp is saved, it has your name(s) in a comment at the top, it compiles and executes properly, and has been submitted with a score of 100/100 to the submit.cs system.</li>
-    <li>[50 points] Creation of github repo, writing readable code and pushing your code frequently to github</li>
-  </ul>
-
-  <p>Diba Mirza, adapted from a lab by Michael Costanza</p>
 </div>
+<p>Now run it in valgrind to make sure you don’t have any memory leaks</p>
+
+<ul>
+  <li>Finally implement the overloaded assignment operator in intlist.cpp. To test it run <code>$ ./testrest 3</code>. If it doesn’t crash, run it in valgrind to check for memory leaks</li>
+</ul>
+
+<p>Step 5: Submit intlist.cpp</p>
+
+<p>Submit your code at https://submit.cs.ucsb.edu/, or use the following command from a CS terminal:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>~submit/submit -p 930 intlist.cpp
+</code></pre>
+</div>
+
+<p>If you are working with a partner, be sure that both partners’ names are in a comment at the top of the source code file, and be sure to properly form a group for this project in the submit.cs system.</p>
+
+<p>Do beware that all parts must be working to earn any points at all from the submit.cs tests.</p>
+
+<h2 id="evaluation-and-grading">Evaluation and Grading</h2>
+
+<p>Each student must accomplish the following to earn full credit [50 total points] for this lab:</p>
+
+<ul>
+  <li>[100 points] intlist.cpp is saved, it has your name(s) in a comment at the top, it compiles and executes properly, and has been submitted with a score of 100/100 to the submit.cs system.</li>
+  <li>[50 points] Creation of github repo, writing readable code and pushing your code frequently to github</li>
+</ul>
+
+<p>Diba Mirza, adapted from a lab by Michael Costanza
+&lt;/div&gt;</p>
 
         </div><!-- content -->
         <div data-role="footer" class="footer">

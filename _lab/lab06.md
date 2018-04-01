@@ -20,7 +20,7 @@ Here is the link to the survey:
 [Please click on this link to complete](https://goo.gl/forms/eIlG8dsXjWbjsAF23)
 
 You may use the following webpage to identify the mentors should you need it to answer the final question on the survey:
-[https://ucsb-cs24-w18.github.io/info/staff/](https://ucsb-cs24-w18.github.io/info/staff/)
+[https://ucsb-cs24-s18.github.io/info/staff/](https://ucsb-cs24-s18.github.io/info/staff/)
 
 To get credit show the final screen of the completed survey to your mentor.
 

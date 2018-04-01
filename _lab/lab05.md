@@ -51,7 +51,7 @@ cd ~/cs24/lab05_jgauch_alily/
 Now copy all of the files for this lab from the starter-code directory to your git repo directory:
 
 ```
-cp ~/cs24/cs24-w18-lab-starter-code/lab05/* ./
+cp ~/cs24/cs24-s18-starter-code/lab05/* ./
 
 -bash-4.3$ ls
 evalfull.cpp  intstack.h  usestack.cpp

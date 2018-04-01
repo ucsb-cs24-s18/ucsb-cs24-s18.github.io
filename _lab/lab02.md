@@ -35,7 +35,7 @@ cd ~/cs24/lab02
 Now navigate to your starter-code directory and do a git pull to get the latest version of the code
 
 ```
-cd ~/cs24/cs24-w18-lab-starter-code/
+cd ~/cs24/cs24-s18-starter-code/
 git pull
 cd ~/cs24/lab02/
 ```
@@ -43,7 +43,7 @@ cd ~/cs24/lab02/
 Now copy all of the files for this lab from the starter-code directory to your cs24/lab02 directory:
 
 ```
-cp ~/cs24/cs24-w18-lab-starter-code/lab02/* ~/cs24/lab02/
+cp ~/cs24/cs24-s18-starter-code/lab02/* ~/cs24/lab02/
 ```
 
 ## Step 2: Review compiling and linking with g++
@@ -266,7 +266,7 @@ Reading symbols from ./buggy...done.
 Type "r" for "run", followed by the command line arguments CS16 A CS24 A+ 
 
 (gdb)r CS16 A CS24 A+ CS32 A
-Starting program: /cs/faculty/dimirza/git/cs24-w18-lab-starter-code/lab02/buggy CS16 A CS24 A+ CS32 A
+Starting program: /cs/faculty/dimirza/git/cs24-s18-starter-code/lab02/buggy CS16 A CS24 A+ CS32 A
 This way the program will run until line 23. Normally, you might have put 
 a cout statement right before this line to examine the values of the arrays 
 and any other local variables. With gdb we can do this at the gdb command 
@@ -294,6 +294,8 @@ courseLetterGrades = {"A", "", "A+", "", "A"}
 numCourses = 3
 result = 2.0750045670802343e-317
 
+```
+
 You will probably see a different set of values for courseGrades and result 
 because these are uninitialzied. But the other variables should have the
 same values as shown above. We can immediately spot that something went 
@@ -306,10 +308,11 @@ print statements.
 
 Let's continue for now. Type "l" for list to see the code you are about to execute.
 
+```
 (gdb) l
 18	    courseNames[i-1] = string(argv[i]);
 19	    courseLetterGrades[i-1] = string(argv[i+1]);
-20	    cout<<courseNames[i-1] << "   "<<courseLetterGrades[i-1]<<endl;
+20	    cout<< courseNames[i-1] << "   "<< courseLetterGrades[i-1]<< endl;
 21	  }
 22	
 23	  assignCourseGrade(numCourses, courseLetterGrades, courseGrades );
@@ -325,6 +328,8 @@ assignCourseGrade (numCourses=2, courseLetterGrades=0x7fffffffde60,
     courseGrades=0x7fffffffdf00) at buggyGPA.cpp:37
 37	    for(int i =0 ; i < numCourses; i++){
 
+```
+
 gdb is showing you the values of all the parameters passed to the 
 assignCourseGrade function! Print the first 5 elements of courseGrades
 
@@ -337,48 +342,53 @@ Use "n" for next to just execute the next line
 (gdb) n
 38	      if(courseLetterGrades[i]=="A" || courseLetterGrades[i]=="A+"){
 
+```
+
 You can run the same gdb command as before by pressing enter. 
 In this case if you press enter you gdb will execute the next command.
 
+```
 (gdb) 
 39	        courseGrades[i] = 4.0;
 
-So, the next line gdb is going to execute is line 40. 
-Enter once more to execute this line and you should be back to the beginning
-of the for loop on line 38
+```
 
+So, the next line gdb is going to execute is line 40. 
+Enter once more to execute this line and you should be back to the beginning of the for loop on line 38
+
+```
 (gdb) 
 37	    for(int i =0 ; i < numCourses; i++){
+```
 
 Now print the 5 elements of courseGrades using the commands we learned before. 
 Is it what you expected?
-
+```
 (gdb) p courseGrades[0]@5
 $3 = {4, 0, 1.3852388523421298e-309, 5.4322263344105125e-312, 0}
-
+```
 Element at index 0 has been set to 4 which is what we expected.
 Now let's run the code until we finish executing the for loop.
 You can do this with until
 
+```
 gdb) until
 62	}
-
+```
 gdb always shows you the next line that will be executed. 
 In this case it is the brace that is at the end of the function. 
 We are still in the function, so you can examine the value of courseGrades again
 
+```
 (gdb)p courseGrades[0]@5
 $4 = {4, 0, 4, 5.4322263344105125e-312, 0}
-
-Notice element at index 1 has been set to 0. If courseLetterGrades was properly populated,
-courseGrades would have had 4.0 at index 1. You can now clearly see the consequence 
-of not having courseGrades properly populated.
-
-
 ```
 
+Notice element at index 1 has been set to 0. If courseLetterGrades was properly populated, courseGrades would have had 4.0 at index 1. You can now clearly see the consequence  of not having courseGrades properly populated.
 
-More about breakpoints: Write command break to put a breakpoint on line 28. Now you have two breakpoints set - this new one is number 2. You can disable it by entering "disable 2" (you could also use dis 2). And you can enter "enable 2" (or "ena 2") to enable the breakpoint again, and "delete 2" (or "d 2") to delete the breakpoint.
+
+
+More about breakpoints: Put a breakpoint on line 28. Now you have two breakpoints set - this new one is number 2. You can disable it by entering "disable 2" (you could also use dis 2). And you can enter "enable 2" (or "ena 2") to enable the breakpoint again, and "delete 2" (or "d 2") to delete the breakpoint.
 
 To run your code until the next breakpoint is reached type (c) for continue.
 
@@ -394,11 +404,11 @@ terminate called after throwing an instance of 'std::logic_error'
   what():  basic_string::_M_construct null not valid
 Aborted (core dumped)
 ```
+
 Your program may or may not crash but if you see the same error message as I have
 then it has clearly crashed! If you are not able to reproduce the crash don't worry, just read on.
 
-Notice that when your program crashes, the error message C++ throws at you doesn't 
-give any clues about which line of code caused it.
+Notice that when your program crashes, the error message C++ throws at you doesn't give any clues about which line of code caused it.
 
 Now let's try running the program in gdb
 
@@ -428,6 +438,8 @@ terminate called after throwing an instance of 'std::logic_error'
 Program received signal SIGABRT, Aborted.
 0x00007ffff719e8df in raise () from /lib64/libc.so.6
 
+```
+
 Looks like an exception was raised somewhere in the C++ library. The std library
 is always correct. We need to find which line of our code caused this 
 behavior.
@@ -435,6 +447,7 @@ behavior.
 Use the bt (backtrace) command to trace the sequence of function calls that
 resulted in this state
 
+```
 (gdb) bt
 #0  0x00007ffff719e8df in raise () from /lib64/libc.so.6
 #1  0x00007ffff71a04da in abort () from /lib64/libc.so.6
@@ -453,11 +466,13 @@ std::allocator<char> >::basic_string(char const*, std::allocator<char> const&) (
 from /lib64/libstdc++.so.6
 #9  0x0000000000400e99 in main (argc=2, argv=0x7fffffffe148) at buggyGPA.cpp:19
 (gdb)
+```
 
 Ah! Looks like the culprit is line 19 of buggyGPA.cpp. That's the line of code
 that resulted in the chain of events leading up to the crash.
 Use the list command to examine the code around line 19 of buggyGPA.cpp
 
+```
 (gdb) l buggyGPA.cpp:19
 
 15	  int numCourses = int(argc/2);
@@ -467,6 +482,7 @@ Use the list command to examine the code around line 19 of buggyGPA.cpp
 19	    courseLetterGrades[i-1] = string(argv[i+1]); // here is the line that caused the crash
 20	    cout<<courseNames[i-1] << "   "<<courseLetterGrades[i-1]<<endl;
 21	  }
+```
 
 Line 19 is: courseLetterGrades[i-1] = string(argv[i+1]);
 Without gdb identifying that this exact line of code caused the program to crash would have 
@@ -477,6 +493,7 @@ and retrieve the values of your local variables right before line 19 was execute
 
 Use the up command to go back 9 calls to the moment when line 19 was about to be executed.
 
+```
 (gdb) up 9
 #9  0x0000000000400e99 in main (argc=2, argv=0x7fffffffe148) at buggyGPA.cpp:19
 19	    courseLetterGrades[i-1] = string(argv[i+1]);
@@ -485,25 +502,23 @@ You can now examine the value of the local variable i
 
 (gdb) p i
 $1 = 1
+```
 
 Look at line 19 again. If i is 1 then i+1 is 2. This means argv[i+1] is an out of
 bound access (argv only has two elements). You can actually print the value of
 argv[i+1] 
 
+```
 (gdb) p argv[i+1]
 $2 = 0x0
+```
 
 In my case it was null - an invalid parameter to the constructor of string class.
 This caused my program to crash!
 
 
-```
 
-
-Ok... Now you have all the tools you need in order to find where the bugs in this program are. Your program should be able to handle upto 5 input courses although you may modify it to handle information about an arbitrary number of inputs
-
-
-As you find the bugs, modify buggyGPA.cpp to correct for them. Everytime you change the file, you should recompile it and then run.
+Ok... Now you have a new tool to find bugs in your programs. Debug buggyGPA.cpp so that it can handle upto 5 (or more) input courses. Everytime you change the file, you should recompile it and then run.
 
 
 ## Step 6: Show off your work and get credit for this lab
@@ -511,24 +526,9 @@ As you find the bugs, modify buggyGPA.cpp to correct for them. Everytime you cha
 Get your mentor's attention to inspect your work.
 
 
-## Step 7: Submit your code on submit.cs
+## Step 7: Submit your code on gradescope
 
-* Both you and your partner should join the same group on submit.cs
-* To submit your code type:
 
-```
-~submit/submit -p 929 buggyGPA.cpp
-```
 
 ## Evaluation and Grading
-
-You must accomplish the following to earn full credit [50 total points] for this lab:
-
-[50 points]:  
-
-* buggyGPA.cpp is saved, it has your name(s) in a comment at the top, and it compiles and executes properly. Moreover, you can tell the TA where the error happens in buggyGPA.cpp, and can demonstrate how to use make. 
-
-* correct program turned in via submit
-
-
 
