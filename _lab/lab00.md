@@ -2,7 +2,7 @@
 layout: lab
 num: lab00
 ready: false
-desc: "Getting started with C++ functions and github's web interface"
+desc: "Getting started"
 assigned: 2018-04-03 11:00:00.00-7
 due: 2018-04-03 23:59:00.00-7
 ---
@@ -12,66 +12,53 @@ due: 2018-04-03 23:59:00.00-7
 
 Your first lab for this week is an introduction to your mentor group and programming on CSIL and in the Computer Science (Phelps) lab. The intended outcomes are:
 
-* Selecting a mentor and pair programming partner
-* Writing a simple C++ program
-* Learning about github's web interface
+* Get to know the course staff and help us get to know you
+* Learn about the tools we will be using in this class: gradescope and github
+
 
 This lab must be completed INDIVIDUALLY. In the subsequent labs you are encouraged to work with your programming partner.
 
-## Get to know your mentor and programming partner:
+# Tell us about yourself for 50 points
 
-* Take note of your course mentor and pair programming partner at  [mentor group](/info/mentor_groups/). Get to know your mentor:
+Please fill out the following form to tell us about yourself. We will use the information to pair you with your preferred programming partner or someone in the class with the similar skill levels as your self. Here is the link to the form [http://bit.ly/CS24-ic00-AboutYou](http://bit.ly/CS24-ic00-AboutYou)
 
-	* Read your [mentor's profile] (/info/staff/)
-	* Meet them during the open lab hours on Thursday or Friday. The exact time and location can be found at [lab and office hours schedule](/info/schedule/)
-	* Contact your mentor via Piazza or email to confirm your meeting in Week1. During your meeting, set up a time when you can regularly meet for the remainder of the quarter. Your mentor will send you feedback on your work to your umail account. Make sure your line of communication with your mentor is working and talk about any preferences you may have. Your mentor will be your first point of contact for the quarter!
+Completing all the answers in the form carries 100 points. Answer all questions to get credit.
 
-* Connect with your programming partner via email or in person and determine times when you can work together outside the prescribed lab hours. You will need to set aside 2 to 3 hours each week to work on assignments. Get your partner's contact: phone number or email.
+# Get setup with the tools for this course
 
+## Create an CoE account if you don't have one already
 
-
-
-
-
-
-## Create an Engineering (CoE) Account, a github account and sign into our class github organization <a name="step1"></a>
-
-### Create an CoE account if you don't have one already
-
-To log in to the machines in the Computer Science labs, or to connect remotely, you will need a **College of Engineering account**.
-
-You can create an account online at <a href="https://accounts.engr.ucsb.edu/create" target="_blank">https://accounts.engr.ucsb.edu/create</a>.
+We encourage you to complete all programming assignments by logging in to the machines in the Computer Science labs, or to connect remotely. To do this you will need a **College of Engineering account**. You can create an account online at <a href="https://accounts.engr.ucsb.edu/create" target="_blank">https://accounts.engr.ucsb.edu/create</a>.
 
 If you are enrolled in <i>any</i> CoE course this quarter (including CS24), you can create your account immediately. If you are not, you will need to contact the ECI Help Desk at <a href="mailto:help@engineering.ucsb.edu">help@engineering.ucsb.edu</a>.
 
-### Create a github account
+## Get setup with github
 
-Sign up for a free account on [Github](https://github.com/). Use your official ucsb email when signing up. Sign into [Github](https://github.com/) with your github account.
+We will be using github.com in this course.   We have created an organization called ucsb-cs24-s18 on github.com where you can create repositories (repos) for your assignments in this course.   The advantage of creating private repos under that organization is that the course staff (your instructors, TAs and mentors) will be able to see your code and provide you with help, without you having to do anything special.
 
-### Sign up to be added into our class organization
+To join this organization, you need to do three things.
 
-To join our github organization, follow these easy steps:
+1. If you don't already have a github.com account, create one on the "free" plan. Visit [www.github.com](www.github.com)
 
-* click on this link:[ https://ucsb-cs24-w18-signup.herokuapp.com/]( https://ucsb-cs24-w18-signup.herokuapp.com/). You should see the following welcome message (with the organization stated as ucsb-cs24-w18), click on the blue "sign in with Github" button:
+2. If you don't already have your @umail.ucsb.edu email address associated with your github.com account. go to "settings", add that email, and confirm that email address.
 
-![welcome](/lab/lab00/enter-org/pic1.png){:height="250px"}
+3. Visit [our Github Sign Up Tool](https://ucsb-cs-github-linker.herokuapp.com/), login with your github.com account, click "Home", find this course (CS24-S18), and click the "join course button".   That will automatically send you an invitation to join the course organization on github. 
 
-* The next screen asks you to authorize our app to add you to our class organization. Click on the green "authorize application" button.
+4. Accept the invitation that appears in your browser (from step 3) or log into your account on [www.github.com](www.github.com) to accept the invitation.
 
-![authorize](/lab/lab00/enter-org/pic2.png){:height="500px"}
+## Get setup with gradescope
 
-* Enter your github and you should see the following screen that shows you were successfully added to our class organization:
+We will use gradescope to grade all your homeworks, exams and lab/programming assignments. You should have received an email notification with instructions about logging into gradescope.
 
-![success](/lab/lab00/enter-org/pic4.png){:height="500px"}
+Log into our class site: CS24 Spring 2018 and navigate to the lab00 assignment
 
-<hr>
+# Implement and submit a simple C++ program 
 
-## Open a Terminal and write a simple "Hello World" program <a name="step2"></a>
+## Open a Terminal and write a simple "Hello World" program 
 
-Open a <b>terminal window</b>, which will be the environment you use to write, compile, and run your programs.
+Open a **terminal window**, which will be the environment you use to write, compile, and run your programs.
 
-If you are working on your laptop, whether Windows, Mac or Linux, the instructions below
-will tell you how to connect to `csil.cs.ucsb.edu`. For now its okay to connect to that server, however in the future please connect to one of the following machines:
+If you are working on your laptop, whether Windows, Mac or Linux, the instructions below will tell you how to connect to `csil.cs.ucsb.edu`. For now its okay to connect to that server, however in the future please connect to one of the following machines:
 
 * `csil-01.cs.ucsb.edu`
 * `csil-02.cs.ucsb.edu`, etc.
@@ -80,7 +67,7 @@ will tell you how to connect to `csil.cs.ucsb.edu`. For now its okay to connect 
 
 You'll get much better performance on those individual machines, because they are much less heavily loaded and have newer hardware, as compared to `csil.cs.ucsb.edu`.
 
-## Create cs24 and lab00 directories<a name="step3"></a>
+## Create cs24 and lab00 directories
 
 Now that your environment is set up, you will need to create a directory that will contain all your work for the course. Then, inside that directory, you will need to create another directory to contain your work for this assignment.
 
@@ -96,86 +83,67 @@ $ mkdir lab00
 $ cd lab00   
 ```
 
-Open an editor of your choice (either vim or emacs)
+Create a new file called <code>hello.cpp</code> using an editor of your choice (either vim or emacs)
 
 Useful links related to emacs
 
-	* <a href="https://www.gnu.org/software/emacs/tour/" target="_blank">emacs tour from the GNU organization (makers of emacs)</a>
+* <a href="https://www.gnu.org/software/emacs/tour/" target="_blank">emacs tour from the GNU organization (makers of emacs)</a>
 
-	* <a href="https://www.gnu.org/software/emacs/refcards/pdf/refcard.pdf" target="_blank">emacs commands - a handy reference card</a>
+* <a href="https://www.gnu.org/software/emacs/refcards/pdf/refcard.pdf" target="_blank">emacs commands - a handy reference card</a>
 
-	* <a href="http://www.jesshamrick.com/2012/09/10/absolute-beginners-guide-to-emacs" target="_blank">a beginner's guide to emacs</a>
-
+* <a href="http://www.jesshamrick.com/2012/09/10/absolute-beginners-guide-to-emacs" target="_blank">a beginner's guide to emacs</a>
 
 Useful information related to <b>vim</b> for UNIX-based OS
 
-	* To customize your vim environment for a better coding experience with C/C++ copy this .vimrc file from the instructor folder to your home folder using the following command:
+* To customize your vim environment for a better coding experience with C/C++ copy this .vimrc file from the instructor folder to your home folder using the following command:
 
-	```
-	cp /cs/faculty/dimirza/all-cs16/cs16-wi17/labs/example_dotvimrc/.vimrc ~/
-	```
+```
+cp /cs/faculty/dimirza/all-cs16/cs16-wi17/labs/example_dotvimrc/.vimrc ~/
+```
 
-	* <a href="http://www.vim.org/about.php" target="_blank">About vim</a>
+* <a href="http://www.vim.org/about.php" target="_blank">About vim</a>
 
-	* <a href="http://tnerual.eriogerg.free.fr/vimqrc.html" target="_blank">vim commands - a handy reference card</a>
+* <a href="http://tnerual.eriogerg.free.fr/vimqrc.html" target="_blank">vim commands - a handy reference card</a>
 
-	* <a href="https://www.fprintf.net/vimCheatSheet.html" target="_blank">another reference cheat sheet for vim</a>
+* <a href="https://www.fprintf.net/vimCheatSheet.html" target="_blank">another reference cheat sheet for vim</a>
 
-
-
-<hr>
-To refresh you may see some [emacs hints](emacs_hints/) and some [vim hints](vim_hints/).
-
-This assignment only needs you to write a program that prints out two lines on the display, and nothing else. <b>The output should look exactly as follows</b> (no space before or after each line, except the 2 newlines):
+This assignment only needs you to write a program in hello.cpp that prints out two lines on the display, and nothing else. **The output should look exactly as follows** (no space before or after each line, except the 2 newlines):
 
 ```
 Hello, world!
 I am ready for CS24!
 ```
 
-## Submit your program for grading <a name="step7"></a>
+## Create a repo on github in our class organization
 
-Once you are satisfied that your program is correct, then it's time to submit it.
+For this lab and all subsequent programming assignments, you should start by creating a repo in the ucsb-cs24-s18 organization following these steps
 
-<strong>Please remember that you must submit the program to obtain any credit for the assignment; just completing the program is not enough.</strong>
+* Navigate to your dashboard on [www.github.com](www.github.com). From the left drop down menu, select the class organization as shown in the figure below:
+![select-org](/lab/lab00/select-org.png){:height="500px"}
 
-Join the class CS24_w18 on submit.cs.
+* Click on the green "New repository" button to create a new repository.
 
-Submit using the command:
+* Type the name of your repo following the naming convention lab00_your-github-username. For example if your github username is jgaucho, you should name your repo as lab00_jgaucho. If you are working with a partner, include your partner's github username in the name of the repo. e.g. lab00_jgaucho_alily
 
-```
-$ ~submit/submit -p 918 hello.cpp
-```
+* Select the "Private" visibility option so that other students in the org cannot view your code.
 
-<hr>
-
-## Explore github's web interface <a name="step9"></a>
-
-Motivation for using github: When developing large programs, it is very useful to save working versions of your code that you can always revert to. Trying to do this manually often leads to total chaos!! That's why professional programmers use some kind of version control system (VCS). We will use a popular VCS called Git. With Git all versions of your code will be available to you and your collaborators (in later labs this would be your pair-programming partner) anytime, anywhere! It will also help the course staff view your progress as you work on the assignments.
-
-* Before we begin, read this article to get an overview of git: [https://ucsb-cs56-pconrad.github.io/topics/git_overview/](https://ucsb-cs56-pconrad.github.io/topics/git_overview/)
-
-* You will now create a git repo. The concept of a repo was explained in the article that you just read. New projects always start with this step. Since Github promotes "open source" projects, repos created under your default github account are *public*. This means that they are visible to everyone on the internet. However, for this class your assignments have to be "closed source", and not open to your classmates and others on the internet. This requires that you create *private* repos. These are repos that are only visible to you, your pair-partner and the instructional staff. You can only create private repos within our class organization on github: ucsb-cs24-sp17. So, the next step is to join our class organization.
-
-* Read this article on [creating a github repo under an organization](https://ucsb-cs16.github.io/topics/github_com_create_private_repo_under_org/). Open a browser and navigate to our class organization on github: [ucsb-cs24-w18](https://github.com/orgs/ucsb-cs24-w18/dashboard). Click on the green button that says "New repository", and follow the steps from the ["creating a github repo under an organization"](https://ucsb-cs24.github.io/topics/github_com_create_private_repo_under_org/) article, to create a PRIVATE repo containing only a README.md and a .gitignore. See screenshot below:
+* Add the C++ .ignore option from the frop down menu and click on "Create repository". See screenshot below.
 
 ![new-repo](/lab/lab00/enter-org/pic5.png){:height="500px"}
 
 
-Your repo name should be lab00_your-github-username. For example if your github username is jgaucho, you should name your repo as lab00_jgaucho. Make sure you select the PRIVATE option when creating your repo.
+## Upload your code using github's web interface 
 
-* Check to see if you have the files: README.txt and .gitignore in your repo. If you don't see these files, contact an instructor or ask for help on Piazza. To learn more about the .gitignore, read this article: [About gitignore](https://ucsb-cs56-pconrad.github.io/topics/git_gitignore/)
-
-* Use github's web interface to edit the README file. In the README, add your and your partners name and perm number. If you don't know how to do this yet, wait until I demonstrate it in the next lecture. You may proceed to the next step
-
-* Upload your hello.cpp file. To do this step you should be physically present on a lab machine or in CSIL where you have access to a web browser and a local copy of your hello.cpp program. On your web browser, navigate to your repo on github. If your repo name is lab00_jgaucho, the link to the repo is: https://github.com/ucsb-cs24-w18/lab00_jgaucho. Click on the "Upload files" button as shown below.
-
-![git-file-upload](/lab/lab00/git-repo-pic_ink-upload.jpg){:height="500px"}
-
-<p>You should see the following screen:</p>
-
-![git-upload-hello](/lab/lab00/upload-hello-cpp.png){:height="500px"}
+* Upload your hello.cpp file to the new repo you created in the previous step. To do this, you should be physically present on a lab machine or in CSIL where you have access to a web browser and a local copy of your hello.cpp program. On your web browser, navigate to your repo on github. Click on the "Upload files" button.
 
 * Now either drag and drop the "hello.cpp" file from your machine or use the "Choose your files" option to browse through your local directory and upload the file. Then press the green "Commit new files" button. Navigate back to your repo to see that the hello.cpp file is correctly listed along with the other files. Click on it and you should see your code on github's web interface. Continue to explore the web interface of your github repo. For example, try clicking on the "commits" link in your repo. What does that show you and what do you think it means?
 
-Congratulations on completing your introductory exercise to github. We will continue to explore git in the subsequent assignments.
+
+## Submit your program for grading to gradescope
+
+Once you are satisfied that your program is correct, then it's time to submit it. You can submit your program to gradescope by either directly uploading your hello.cpp file or by submitting your code on github. We recommend the second option for future labs, so be sure to try it out
+
+<strong>Please remember that you must submit the program to obtain any credit for the assignment; just completing the program is not enough.</strong>
+
+
+Congratulations on completing the workflow for completing a programming assignment using the tools that we will be using for this class aka: gradescope and github. In the next labs we will integrate using the command line interface of github in this workflow
