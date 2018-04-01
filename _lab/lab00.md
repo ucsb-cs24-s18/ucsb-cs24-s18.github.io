@@ -1,7 +1,7 @@
 ---
 layout: lab
 num: lab00
-ready: false
+ready: true
 desc: "Getting started"
 assigned: 2018-04-03 11:00:00.00-7
 due: 2018-04-03 23:59:00.00-7
@@ -18,15 +18,15 @@ Your first lab for this week is an introduction to your mentor group and program
 
 This lab must be completed INDIVIDUALLY. In the subsequent labs you are encouraged to work with your programming partner.
 
-# Tell us about yourself for 50 points
+# Tell us about yourself 
 
 Please fill out the following form to tell us about yourself. We will use the information to pair you with your preferred programming partner or someone in the class with the similar skill levels as your self. Here is the link to the form [http://bit.ly/CS24-ic00-AboutYou](http://bit.ly/CS24-ic00-AboutYou)
 
-Completing all the answers in the form carries 100 points. Answer all questions to get credit.
+Answer all the questions in the form to earn credit for this part (50 points). 
 
 # Get setup with the tools for this course
 
-## Create an CoE account if you don't have one already
+## Create a CoE account if you don't have one already
 
 We encourage you to complete all programming assignments by logging in to the machines in the Computer Science labs, or to connect remotely. To do this you will need a **College of Engineering account**. You can create an account online at <a href="https://accounts.engr.ucsb.edu/create" target="_blank">https://accounts.engr.ucsb.edu/create</a>.
 
@@ -98,7 +98,7 @@ Useful information related to <b>vim</b> for UNIX-based OS
 * To customize your vim environment for a better coding experience with C/C++ copy this .vimrc file from the instructor folder to your home folder using the following command:
 
 ```
-cp /cs/faculty/dimirza/all-cs16/cs16-wi17/labs/example_dotvimrc/.vimrc ~/
+cp /cs/faculty/dimirza/vim-configuration/example_dotvimrc/.vimrc ~/
 ```
 
 * <a href="http://www.vim.org/about.php" target="_blank">About vim</a>
@@ -141,9 +141,9 @@ For this lab and all subsequent programming assignments, you should start by cre
 
 ## Submit your program for grading to gradescope
 
-Once you are satisfied that your program is correct, then it's time to submit it. You can submit your program to gradescope by either directly uploading your hello.cpp file or by submitting your code on github. We recommend the second option for future labs, so be sure to try it out
+It's time to submit your program to gradescope. Go to [www.gradescope.com](www.gradescope.com). Log into our class website. Select this assignment. Then click on the "Submit" button on the bottom right corner.
 
-<strong>Please remember that you must submit the program to obtain any credit for the assignment; just completing the program is not enough.</strong>
+You will be given the option of directly uploading files from your local machine or submitting the code in a github repo. We recommend you try out both options. In the future, we will insist that you maintain all your code in github repos and submit via github. This will avoid discrepancies between the versions of your code that our staff sees on github and the one you submitted for grading,
 
 
-Congratulations on completing the workflow for completing a programming assignment using the tools that we will be using for this class aka: gradescope and github. In the next labs we will integrate using the command line interface of github in this workflow
+Congratulations on completing the workflow for CS24 programming assignments using the tools that we will be using for this class aka: gradescope and github. In the next labs we will integrate the command line interface of github into this workflow
