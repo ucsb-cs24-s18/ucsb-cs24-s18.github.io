@@ -143,7 +143,8 @@ For this lab and all subsequent programming assignments, you should start by cre
 
 It's time to submit your program to gradescope. Go to [www.gradescope.com](www.gradescope.com). Log into our class website. Select this assignment. Then click on the "Submit" button on the bottom right corner.
 
-You will be given the option of directly uploading files from your local machine or submitting the code in a github repo. We recommend you try out both options. In the future, we will insist that you maintain all your code in github repos and submit via github. This will avoid discrepancies between the versions of your code that our staff sees on github and the one you submitted for grading,
+You will be given the option of directly uploading files from your local machine or submitting the code in a github repo. We recommend that you submit via github as shown in the figure below. This will ensure that our staff sees the version of the code that you submitted for grading on github.
 
+![submit](/lab/lab00/enter-org/gradescope-submission.png){:height="500px"}
 
-Congratulations on completing the workflow for CS24 programming assignments using the tools that we will be using for this class aka: gradescope and github. In the next labs we will integrate the command line interface of github into this workflow
+Congratulations on completing the workflow for CS24 programming assignments using the tools that we will be using in this class i.e. gradescope and github. In the next labs we will integrate the command line interface of github into this workflow
