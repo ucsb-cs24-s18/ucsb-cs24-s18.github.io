@@ -20,13 +20,13 @@ For hw, lab and exam schedule, please check the [assignment calendar](/info/cale
 ## Grade breakup by evaluation component
 
 * Lecture and section partcipation: 2%
-* Homeworks/Quizzes: 8%
+* Homeworks: 8%
 * Lab assignments: 20%
 * Projects: 20%
-* Midterm Exam: 20%
+* Midterm Exams: 20%
 * Final Examination : 30%
 
-Quizzes may occur at anytime, announced or unannounced. Missed quizzes may not be made up.<br />
+
 Thus <strong>attendance is required</strong>, and <strong>reading the assigned readings is required.</strong>
 
 ## Grade assignment policy
@@ -105,8 +105,6 @@ Thus <strong>attendance is required</strong>, and <strong>reading the assigned r
 * Converting from binary to decimal, octal, and hex, and back again&mdash;and how this relates to how C++ programs store various kinds of data in memory.
 * The basic principles of recursion, and some idea of when a recursive solution is appropriate.
 
-
-## Course policies <a name="policies"></a>
 
 
 # Course objectives

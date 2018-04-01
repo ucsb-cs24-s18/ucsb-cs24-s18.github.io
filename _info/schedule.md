@@ -1,13 +1,13 @@
 ---
-title: Schedule - Lecture, lab, office hours
+title: Lecture, lab, office hours
 desc: "Lecture, open labs, office hours, TA office location"
 layout: default
 ---
 
 # Schedule <a name="schedule"></a>
 
-* **Lecture**: Mon and Wed 2:00pm-3:15pm IV Theatre , ATTENDANCE REQUIRED.
-* **Lab**:(50 minute discussion sections) Mondays starting at 9am, 10am, 11am, noon PHELPS 3525, ATTENDANCE REQUIRED.
+* **Lecture**: Mon and Wed 9:30am-10:45am CHEM 1171, ATTENDANCE REQUIRED.
+* **Lab**:(50 minute discussion sections) Tuesdays starting at 3p, 4p, 5p, 6p in PHELPS 3525, ATTENDANCE REQUIRED.
 
 * **Open labs**: All open labs will be held in Phelps 3525. Please see [the detailed open lab schedule](/info/cs24_open_lab_hours/)
 

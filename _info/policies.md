@@ -6,6 +6,13 @@ ready: true
 
 # Course Policies<a name="policy"></a>
 
+## Makeups for exams
+
+* Makeups on exams will only be given if there is an emergency situation that you could not predict or avoid including but not limited to major illness
+
+* No makeups will be given if you have a conflict with any of the exams 
+for this course. Please check for conflicts with the final!
+
 
 ## Disabled Students Program (DSP)
 UCSB provides academic accommodations to students with disabilities. Students with disabilities are responsible for ensuring that the Disabled Students Program (DSP) is aware of their disabilities and for providing DSP with appropriate documentation. DSP is located at 2120 Student Resource Building and serves as the campus liaison regarding issues and regulations related to students with disabilities. The
@@ -110,8 +117,7 @@ You may NOT:
 The policy is simple, and is based on the idea that the primary purpose of the deadlines is to allow the TA manage his/her workload. The number of labs in this course requires that he/she not have to do "context switching" between grading different labs. All labs must be graded in one sitting, or he/she just won't be able to keep up with the workload.
 So:
 * If you want your work to be graded without penalty, turn it in on time.
-* If you turn in your lab late, you RISK GETTING A ZERO.
-* We will grade late labs ONLY if it creates no extra inconvenience for the graders, and we WILL impose a penalty between 10-20% (see the individual grading rubrics for the labs.)
+* If you turn in your lab late, you RISK GETTING A ZERO. However, we will use your best submission until grades are uploaded to gauchospace.
 * There is NO GUARANTEE that late labs will be graded at all. The TA will simply start work at some point after the deadline, and grade until he/she is finished. At that time, he/she will "close the books" on that particular lab, and any work not submitted at that time will NOT be considered.
 
 
