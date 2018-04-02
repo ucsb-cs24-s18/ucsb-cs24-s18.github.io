@@ -10,10 +10,10 @@ due: 2018-04-03 23:59:00.00-7
 
 # Introduction
 
-Your first lab for this week is an introduction to your mentor group and programming on CSIL and in the Computer Science (Phelps) lab. The intended outcomes are:
+Your first lab for this week is an introduction to programming on CSIL and tools for this course. The intended outcomes are:
 
 * Get to know the course staff and help us get to know you
-* Learn about the tools we will be using in this class: gradescope and github
+* Learn about the tools you will be using in this class: gradescope and github
 
 
 This lab must be completed INDIVIDUALLY. In the subsequent labs you are encouraged to work with your programming partner.
@@ -50,7 +50,7 @@ To join this organization, you need to do three things.
 
 We will use gradescope to grade all your homeworks, exams and lab/programming assignments. You should have received an email notification with instructions about logging into gradescope.
 
-Log into our class site: CS24 Spring 2018 and navigate to the lab00 assignment
+Log into our class site on[www.gradescope.com](www.gradescope.com): CS24 Spring 2018 and navigate to the lab00 assignment
 
 # Implement and submit a simple C++ program 
 
@@ -146,5 +146,7 @@ It's time to submit your program to gradescope. Go to [www.gradescope.com](www.g
 You will be given the option of directly uploading files from your local machine or submitting the code that is in a github repo. We recommend that you choose the latter option as shown in the figure below. This will ensure that our staff sees the version of code on github that you submitted to gradescope.
 
 ![submit](/lab/lab00/enter-org/gradescope-submission.png){:height="500px"}
+
+You should receive 50 points on this part of the assignment.
 
 Congratulations on completing the workflow for CS24 programming assignments using the tools that we will be using in this class i.e. gradescope and github. In the next labs we will integrate the command line interface of github into this workflow
