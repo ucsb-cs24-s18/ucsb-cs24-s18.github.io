@@ -14,9 +14,11 @@ annotatedready: true
 
 # Topics
 
-## Course overview
-* C++
-* Data structures
-* Complexity analysis
-* and ...github
+* Course overview 
+	- why study data structures, C++ and git?
+	- what are the goals of this class?
+* Intro to Object Oriented Programming
+* C++ classes - a way to describe similar objects
+* Instances of a class (aka objects) vs classes
+
 
