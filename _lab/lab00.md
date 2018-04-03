@@ -65,6 +65,18 @@ If you are working on your laptop, whether Windows, Mac or Linux, the instructio
 * etc.
 * through `csil-48.cs.ucsb.edu`
 
+If you are on a Mac laptop, open a terminal and type the 
+following ssh command to connect to one of the servers remotely
+
+```
+ssh -X yourCoEaccount@csil-02.cs.ucsb.edu
+```
+If you are using a Windows, you will need to install the program
+[MobaXterm](https://mobaxterm.mobatek.net/)
+
+For more information on how to ssh, please refer to Step 1 of lab00 from
+cs16: [https://ucsb-cs16-s18-mirza.github.io/lab/lab00/](https://ucsb-cs16-s18-mirza.github.io/lab/lab00/)
+
 You'll get much better performance on those individual machines, because they are much less heavily loaded and have newer hardware, as compared to `csil.cs.ucsb.edu`.
 
 ## Create cs24 and lab00 directories
