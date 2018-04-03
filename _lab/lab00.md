@@ -150,6 +150,7 @@ For this lab and all subsequent programming assignments, you should start by cre
 
 * Now either drag and drop the "hello.cpp" file from your machine or use the "Choose your files" option to browse through your local directory and upload the file. Then press the green "Commit new files" button. Navigate back to your repo to see that the hello.cpp file is correctly listed along with the other files. Click on it and you should see your code on github's web interface. Continue to explore the web interface of your github repo. For example, try clicking on the "commits" link in your repo. What does that show you and what do you think it means?
 
+* In the subsequent labs we will integrate using the git command line into our workflow. You may find this [cheatsheet of git commands](https://education.github.com/git-cheat-sheet-education.pdf) handy.
 
 ## Submit your program for grading to gradescope
 
