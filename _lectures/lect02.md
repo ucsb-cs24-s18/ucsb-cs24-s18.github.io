@@ -1,6 +1,6 @@
 ---
 num: "lect02"
-desc: "C++ classes - converting a procedural implementation to a OOP style program"
+desc: " Intro to git, converting procedural programs to OOP (lab01)"
 ready: true
 pdfurl:  /lectures/CS24_Lecture2.pdf
 annotatedpdfurl: /lectures/CS24_Lecture2_ann.pdf

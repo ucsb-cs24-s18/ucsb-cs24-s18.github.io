@@ -1,7 +1,7 @@
 ---
 num: "lect01"
 lecture_date: 2018-04-02
-desc: "Course overview, intro to C++ classes (lab01)"
+desc: "Course overview, intro to C++ classes"
 ready: true
 pdfurl: /lectures/CS24_Lecture1.pdf
 annotatedpdfurl: /lectures/CS24_Lecture1_ann.pdf
