@@ -1,7 +1,7 @@
 ---
 num: "lect02"
 desc: "C++ classes - converting a procedural implementation to a OOP style program"
-ready: false
+ready: true
 pdfurl:  /lectures/CS24_Lecture2.pdf
 annotatedpdfurl: /lectures/CS24_Lecture2_ann.pdf
 annotatedready: false

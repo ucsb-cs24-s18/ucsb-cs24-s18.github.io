@@ -17,6 +17,9 @@ By the time you have completed this lab, you should be able to
 
 Please note that this lab was updated on Jan 29 at 12:14 am. If you completed the lab before, note that the gdb exercise has changed. You must redo it.
 
+# Lab partners and mentor groups
+TBD: Need to publish links to the excel sheet with information about lab partners and mentor groups.
+
 # Step by Step Instructions
 
 ## Step 1: Choose initial roles, create a directory and get the starter code for this lab
