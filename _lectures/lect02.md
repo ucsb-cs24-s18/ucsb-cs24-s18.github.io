@@ -4,12 +4,14 @@ desc: " Intro to git, converting procedural programs to OOP (lab01)"
 ready: true
 pdfurl:  /lectures/CS24_Lecture2.pdf
 annotatedpdfurl: /lectures/CS24_Lecture2_ann.pdf
-annotatedready: false
+annotatedready: true
 lecture_date: 2018-04-04
 ---
 
 
 # Code from lecture:
+
+[https://github.com/ucsb-cs24-s18/cs24-s18-lectures/tree/master/lec-02](https://github.com/ucsb-cs24-s18/cs24-s18-lectures/tree/master/lec-02)
 
 # Topics
 
