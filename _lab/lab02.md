@@ -387,11 +387,15 @@ We are still in the function, so you can examine the value of courseGrades again
 $4 = {4, 0, 4, 5.4322263344105125e-312, 0}
 ```
 
-Notice element at index 1 has been set to 0. If courseLetterGrades was properly populated, courseGrades would have had 4.0 at index 1. You can now clearly see the consequence  of not having courseGrades properly populated.
+Notice element at index 1 has been set to 0. If courseLetterGrades was properly populated, courseGrades would have had 4.0 at index 1. 
+
+You can now clearly see the consequence  of not having courseGrades properly populated.
 
 
 
-More about breakpoints: Put a breakpoint on line 28. Now you have two breakpoints set - this new one is number 2. You can disable it by entering "disable 2" (you could also use dis 2). And you can enter "enable 2" (or "ena 2") to enable the breakpoint again, and "delete 2" (or "d 2") to delete the breakpoint.
+More about breakpoints: Put a breakpoint on line 28. Now you have two breakpoints set - this new one is number 2. You can disable it by entering "disable 2" (you could also use dis 2). 
+
+And you can enter "enable 2" (or "ena 2") to enable the breakpoint again, and "delete 2" (or "d 2") to delete the breakpoint.
 
 To run your code until the next breakpoint is reached type (c) for continue.
 
