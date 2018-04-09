@@ -13,6 +13,10 @@ lecture_date: 2018-04-11
 
 # Topics
 
+## Makefiles and gdb
+* We will split our implementation of the die Game from the previous class into three files  - header file (contains only the class definition), source file (contains the implementation of the class methods - no main), test file - uses the ADT. (More practice on this in lab02)
+* Refer to the [gdb cheat sheet](http://darkdust.net/files/GDB%20Cheat%20Sheet.pdf) (handout given in class). More practice in lab 02.
+
 ## Operator overloading - Pages 63 - 80 in the book
 
 We will start with a basic implementation of the point class from Chapter 2. We will then augment the class with binary operator functions. By **overloading** certain operators like ==, we can now write code as shown below:
