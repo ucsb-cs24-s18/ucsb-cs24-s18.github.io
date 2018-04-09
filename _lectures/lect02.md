@@ -1,6 +1,6 @@
 ---
 num: "lect02"
-desc: " Intro to git, converting procedural programs to OOP (lab01)"
+desc: " Intro to git"
 ready: true
 pdfurl:  /lectures/CS24_Lecture2.pdf
 annotatedpdfurl: /lectures/CS24_Lecture2_ann.pdf
@@ -17,8 +17,6 @@ lecture_date: 2018-04-04
 
 * Intro to lab01 
 * Implementing classes: class vs instance, syntax for classes, scope, methods, instance variables
-* We examine the differences and similarities between a procedural implementation and a OOP style program by coding up a game involving rolling a pair of die
-
 * Classes: structs but with methods
 * Accessors and modifiers
 * When to use classes, how many? The dangers of overobjectification (too many classes)

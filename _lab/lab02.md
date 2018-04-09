@@ -336,6 +336,7 @@ assignCourseGrade (numCourses=2, courseLetterGrades=0x7fffffffde60,
 gdb is showing you the values of all the parameters passed to the 
 assignCourseGrade function! Print the first 5 elements of courseGrades
 
+```
 (gdb) p courseGrades[0]@5
 $2 = {0, 0, 1.3852388523421298e-309, 5.4322263344105125e-312, 0}
 
@@ -366,10 +367,12 @@ Enter once more to execute this line and you should be back to the beginning of 
 
 Now print the 5 elements of courseGrades using the commands we learned before. 
 Is it what you expected?
+
 ```
 (gdb) p courseGrades[0]@5
 $3 = {4, 0, 1.3852388523421298e-309, 5.4322263344105125e-312, 0}
 ```
+
 Element at index 0 has been set to 4 which is what we expected.
 Now let's run the code until we finish executing the for loop.
 You can do this with until
@@ -390,7 +393,6 @@ $4 = {4, 0, 4, 5.4322263344105125e-312, 0}
 Notice element at index 1 has been set to 0. If courseLetterGrades was properly populated, courseGrades would have had 4.0 at index 1. 
 
 You can now clearly see the consequence  of not having courseGrades properly populated.
-
 
 
 More about breakpoints: Put a breakpoint on line 28. Now you have two breakpoints set - this new one is number 2. You can disable it by entering "disable 2" (you could also use dis 2). 
@@ -475,7 +477,7 @@ from /lib64/libstdc++.so.6
 (gdb)
 ```
 
-Ah! Looks like the culprit is line 19 of buggyGPA.cpp. That's the line of code
+Looks like the culprit is line 19 of buggyGPA.cpp. That's the line of code
 that resulted in the chain of events leading up to the crash.
 Use the list command to examine the code around line 19 of buggyGPA.cpp
 
