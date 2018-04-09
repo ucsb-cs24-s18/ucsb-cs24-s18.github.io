@@ -1,6 +1,6 @@
 ---
 num: "lect04"
-desc: " Operator overloading, review of references and pointers, intro to pa01"
+desc: " Operator overloading, review of references and pointers (pa01)"
 ready: false
 pdfurl: /lectures/CS24_Lecture4.pdf
 annotatedpdfurl: /lectures/CS24_Lecture4_ann.pdf

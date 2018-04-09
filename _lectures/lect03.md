@@ -1,6 +1,6 @@
 ---
 num: "lect03"
-desc:  "Converting procedural programs to OOP (lab01), more OOP concepts, intro to gdb (lab02)  "
+desc:  "Converting procedural programs to OOP (lab01),  gdb (lab02)  "
 ready: true
 pdfurl: /lectures/CS24_Lecture3.pdf
 annotatedpdfurl: /lectures/CS24_Lecture3_ann.pdf
