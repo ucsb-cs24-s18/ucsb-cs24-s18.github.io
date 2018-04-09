@@ -4,7 +4,7 @@ desc:  "Converting procedural programs to OOP (lab01) "
 ready: true
 pdfurl: /lectures/CS24_Lecture3.pdf
 annotatedpdfurl: /lectures/CS24_Lecture3_ann.pdf
-annotatedready: false
+annotatedready: true
 lecture_date: 2018-04-09
 ---
 
