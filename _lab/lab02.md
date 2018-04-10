@@ -535,7 +535,7 @@ Ok... Now you have a new tool to find bugs in your programs. Debug buggyGPA.cpp 
 ## Step 6: Show off your work and get credit for this lab
 
 Get your mentor's attention to inspect your work.
-
+Before you submit, rename buggyGPA.cpp to gpa.cpp as it is now bug free!
 
 ## Step 7: Submit your code on gradescope
 
