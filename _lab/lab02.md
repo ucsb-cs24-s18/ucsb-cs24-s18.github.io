@@ -1,7 +1,7 @@
 ---
 layout: lab
 num: lab02
-ready: false
+ready: true
 desc: "Using g++, make and gdb"
 assigned: 2018-04-10 11:00:00.00-7
 due: 2018-04-16 23:59:00.00-7
@@ -18,7 +18,9 @@ By the time you have completed this lab, you should be able to
 Please note that this lab was updated on Jan 29 at 12:14 am. If you completed the lab before, note that the gdb exercise has changed. You must redo it.
 
 # Lab partners and mentor groups
-TBD: Need to publish links to the excel sheet with information about lab partners and mentor groups.
+You have been assigned a partner who has reported the same level of confidence and experience in programming as yourself. Find your pair partner and mentor at this link:
+
+[Pair partners and mentor groups for CS24](/info/mentor_groups/)
 
 # Step by Step Instructions
 
@@ -537,7 +539,6 @@ Get your mentor's attention to inspect your work.
 
 ## Step 7: Submit your code on gradescope
 
+Log into your account on [https://www.gradescope.com/](https://www.gradescope.com/) and navigate to our course site: CS24 Spring 2018. Select this assignment. Then click on the "Submit" button on the bottom right corner to make a submission. You will be given the option of  uploading files from your local machine or submitting the code that is in a github repo. Select the second option and select your github repo for this assignment. You should receive 50/50 for a completely correct program.
 
-
-## Evaluation and Grading
 

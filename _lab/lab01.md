@@ -46,7 +46,7 @@ Note that this repo contains the starter code for all labs and programming assig
 
 ## Step 1b: Create a new repo and clone it on your local machine
 
-* Create a repo for this lab just like you did in lab00: To do this, open a browser and navigate to [www.github.com](www.github.com). Log into your github account. From the drop down menu on the left, select our class organization: ucsb-cs24-s18 and proceed to create a new repo using the correct naming convention. You may refer to the instructions in lab00. Also you must set the visibity of your repo to be 'PRIVATE' when creating it. We will not repeat these instructions in subsequent labs.
+* Create a repo for this lab just like you did in lab00: To do this, open a browser and navigate to [https://github.com](https://github.com). Log into your github account. From the drop down menu on the left, select our class organization: ucsb-cs24-s18 and proceed to create a new repo using the correct naming convention. You may refer to the instructions in lab00. Also you must set the visibity of your repo to be 'PRIVATE' when creating it. We will not repeat these instructions in subsequent labs.
 
 * Clone the repo on your local machine: Navigate to your repo on github. If your repo is named lab00_jgaucho, then you have to go to to the link:
 [https://github.com/ucsb-cs24-s18/lab00_jgaucho](https://github.com/ucsb-cs24-s18/lab00_jgaucho). Click on the green "clone or download" button. Then click on the address of your repo as shown in the figure below:
@@ -80,7 +80,7 @@ You should see two files in your current directory: rugfit1.cpp and rugfit2.cpp
 
 ## Step 1d: Push your code to github
 
-In furture labs we will refer to all the steps in this section as "push your code to github". What we really mean is that you sync up a current version of your code with your repo on www.github.com. Follow these steps to sync the current version of your code:
+In furture labs we will refer to all the steps in this section as "push your code to github". What we really mean is that you sync up a current version of your code with your repo on https://github.com. Follow these steps to sync the current version of your code:
 
 * Check the status of the files that changed since the last time you synced your repo. Just type git status as follows:
 
@@ -122,7 +122,7 @@ Type <code>git status</code> again and you should see that two files appear in g
 	git commit -m "Initial version of lab01"
 ```
 
-* Finally sync your latest changes with your repo on www.github.com using git push
+* Finally sync your latest changes with your repo on https://github.com using git push
 
 ```
 	git push origin master
