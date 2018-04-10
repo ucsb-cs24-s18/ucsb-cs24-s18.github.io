@@ -98,7 +98,7 @@ I’ve been told I look intimidating when I’m not talking, but I promise I’m
   
   <tr>
   <td>
-  <img src="/info/mentorPhotos/CS24-S18-Andrew-G.jpg" alt="Andrew Gaut" width="150px" style="float: left; margin: 10px 10px 10px 10px;">
+  <img src="" alt="Andrew Gaut" width="150px" style="float: left; margin: 10px 10px 10px 10px;">
   <b>  Andrew Gaut (Tutor)    </b>
   <i> "Hi! My name is Andrew Gaut and I’m a first year computer science major. My pronouns are he/him/his. I’m really excited to tutor CS24 this quarter! I’ve always loved tutoring and I’ve loved computer science since I started, so I’m really excited to merge my two interests! I hope to help learn how to construct readable and usable classes from scratch. I also want to help students understand the concepts behind the projects and labs in CS24, because the concepts are very important (and integral to finishing the programming assignments). Outside of school, I love to watch and play basketball. I’m a HUGE Lakers fan, so I’m always ready to talk about this year’s MVP Lonzo Ball or basketball in general. If any of you guys are interested in software or hardware projects outside of class, I’ve got some experience with the club IEEE and I’ve done one of their projects. If you have any questions about IEEE, want to talk basketball, or have any questions about CS24 feel free to talk to me or email me (at ajg@umail.ucsb.edu)!
 " </i>
