@@ -95,6 +95,15 @@ I’ve been told I look intimidating when I’m not talking, but I promise I’m
   <i> "Hi! My name is  Abhishek, I am a 4th year CCS Computing and Biology double major. I am super excited to be one of the mentors for CS24. Here’s a little background about me:  In the last few years I have been lucky enough to have worked with leading scientists at Stanford, UCSF and UCSB to uncover the potential of big data in computational biology. My interests lie in deep learning precision interpretation of medical imaging for the clinics. I have been involved with a number of ongoing projects in skin and breast cancer quantitative image analysis. If any of you also like these topics or just want to chat, don’t hesitate to contact me on Piazza :) " </i>
   </td>
   </tr>
+  
+  <tr>
+  <td>
+  <img src="" alt="Andrew Gaut" width="150px" style="float: left; margin: 10px 10px 10px 10px;">
+  <b>  Andrew Gaut (Tutor)    </b>
+  <i> "Hi! My name is Andrew Gaut and I’m a first year computer science major. My pronouns are he/him/his. I’m really excited to tutor CS24 this quarter! I’ve always loved tutoring and I’ve loved computer science since I started, so I’m really excited to merge my two interests! I hope to help learn how to construct readable and usable classes from scratch. I also want to help students understand the concepts behind the projects and labs in CS24, because the concepts are very important (and integral to finishing the programming assignments). Outside of school, I love to watch and play basketball. I’m a HUGE Lakers fan, so I’m always ready to talk about this year’s MVP Lonzo Ball or basketball in general. If any of you guys are interested in software or hardware projects outside of class, I’ve got some experience with the club IEEE and I’ve done one of their projects. If you have any questions about IEEE, want to talk basketball, or have any questions about CS24 feel free to talk to me or email me (at ajg@umail.ucsb.edu)!
+" </i>
+  </td>
+  </tr>
 
 
 </table>
