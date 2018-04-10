@@ -57,9 +57,13 @@ ready: true
 
   <tr>
   <td>
-  <img src="/info/mentorPhotos/CS24-Natasha-Lee.jpeg" alt=" Areg	Nersisyan" width="150px" style="float: left; margin: 10px 10px 10px 10px;">
+  <img src="/info/mentorPhotos/CS24-Natasha-L.jpeg" alt=" Natasha Lee" width="150px" style="float: left; margin: 10px 10px 10px 10px;">
   <b> Natasha Lee (Tutor)    </b>
-  <i> "" </i>
+  <i> "Hi! I’m Natasha, a fourth year Computer Science major here at UCSB. CS8 was the first time I had ever seen code and programmed a “Hello World” program. I remember feeling like everyone around me was way ahead of me or knew exactly what was going on. But that feeling pushed me work extra hard to catch myself up, allowing me to figure out study habits and tools that worked for my pace of learning.
+
+I love being a tutor/mentor because it’s something I wish I had when I first started learning computer science. There are so many resources available online but sometimes you just don’t know where to start. Us tutors can help guide you and point you in the right direction!
+
+I’ve been told I look intimidating when I’m not talking, but I promise I’m really nice! Come talk to me about cs8, future courses, watercoloring, and most importantly the best spots to watch the sunset!" </i>
   </td>
   </tr>
 
