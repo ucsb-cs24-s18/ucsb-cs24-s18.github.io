@@ -17,7 +17,7 @@ ready: true
 
   <tr>
     <td>
-    <img src="/info/mentorPhotos/CS24-W18-Nidhi-Hiremath.jpg"  width="150px"  alt="Nidhi Hiremath" style="float: left; margin: 10px 10px 10px 10px;">
+    <img src="/info/mentorPhotos/CS24-S18-Jinjin.jpg"  width="150px"  alt="Jinjin Shao" style="float: left; margin: 10px 10px 10px 10px;">
     <b> (TA)</b>
     <i> "" </i>
     </td>
