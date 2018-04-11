@@ -32,9 +32,9 @@ ready: true
   </tr>
   <tr>
   
-    <td>
+  <td>
   <img src="/info/mentorPhotos/CS24-S18-Angela-Yung.jpg" alt="Angela Yung" alt="Image" width="150px" style="float: left; margin: 5px 10px 10px 10px;">
-  <b> Angela Yung </b>
+  <b> Angela Yung (Tutor) </b>
   <i> "Hi, I am Angela, and a fourth year CS major here at UCSB. I started mentoring last year and had a lot of fun, so I'm really excited to be a mentor again this quarter! I think data structures is pretty wicked, so CS24 and CS130A have been some of my favorite classes and I hope they can be some of your favorites as well!
 
 Feel free to reach out with any questions, whether they are about labs, classes in general, or internships. I also like puzzles, baking, and going on hikes so I'm always looking for good recommendations." </i>
