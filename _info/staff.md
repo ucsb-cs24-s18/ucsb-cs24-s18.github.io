@@ -17,9 +17,9 @@ ready: true
 
   <tr>
     <td>
-    <img src="/info/mentorPhotos/CS24-W18-Nidhi-Hiremath.jpg"  width="150px"  alt="Nidhi Hiremath" style="float: left; margin: 10px 10px 10px 10px;">
-    <b> (TA)</b>
-    <i> "" </i>
+    <img src="/info/mentorPhotos/CS24-S18-Jinjin-S.jpg"  width="150px"  alt="Jinjin Shao" style="float: left; margin: 10px 10px 10px 10px;">
+    <b> Jinjin Shao(TA)</b>
+    <i> "Hi, I am Jinjin. Welcome to CS24! I’m a PhD student in the Computer Science department. I have been TA for both CS16 and CS24 in the past. Thus I have seen many studnets having fun (So will you) in these introductory C++ classes. In this class, besides C++, you will also learn some basic knowledge about data structures and algorithm, which is so important for your success in the future (not only in the school). I am glad to share my programming experience with you and guide you through this class. You can reach out to me anytime when you need help via email or piazza. I am sure we will have a perfect experience in this course" </i>
     </td>
 </tr>
 <tr>
@@ -57,9 +57,13 @@ ready: true
 
   <tr>
   <td>
-  <img src="/info/mentorPhotos/CS24-Natasha-Lee.jpeg" alt=" Areg	Nersisyan" width="150px" style="float: left; margin: 10px 10px 10px 10px;">
+  <img src="/info/mentorPhotos/CS24-Natasha-L.jpeg" alt=" Natasha Lee" width="150px" style="float: left; margin: 10px 10px 10px 10px;">
   <b> Natasha Lee (Tutor)    </b>
-  <i> "" </i>
+  <i> "Hi! I’m Natasha, a fourth year Computer Science major here at UCSB. CS8 was the first time I had ever seen code and programmed a “Hello World” program. I remember feeling like everyone around me was way ahead of me or knew exactly what was going on. But that feeling pushed me work extra hard to catch myself up, allowing me to figure out study habits and tools that worked for my pace of learning.
+
+I love being a tutor/mentor because it’s something I wish I had when I first started learning computer science. There are so many resources available online but sometimes you just don’t know where to start. Us tutors can help guide you and point you in the right direction!
+
+I’ve been told I look intimidating when I’m not talking, but I promise I’m really nice! Come talk to me about cs8, future courses, watercoloring, and most importantly the best spots to watch the sunset!" </i>
   </td>
   </tr>
 
@@ -89,6 +93,15 @@ ready: true
   <img src="/info/mentorPhotos/CS24-W18-Abhishek-Bhattacharya.jpg" alt=" Abhishek	Bhattacharya" width="150px" style="float: left; margin: 10px 10px 10px 10px;">
   <b>  Abhishek	Bhattacharya (Tutor)    </b>
   <i> "Hi! My name is  Abhishek, I am a 4th year CCS Computing and Biology double major. I am super excited to be one of the mentors for CS24. Here’s a little background about me:  In the last few years I have been lucky enough to have worked with leading scientists at Stanford, UCSF and UCSB to uncover the potential of big data in computational biology. My interests lie in deep learning precision interpretation of medical imaging for the clinics. I have been involved with a number of ongoing projects in skin and breast cancer quantitative image analysis. If any of you also like these topics or just want to chat, don’t hesitate to contact me on Piazza :) " </i>
+  </td>
+  </tr>
+  
+  <tr>
+  <td>
+  <img src="/info/mentorPhotos/CS24-S18-Andrew-G.jpg" alt="Andrew Gaut" width="150px" style="float: left; margin: 10px 10px 10px 10px;">
+  <b>  Andrew Gaut (Tutor)    </b>
+  <i> "Hi! My name is Andrew Gaut and I’m a first year computer science major. My pronouns are he/him/his. I’m really excited to tutor CS24 this quarter! I’ve always loved tutoring and I’ve loved computer science since I started, so I’m really excited to merge my two interests! I hope to help learn how to construct readable and usable classes from scratch. I also want to help students understand the concepts behind the projects and labs in CS24, because the concepts are very important (and integral to finishing the programming assignments). Outside of school, I love to watch and play basketball. I’m a HUGE Lakers fan, so I’m always ready to talk about this year’s MVP Lonzo Ball or basketball in general. If any of you guys are interested in software or hardware projects outside of class, I’ve got some experience with the club IEEE and I’ve done one of their projects. If you have any questions about IEEE, want to talk basketball, or have any questions about CS24 feel free to talk to me or email me (at ajg@umail.ucsb.edu)!
+" </i>
   </td>
   </tr>
 
