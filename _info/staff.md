@@ -17,9 +17,9 @@ ready: true
 
   <tr>
     <td>
-    <img src="/info/mentorPhotos/CS24-S18-Jinjin.jpg"  width="150px"  alt="Jinjin Shao" style="float: left; margin: 10px 10px 10px 10px;">
-    <b> (TA)</b>
-    <i> "" </i>
+    <img src="/info/mentorPhotos/CS24-S18-Jinjin-S.jpg"  width="150px"  alt="Jinjin Shao" style="float: left; margin: 10px 10px 10px 10px;">
+    <b> Jinjin Shao(TA)</b>
+    <i> "Hi, I am Jinjin. Welcome to CS24! I’m a PhD student in the Computer Science department. I have been TA for both CS16 and CS24 in the past. Thus I have seen many studnets having fun (So will you) in these introductory C++ classes. In this class, besides C++, you will also learn some basic knowledge about data structures and algorithm, which is so important for your success in the future (not only in the school). I am glad to share my programming experience with you and guide you through this class. You can reach out to me anytime when you need help via email or piazza. I am sure we will have a perfect experience in this course" </i>
     </td>
 </tr>
 <tr>
