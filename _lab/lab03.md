@@ -59,9 +59,9 @@ g++ -g -o testrest testrest.o intlist.o
 
 We will discuss these files in Step 3. But first some practice.
 
-## Step 2: Practice using linked structures in cpp.sh (Optional)
+## Step 2: Practice using linked structures (Optional)
 
-You can go to the website, "cpp.sh", to practice the linked structures.
+You can go to the website, "www.cpp.sh", to practice the linked structures. (Or any other online cpp shell)
 Type or copy/paste the simple program shown below (in bold) at the code area in cpp.sh (replacing the original sample code):
 
 The structure, 'Node', you just created incorporates a way for an object of its type to point at another object of the same type - it is a self-referential structure. The idea is to point the next field of a Node at another Node, and in this way we can build lists of Nodes, with each one pointing to the next one. We also maintain a separate pointer that points at the first node in the list - often we call this pointer the "list" because it is the way we can access the list's elements.
@@ -89,7 +89,7 @@ You shall see the output in the bottom.
 This node holds a number: 9
 ```
 
-The Node named item stores a 7 as its information, and its next field (a.k.a. "link") does not point to anything. (The address 0 is reserved to mean "no address" in C++, and it is also the value of the symbolic constant NULL that is define in <cstdlib>. Notice that ch calls it nil, but that just means the same thing too.) Usually a node with a null link is used to indicate the end of a linked list.
+The Node named item stores a 9 as its information, and its next field (a.k.a. "link") does not point to anything. (The address 0 is reserved to mean "no address" in C++, and it is also the value of the symbolic constant NULL that is define in <cstdlib>. Notice that ch calls it nil, but that just means the same thing too.) Usually a node with a null link is used to indicate the end of a linked list.
 
 Now let's use the structure to build an actual linked list of three integers. First we will declare a pointer named list to point at the first node in the list (or null if the list is empty). We initialize this pointer to a dynamically allocated first node, using the C++ keyword new (which returns a pointer). The remaining steps will create two more nodes, store values in each node, and properly link them all together as a list. Type or copy/paste the program in bold:
 
@@ -169,6 +169,8 @@ int main()
 }
 ```
 
+One big issue in the above program is memory leak.
+
 Since we dynamically allocated the memory for three nodes, we should free that memory before exiting the program and proceeding to Step 3. Also, according to convention, we set the list pointer to null - it is now an empty list:
 
 ```
@@ -186,6 +188,7 @@ int main()
   
   delete list->next; // Why we free list->next firstly?
   delete list;
+  list = 0; // Can we put this line before delete line?
 }
 ```
 
