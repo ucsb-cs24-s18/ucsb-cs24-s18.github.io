@@ -59,62 +59,81 @@ g++ -g -o testrest testrest.o intlist.o
 
 We will discuss these files in Step 3. But first some practice.
 
-## Step 2: Practice using linked structures in ch (Optional)
+## Step 2: Practice using linked structures in cpp.sh (Optional)
 
-Start ch (just type ch on the command line). Then type or copy/paste the one-line structure definition shown below (in bold) at the ch prompt:
+You can go to the website, "cpp.sh", to practice the linked structures.
+Type or copy/paste the simple program shown below (in bold) at the code area in cpp.sh (replacing the original sample code):
 
-```
-ch> struct Node {int info; Node *next;};
-```
+The structure, 'Node', you just created incorporates a way for an object of its type to point at another object of the same type - it is a self-referential structure. The idea is to point the next field of a Node at another Node, and in this way we can build lists of Nodes, with each one pointing to the next one. We also maintain a separate pointer that points at the first node in the list - often we call this pointer the "list" because it is the way we can access the list's elements.
 
-Normally such a definition would be spread over a few lines for clarity, but ch makes that difficult. Below we ask you to write a couple of one-line loops for the same reason.
-
-The structure you just created incorporates a way for an object of its type to point at another object of the same type - it is a self-referential structure. The idea is to point the next field of a Node at another Node, and in this way we can build lists of Nodes, with each one pointing to the next one. We also maintain a separate pointer that points at the first node in the list - often we call this pointer the "list" because it is the way we can access the list's elements.
-
-But before we do all that, let's just make a Node object, set it's fields, and let ch display its contents:
+But before we do all that, let's just make a Node object, set it's fields, and let us display its contents:
 
 ```
-ch> Node item;
-ch> item.info = 7;
-7
-ch> item.next = 0; // same as NULL
-(nil)
-ch> item
-.info = 7
-.next = (nil)
+#include <iostream>
+
+struct Node {int info; Node *next;};
+
+int main()
+{
+  Node item;
+  item.info = 9;
+  item.next = 0;
+  std::cout << "This node holds a number: " << item.info << "\n";
+}
+```
+
+Now click a "Run" button below the code area.
+You shall see the output in the bottom.
+
+```
+This node holds a number: 9
 ```
 
 The Node named item stores a 7 as its information, and its next field (a.k.a. "link") does not point to anything. (The address 0 is reserved to mean "no address" in C++, and it is also the value of the symbolic constant NULL that is define in <cstdlib>. Notice that ch calls it nil, but that just means the same thing too.) Usually a node with a null link is used to indicate the end of a linked list.
 
-Now let's use the structure to build an actual linked list of three integers. First we will declare a pointer named list to point at the first node in the list (or null if the list is empty). We initialize this pointer to a dynamically allocated first node, using the C++ keyword new (which returns a pointer). The remaining steps will create two more nodes, store values in each node, and properly link them all together as a list. Type or copy/paste the stuff in bold:
+Now let's use the structure to build an actual linked list of three integers. First we will declare a pointer named list to point at the first node in the list (or null if the list is empty). We initialize this pointer to a dynamically allocated first node, using the C++ keyword new (which returns a pointer). The remaining steps will create two more nodes, store values in each node, and properly link them all together as a list. Type or copy/paste the program in bold:
 
 ```
-ch> Node *list = new Node;  // dynamic memory way to create
-ch> list->info = 10; // store 10 in the first list node
-10
-ch> list->next = new Node; // point first node at new one
-0x2445e60
-ch> list->next->info = 20; // store 20 in second node
-20
-ch> list->next->next = 0;  // mark second node as end of list
-(nil)
-ch> Node *temp = list;  // store temporary pointer to list
-ch> list = new Node; // new node to insert first into list
-0x2446550
-ch> list->info = 5;  // store 5 in new first node
-5
-ch> list->next = temp; // connect rest of list to new first
-0x2445c70
+#include <iostream>
+
+struct Node {int info; Node *next;};
+
+int main()
+{
+  Node* list = new Node;
+  list->info = 10;
+  list->next = new Node;
+  list->next->info = 20;
+  list->next->next = 0;
+  
+  Node* temp = list;
+  list = new Node;
+  list->info = 5;
+  list->next = temp;
+  
+  for (Node* n = list; n != 0; n = n->next) {
+    std::cout << "\nThis node is at address: " << n << std::endl;
+    std::cout << "It holds a number: " << n->info << std::endl;
+    std::cout << "Moving to the next node whose address is " << n->next << "..." << std::endl;
+  }
+}
 ```
 
-Of course dealing with list nodes this way is really clumsy. Soon you will learn cleaner ways to build and process a list. For now, see how we can use a for loop and an auxiliary pointer to print the data in such a list:
+Now click a "Run" button below the code area.
+You shall see the output in the bottom.
 
 ```
-ch> Node *n;  // a list pointer to use for loop control
-ch> for (n = list; n != 0; n = n->next) cout << n->info << endl;
-5
-10
-20
+This node is at address: 0x16359e0
+It holds a number: 5
+Moving to the next node whose address is 0x16359a0...
+
+This node is at address: 0x16359a0
+It holds a number: 10
+Moving to the next node whose address is 0x16359c0...
+
+This node is at address: 0x16359c0
+It holds a number: 20
+Moving to the next node whose address is 0...
 ```
 
 The for loop continues as long as n points at a node. At the end of each loop iteration, n is changed to point at the next node in the list. Study this loop, and be sure to understand it - discuss it with your partner to make sure you both understand it.
@@ -122,23 +141,52 @@ The for loop continues as long as n points at a node. At the end of each loop it
 As one more illustration, let's use a while loop to count the nodes in a list like this one. Make sure you understand the following loop too, in which the while loop condition is just the node pointer itself -- it becomes 0 at the end. ;-)
 
 ```
-ch> int count = 0;
-ch> n = list; // start back at beginning
-0x2446550
-ch> while (n) { ++count; n = n->next; }
-ch> count
-3
+#include <iostream>
+
+struct Node {int info; Node *next;};
+
+int main()
+{
+  Node* list = new Node;
+  list->info = 10;
+  list->next = new Node;
+  list->next->info = 20;
+  list->next->next = 0;
+  
+  Node* temp = list;
+  list = new Node;
+  list->info = 5;
+  list->next = temp;
+  
+  Node* n = list;
+  while (n) {
+    std::cout << "\nThis node is at address: " << n << std::endl;
+    std::cout << "It holds a number: " << n->info << std::endl;
+    std::cout << "Moving to the next node whose address is " << n->next << "..." << std::endl;
+    
+    n = n->next;
+  }
+}
 ```
 
-Since we dynamically allocated the memory for three nodes, we should free that memory before exiting ch and proceeding to Step 3. Also, according to convention, we set the list pointer to null - it is now an empty list:
+Since we dynamically allocated the memory for three nodes, we should free that memory before exiting the program and proceeding to Step 3. Also, according to convention, we set the list pointer to null - it is now an empty list:
 
 ```
-ch> delete list->next->next; // free last node first
-ch> delete list->next; // then free second one
-ch> delete list; // free first node last
-ch> list = 0; // to indicate the list is empty
-(nil)
-Exit ch.
+#include <iostream>
+
+struct Node {int info; Node *next;};
+
+int main()
+{
+  Node* list = new Node;
+  list->info = 10;
+  list->next = new Node;
+  list->next->info = 20;
+  list->next->next = 0;
+  
+  delete list->next; // Why we free list->next firstly?
+  delete list;
+}
 ```
 
 ## Step 3: Learn how to encapsulate list nodes
@@ -278,24 +326,20 @@ Now run it in valgrind to make sure you don't have any memory leaks
 
 * Finally implement the overloaded assignment operator in intlist.cpp. To test it run <code>$ ./testrest 3</code>. If it doesn't crash, run it in valgrind to check for memory leaks
 
-Step 5: Submit intlist.cpp
+Step 5: Submit intlist.cpp. (Only intlist.cpp)
 
-Submit your code at https://submit.cs.ucsb.edu/, or use the following command from a CS terminal:
+Log into your account on https://www.gradescope.com/ and navigate to our course site: CS24 Spring 2018. Select this assignment. Then click on the "Submit" button on the bottom right corner to make a submission. You will be given the option of uploading files from your local machine or submitting the code that is in a github repo. Select the second option and select your github repo for this assignment. You should receive 100/100 for a completely correct program.
 
-```
-~submit/submit -p 930 intlist.cpp
-```
+If you are working with a partner, be sure that both partners' names are in a comment at the top of the source code file.
 
-If you are working with a partner, be sure that both partners' names are in a comment at the top of the source code file, and be sure to properly form a group for this project in the submit.cs system.
-
-Do beware that all parts must be working to earn any points at all from the submit.cs tests.
+Do beware that all parts must be working to earn any points at all from the Gradescope system.
 
 
 ## Evaluation and Grading
 
 Each student must accomplish the following to earn full credit [50 total points] for this lab:
 
-* [100 points] intlist.cpp is saved, it has your name(s) in a comment at the top, it compiles and executes properly, and has been submitted with a score of 100/100 to the submit.cs system.
+* [100 points] intlist.cpp is saved, it has your name(s) in a comment at the top, it compiles and executes properly, and has been submitted with a score of 100/100 to the Gradescope system.
 * [50 points] Creation of github repo, writing readable code and pushing your code frequently to github
 
 Diba Mirza, adapted from a lab by Michael Costanza
