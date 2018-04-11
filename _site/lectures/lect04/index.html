@@ -49,7 +49,9 @@
   <td>
     lect04
      
+        <a href="/lectures/CS24_Lecture4.pdf" data-ajax="false">
         Before Slides 
+        </a> 
      
  </td>
  <td>
@@ -65,12 +67,39 @@
 </table> 
     <h1 id="code-from-lecture">Code from lecture</h1>
 
+<p><a href="https://github.com/ucsb-cs24-s18/cs24-s18-lectures/tree/master/lec-04">https://github.com/ucsb-cs24-s18/cs24-s18-lectures/tree/master/lec-04</a></p>
+
 <h1 id="topics">Topics</h1>
 
-<h2 id="makefiles-and-gdb">Makefiles and gdb</h2>
+<h2 id="gdb">gdb</h2>
+
+<ul>
+  <li>Demo of gdb commands using example from lab02</li>
+  <li>To use gdb, compile with the -g flag</li>
+  <li>Setting breakpoints (b)</li>
+  <li>Running programs that take arguments within gdb (r arguments)</li>
+  <li>Continue excution until breakpoint is reached (c)</li>
+  <li>Stepping into functions with step (s)</li>
+  <li>Stepping over functions with next (n)</li>
+  <li>Re-running a program (r)</li>
+  <li>Examining local variables  (info locals)</li>
+  <li>Printing the value of variables with print (p)</li>
+  <li>Quitting gdb (q)</li>
+  <li>Debugging segfaults with backtrace (bt)</li>
+  <li>Refer to the <a href="http://darkdust.net/files/GDB%20Cheat%20Sheet.pdf">gdb cheat sheet</a> (handout given in class). More practice in lab 02.</li>
+</ul>
+
+<h2 id="makefiles">Makefiles</h2>
 <ul>
   <li>We will split our implementation of the die Game from the previous class into three files  - header file (contains only the class definition), source file (contains the implementation of the class methods - no main), test file - uses the ADT. (More practice on this in lab02)</li>
-  <li>Refer to the <a href="http://darkdust.net/files/GDB%20Cheat%20Sheet.pdf">gdb cheat sheet</a> (handout given in class). More practice in lab 02.</li>
+</ul>
+
+<h2 id="the-big-four">The big four</h2>
+<ul>
+  <li>Constructor</li>
+  <li>De-constructor</li>
+  <li>Copy-constructor</li>
+  <li>Copy-assignment</li>
 </ul>
 
 <h2 id="operator-overloading---pages-63---80-in-the-book">Operator overloading - Pages 63 - 80 in the book</h2>
@@ -90,6 +119,8 @@ if (p1 == p2){
   <li>Overloading binary arithmetic operators e.g. +</li>
   <li>Overloading output and input operators e.g. » and «</li>
 </ol>
+
+<p>If time permits…</p>
 
 <h2 id="review-of-pointers-and-dynamic-memory-allocation">Review of pointers and dynamic memory allocation</h2>
 <ul>
