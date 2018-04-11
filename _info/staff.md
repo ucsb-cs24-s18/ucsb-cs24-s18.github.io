@@ -51,7 +51,7 @@ ready: true
   <td>
   <img src="/info/mentorPhotos/CS24-Carly-Larsson.jpg" alt=" Carly"  width="150px"  style="float: left; margin: 10px 10px 10px 10px;">
   <b>  Carly  Larsson (Tutor)    </b>
-  <i> "Salutations and welcome to CS 16. In the next nine weeks we will both be learning something new: I will be tutoring CS 16 for the first time, and you all will be taking CS 16. I hope we can work together, and get as much computer science knowledge into our brains as possible. Currently I’m a third year CCS CS student, also enrolled in the MS/BS program. I’m the Treasurer for the Society of Women Engineers (S.W.E) and would love to recruit some new computer scientists! This coming summer and last summer, I interned as a Software Engineer at Microsoft. If you have questions about computer science, CS 16, internships, or S.W.E. please reach out to me at carly@umail.ucsb.edu. " </i>
+  <i> "Salutations and welcome to CS 24. In the coming weeks we will both be learning something new: I will be tutoring CS 24 for the first time, and you all will be taking CS 24. I hope we can work together, and get as much computer science knowledge into our brains as possible. Currently I’m a third year CCS CS student, also enrolled in the MS/BS program. I’m the Treasurer for the Society of Women Engineers (S.W.E) and would love to recruit some new computer scientists! This coming summer and last summer, I interned as a Software Engineer at Microsoft. If you have questions about computer science, CS 24, internships, or S.W.E. please reach out to me at carly@umail.ucsb.edu. " </i>
   </td>
   </tr>
 
