@@ -59,7 +59,7 @@ Feel free to reach out with any questions, whether they are about labs, classes 
 
   <tr>
   <td>
-  <img src="/info/mentorPhotos/CS24-Natasha-L.jpeg" alt=" Natasha Lee" width="150px" style="float: left; margin: 10px 10px 10px 10px;">
+  <img src="/info/mentorPhotos/CS24-S18-Natasha-L.jpeg" alt=" Natasha Lee" width="150px" style="float: left; margin: 10px 10px 10px 10px;">
   <b> Natasha Lee (Tutor)    </b>
   <i> "Hi! I’m Natasha, a fourth year Computer Science major here at UCSB. CS8 was the first time I had ever seen code and programmed a “Hello World” program. I remember feeling like everyone around me was way ahead of me or knew exactly what was going on. But that feeling pushed me work extra hard to catch myself up, allowing me to figure out study habits and tools that worked for my pace of learning.
 
@@ -68,26 +68,12 @@ I love being a tutor/mentor because it’s something I wish I had when I first s
 I’ve been told I look intimidating when I’m not talking, but I promise I’m really nice! Come talk to me about cs8, future courses, watercoloring, and most importantly the best spots to watch the sunset!" </i>
   </td>
   </tr>
-
   <tr>
   <td>
-  <img src="/info/mentorPhotos/CS24-W18-Scott-DeMoney.jpg" alt="Scott-DeMoney" width="150px" style="float: left; margin: 10px 10px 10px 10px;">
-  <b> (Tutor)    </b>
-  <i> " " </i>
-  </td>
-  </tr>
-  <tr>
-  <td>
-  <img src="/info/mentorPhotos/CS24-W18-Robert-Stosick.jpg" alt=" Robert	Stosick" width="150px" style="float: left; margin: 10px 10px 10px 10px;">
-  <b>  (Tutor)    </b>
-  <i> "" </i>
-  </td>
-  </tr>
-  <tr>
-  <td>
-  <img src="/info/mentorPhotos/CS24-W18-ClaudiaZeng.jpeg" alt="Claudia" width="150px" style="float: left; margin: 10px 10px 10px 10px;">
-  <b> (Tutor) </b>
-  <i> "" </i>
+  <img src="/info/mentorPhotos/CS24-S18-Keith-L.jpg" alt="Keith-Long" width="150px" style="float: left; margin: 10px 10px 10px 10px;">
+  <b> Keith Long (Tutor)    </b>
+  <i> "Hey all! :) My name is Keith and I'm a 4th year student here and I'm part of the MS/BS program where I'm currently pursuing my Masters! I'm super excited to be able to help you all. I love getting all kinds of questions and can't wait to see what you guys can come up with! Seriously, you can ask me questions about anything and I'll do my best to try to help. If you just want to chat, feel free to approach me whenever and wherever.
+A little more about me.. I love software and technology as well as nature and the outdoors. When I'm not on a computer, you can find me surfing or at the beach! " </i>
   </td>
   </tr>
   <tr>
