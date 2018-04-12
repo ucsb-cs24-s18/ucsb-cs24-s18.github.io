@@ -31,14 +31,16 @@ ready: true
   </td>
   </tr>
   <tr>
+  
+  <td>
+  <img src="/info/mentorPhotos/CS24-S18-Angela-Yung.JPG" alt="Angela Yung" alt="Image" width="150px" style="float: left; margin: 5px 10px 10px 10px;">
+  <b> Angela Yung (Tutor) </b>
+  <i> "Hi, I am Angela, and a fourth year CS major here at UCSB. I started mentoring last year and had a lot of fun, so I'm really excited to be a mentor again this quarter! I think data structures is pretty wicked, so CS24 and CS130A have been some of my favorite classes and I hope they can be some of your favorites as well!
 
-    <td>
-    <img src="/info/mentorPhotos/CS24-Angela-Yung.jpg" alt="Shreyas" width="150px" style="float: left; margin: 10px 10px 10px 10px;">
-    <b> Angela Yung (Tutor)   </b>
-    <i> "  " </i>
-    </td>
-    </tr>
-    <tr>
+Feel free to reach out with any questions, whether they are about labs, classes in general, or internships. I also like puzzles, baking, and going on hikes so I'm always looking for good recommendations." </i>
+  </td>
+  </tr>
+  <tr>
 
   <td>
   <img src="/info/mentorPhotos/CS24-W18-Sayali-Kakade.jpg" alt="Sayali" width="150px" style="float: left; margin: 10px 10px 10px 10px;">
@@ -49,15 +51,15 @@ ready: true
 
    <tr>
   <td>
-  <img src="/info/mentorPhotos/CS24-Carly-Larsson.jpg" alt=" Carly"  width="150px"  style="float: left; margin: 10px 10px 10px 10px;">
+  <img src="/info/mentorPhotos/CS24-S18-Carly-L.JPG" alt=" Carly"  width="150px"  style="float: left; margin: 10px 10px 10px 10px;">
   <b>  Carly  Larsson (Tutor)    </b>
-  <i> "Salutations and welcome to CS 16. In the next nine weeks we will both be learning something new: I will be tutoring CS 16 for the first time, and you all will be taking CS 16. I hope we can work together, and get as much computer science knowledge into our brains as possible. Currently I’m a third year CCS CS student, also enrolled in the MS/BS program. I’m the Treasurer for the Society of Women Engineers (S.W.E) and would love to recruit some new computer scientists! This coming summer and last summer, I interned as a Software Engineer at Microsoft. If you have questions about computer science, CS 16, internships, or S.W.E. please reach out to me at carly@umail.ucsb.edu. " </i>
+  <i> "Salutations and welcome to CS 24. In the coming weeks we will both be learning something new: I will be tutoring CS 24 for the first time, and you all will be taking CS 24. I hope we can work together, and get as much computer science knowledge into our brains as possible. Currently I’m a third year CCS CS student, also enrolled in the MS/BS program. I’m the Treasurer for the Society of Women Engineers (S.W.E) and would love to recruit some new computer scientists! This coming summer and last summer, I interned as a Software Engineer at Microsoft. If you have questions about computer science, CS 24, internships, or S.W.E. please reach out to me at carly@umail.ucsb.edu. " </i>
   </td>
   </tr>
 
   <tr>
   <td>
-  <img src="/info/mentorPhotos/CS24-Natasha-L.jpeg" alt=" Natasha Lee" width="150px" style="float: left; margin: 10px 10px 10px 10px;">
+  <img src="/info/mentorPhotos/CS24-S18-Natasha-L.JPG" alt=" Natasha Lee" width="150px" style="float: left; margin: 10px 10px 10px 10px;">
   <b> Natasha Lee (Tutor)    </b>
   <i> "Hi! I’m Natasha, a fourth year Computer Science major here at UCSB. CS8 was the first time I had ever seen code and programmed a “Hello World” program. I remember feeling like everyone around me was way ahead of me or knew exactly what was going on. But that feeling pushed me work extra hard to catch myself up, allowing me to figure out study habits and tools that worked for my pace of learning.
 
@@ -66,26 +68,12 @@ I love being a tutor/mentor because it’s something I wish I had when I first s
 I’ve been told I look intimidating when I’m not talking, but I promise I’m really nice! Come talk to me about cs8, future courses, watercoloring, and most importantly the best spots to watch the sunset!" </i>
   </td>
   </tr>
-
   <tr>
   <td>
-  <img src="/info/mentorPhotos/CS24-W18-Scott-DeMoney.jpg" alt="Scott-DeMoney" width="150px" style="float: left; margin: 10px 10px 10px 10px;">
-  <b> (Tutor)    </b>
-  <i> " " </i>
-  </td>
-  </tr>
-  <tr>
-  <td>
-  <img src="/info/mentorPhotos/CS24-W18-Robert-Stosick.jpg" alt=" Robert	Stosick" width="150px" style="float: left; margin: 10px 10px 10px 10px;">
-  <b>  (Tutor)    </b>
-  <i> "" </i>
-  </td>
-  </tr>
-  <tr>
-  <td>
-  <img src="/info/mentorPhotos/CS24-W18-ClaudiaZeng.jpeg" alt="Claudia" width="150px" style="float: left; margin: 10px 10px 10px 10px;">
-  <b> (Tutor) </b>
-  <i> "" </i>
+  <img src="/info/mentorPhotos/CS24-S18-Keith-L.JPG" alt="Keith Long" width="150px" style="float: left; margin: 10px 10px 10px 10px;">
+  <b> Keith Long (Tutor)    </b>
+  <i> "Hey all! :) My name is Keith and I'm a 4th year student here and I'm part of the MS/BS program where I'm currently pursuing my Masters! I'm super excited to be able to help you all. I love getting all kinds of questions and can't wait to see what you guys can come up with! Seriously, you can ask me questions about anything and I'll do my best to try to help. If you just want to chat, feel free to approach me whenever and wherever.
+A little more about me.. I love software and technology as well as nature and the outdoors. When I'm not on a computer, you can find me surfing or at the beach! " </i>
   </td>
   </tr>
   <tr>
