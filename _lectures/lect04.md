@@ -4,7 +4,7 @@ desc: " Operator overloading, Makefiles, gdb, pa01"
 ready: true
 pdfurl: /lectures/CS24_Lecture4.pdf
 annotatedpdfurl: /lectures/CS24_Lecture4_ann.pdf
-annotatedready: false
+annotatedready: true
 lecture_date: 2018-04-11
 ---
 
@@ -32,6 +32,7 @@ lecture_date: 2018-04-11
 
 ## Makefiles
 * We will split our implementation of the die Game from the previous class into three files  - header file (contains only the class definition), source file (contains the implementation of the class methods - no main), test file - uses the ADT. (More practice on this in lab02)
+
 
 ## The big four
 * Constructor
