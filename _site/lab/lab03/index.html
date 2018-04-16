@@ -144,7 +144,7 @@ You shall see the output in the bottom.</p>
 </code></pre>
 </div>
 
-<p>The Node named item stores a 9 as its information, and its next field (a.k.a. “link”) does not point to anything. (The address 0 is reserved to mean “no address” in C++, and it is also the value of the symbolic constant NULL that is define in <cstdlib>. Notice that ch calls it nil, but that just means the same thing too.) Usually a node with a null link is used to indicate the end of a linked list.</cstdlib></p>
+<p>The Node named item stores a 9 as its information, and its next field (a.k.a. “link”) does not point to anything. (The address 0 is reserved to mean “no address” in C++, and it is also the value of the symbolic constant NULL that is defined in cstdlib. Notice that ch calls it nil, but that just means the same thing too.) Usually a node with a null link is used to indicate the end of a linked list.</p>
 
 <p>Now let’s use the structure to build an actual linked list of three integers. First we will declare a pointer named list to point at the first node in the list (or null if the list is empty). We initialize this pointer to a dynamically allocated first node, using the C++ keyword new (which returns a pointer). The remaining steps will create two more nodes, store values in each node, and properly link them all together as a list. Type or copy/paste the program in bold:</p>
 
