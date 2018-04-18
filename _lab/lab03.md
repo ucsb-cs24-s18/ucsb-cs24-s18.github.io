@@ -1,7 +1,7 @@
 ---
 layout: lab
 num: lab03
-ready: false
+ready: true
 desc: "Implementing a linked list"
 assigned: 2018-04-17 11:00:00.00-7
 due: 2018-04-23 23:59:00.00-7
@@ -345,5 +345,4 @@ Each student must accomplish the following to earn full credit [50 total points]
 * [100 points] intlist.cpp is saved, it has your name(s) in a comment at the top, it compiles and executes properly, and has been submitted with a score of 100/100 to the Gradescope system.
 * [50 points] Creation of github repo, writing readable code and pushing your code frequently to github
 
-Diba Mirza, adapted from a lab by Michael Costanza
-</div>
+
