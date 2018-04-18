@@ -1,6 +1,6 @@
 ---
 num: "lect06"
-desc: "The big three - copy constructor, copy assignment destructor "
+desc: "Operator overloading, the big three (revisted) - copy constructor, copy assignment destructor "
 ready: true
 pdfurl: /lectures/CS24_Lecture6.pdf
 annotatedpdfurl: /lectures/CS24_Lecture6_ann.pdf
