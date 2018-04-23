@@ -4,7 +4,7 @@ desc: "Operator overloading "
 ready: true
 pdfurl: /lectures/CS24_Lecture6.pdf
 annotatedpdfurl: /lectures/CS24_Lecture6_ann.pdf
-annotatedready: false
+annotatedready: true
 lecture_date: 2018-04-18
 ---
 

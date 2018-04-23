@@ -1,10 +1,10 @@
 ---
 num: "lect07"
-desc: "The big Three, Applications of recursion"
+desc: "The big Three"
 ready: true
 pdfurl: /lectures/CS24_Lecture7.pdf
 annotatedpdfurl: /lectures/CS24_Lecture7_ann.pdf
-annotatedready: false
+annotatedready: true
 lecture_date: 2018-04-23
 ---
 
