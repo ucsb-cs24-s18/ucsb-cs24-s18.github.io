@@ -1,6 +1,6 @@
 ---
 num: "lect08"
-desc: "Analyzing the efficiency of programs"
+desc: "Recursion, Analyzing the efficiency of programs"
 ready: false
 pdfurl: /lectures/CS24_Lecture8.pdf
 annotatedpdfurl: /lectures/CS24_Lecture10_ann.pdf
