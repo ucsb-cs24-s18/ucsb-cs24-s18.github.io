@@ -77,7 +77,7 @@ Thus <strong>attendance is required</strong>, and <strong>reading the assigned r
 <p>Finally—note that just as in a math class, everything we do builds on all the work that came before. So, <em>everything</em> is <em>cumulative</em>—so, you can't afford to miss any classes unless absolutely necessary. Miss two lectures in a 10-week two-lecture per week course, and you've already skipped exactly 10% of the course&mdash;it wouldn't be surprising if your performance (i.e. final grade) in the course dipped by a similar amount.
 
 
-# Resources <a name="resources"></a>
+# Resources
 
 ## Required Resources
 
