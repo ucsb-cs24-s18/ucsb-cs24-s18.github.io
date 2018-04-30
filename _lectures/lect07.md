@@ -8,7 +8,8 @@ annotatedready: true
 lecture_date: 2018-04-23
 ---
 
-
+# Code from lecture
+[https://github.com/ucsb-cs24-s18/cs24-s18-lectures/tree/master/lec-07](https://github.com/ucsb-cs24-s18/cs24-s18-lectures/tree/master/lec-07)
 
 # Topics
 
