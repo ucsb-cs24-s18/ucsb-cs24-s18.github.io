@@ -1,7 +1,7 @@
 ---
-num: "h06"
+num: "h05"
 desc: "Chapter 9: Recursive Thinking"
-ready: false
+ready: true
 assigned: 2018-05-08 11:00:00.00-7:00
 due: 2018-05-15 11:00:00.00-7:00
 ---
