@@ -37,7 +37,7 @@ class LinkedList{
 ```
 </div>
 
-Write the definition of a helper function in the provate section of the class provided above that recursively reverses the order of elements in the linked list. This function will be used by the reverse() method. The implementation of the function should be provided on the next page.
+Write the definition of a helper function in the class provided above that recursively reverses the order of elements in the linked list. This function will be used by the reverse() method. The implementation of the function should be provided on the next page.
 <div style="margin-bottom:2em"></div>
 
 
@@ -49,7 +49,7 @@ Write the definition of a helper function in the provate section of the class pr
 <div style="margin-bottom:50em"></div>
 
 
-4. (5 pts) Write a recursive function that finds the sum of the first 'n' odd positive integers. Find a variant expression and a threshold for this function.
+4. (5 pts) Write a recursive function that finds the sum of the first 'n' odd positive integers. 
 <div style="margin-bottom:4em"></div>
 
 
