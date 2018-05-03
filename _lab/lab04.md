@@ -87,8 +87,9 @@ BST:
   contains 4? Y
   contains 16? Y
   contains 128? Y
-  contains 17? Y
+  contains 17? N
   contains 512? Y
+  . . .
 Empty BST:
   pre-order:
   in-order:
@@ -134,6 +135,8 @@ BST:
   post-order: 4 16 32 8 256 512 128 64
   sum: 1020
   count: 8
+  contains 64? Y
+  contains 4? Y
   contains 16? Y
   contains 128? Y
   contains 17? N
@@ -150,32 +153,58 @@ Empty BST:
 
 Be aware, however, that more rigorous testing will be done when your work is submitted (a different program is used for testing your functions, some with random data).
 
-# Step 5: Submit your revised intbst.cpp
+# Step 4: Implement predecessor, successor, and remove
 
-Submit Lab08 at https://submit.cs.ucsb.edu/, or use the following command from a CS terminal:
+Your final task for this lab is to implement getPredecessor(), getSuccessor(), and remove(). The predecessor of a value is the next lowest value, while the successor is the next highest. Note that these functions should be implemented using the inherent structure of the binary tree, not by an exhaustive search for the next value. It will very likely be helpful to draw out the tree (the pre-order print can help you with this) when understanding how to implement getPredecessor() and getSuccessor(). If the element passed to the function is the first (for predecessor) or last (for successor) element in the tree, the function should return 0. It should also return 0 if the value is not present in the tree. Both of these functions will likely be harder to implement than any of the prior functions in this lab. However, correct implementations of getPredecessor() and getSuccessor look VERY similar, so you will likely be able to reuse a lot of your logic.
+
+Finally, move on to remove(), which is likely the hardest algorithm you will be asked to implement this quarter. It is not excessively complicated in principle, but getting it completely right can take a while. Consider switching off pilot and navigator as you are debugging your implementation. You will probably find it helpful to use either getPredecessor() or getSuccessor() in remove(). You can also use remove() inside of itself, though it should NOT be a recursive function--the difference being that only one additional call of remove() should EVER occur. As with predecessors and successors, drawing the tree will be very helpful.
+
+A correct implementation of all functions should produce the following output from testbst when selecting option 0:
+
 ```
-~submit/submit -p 931 intbst.cpp
+BST:
+  pre-order: 64 8 4 32 16 128 512 256
+  in-order: 4 8 16 32 64 128 256 512
+  post-order: 4 8 16 32 128 256 512 64
+  sum: 1020
+  count: 8
+  contains 64? Y
+  contains 4? Y
+  contains 16? Y
+  contains 128? Y
+  contains 17? N
+  contains 512? Y
+  predecessor of 64 is: 32
+  predecessor of 512 is: 256
+  predecessor of 4 is: 0
+  successor of 64 is: 128
+  successor of 512 is: 0
+  successor of 4 is: 8
+  removing 4
+  removing 64
+  removing 128
+  contains 64? N
+  contains 4? N
+  contains 16? Y
+  contains 128? N
+  contains 17? N
+  contains 512? Y
+  pre-order: 256 8 32 16 512
+Empty BST:
+  pre-order:
+  in-order:
+  post-order:
+  sum: 0
+  count: 0
+  contains 16? N
 ```
-If you are working with a partner, be sure that both partners' names are in a comment at the top of the source code files, and be sure to properly form a group for this project in the submit.cs system.
 
-50/50 is a perfect score.
+# Step 5: Submit your revised intbst.cpp and intbst.h
 
-# Evaluation and Grading
-
-Each student must accomplish the following to earn full credit [50 total points] for this lab:
-
-* [50 points] intbst.cpp is saved, it has your name(s) in a comment at the top, it compiles and executes properly, and scores 50/50 on the submit.cs system tests.
-
-* [0 to 50 points, at the TA's discretion] The student arrived on time to their lab session, and worked diligently on CS24-related material until dismissed, git repo made available on github and committed and pushed code to github frequently
+You are allowed to modify intbst.h, though you should not need to, so submit both intbst.cpp and intbst.h to Gradescope for a grade out of 100.
 
 # Optional Extra Challenge
 
-Work with copies of intbst.h, intbst.cpp and testbst.cpp in attempting these challenges. Maybe just create a subdirectory named challenge inside your git directory, and then copy the current versions of these files into there.
-
-If you used recursion to implement the contains method, then try it again using iteration instead. Or if you solved this problem iteratively in the first place, then solve it recursively now. You should know how to do it both ways.
-More challenging: uncomment the remove method (and its helper functions if necessary) in intbst.h, implement it in intbst.cpp, and add tests for it in testbst.cpp.
-We suggest you solve the problem recursively using this remove algorithm, but you may try to solve it iteratively if you prefer.
-Test it thoroughly by editing testbst.cpp, and consider inserting more nodes if necessary. Be sure to test all situations (delete leaves, delete nodes with just a left child or just a right child, and delete nodes with two children).
-Generalize class IntBST to work for other data types. Think about how you might do that, then devise a plan and try to make all the necessary changes to the code. Test it with strings, for example.
+AFTER you have completed the main lab, you may modify it for extra credit by converting your BST to a generic data structure. For convenience, we will not change any of the file or data structure names, but your structure should be useable as IntBST<T> where T is a type that can be compared with <, >, etc. This could include double, char, or any other basic type. There is a separate Gradescope submission portal for this extra credit assignment. Make sure to have a full-credit submission on the main assignment's Gradescope before working on this part.
 
 </div>
