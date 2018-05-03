@@ -46,24 +46,24 @@ cd ~/cs24/cs24-s18-starter-code/
 git pull
 cd ~/cs24/lab04_jgauch_alily/
 ```
-There are four required files to copy from the class account this week. Get them all at once:
+There are three required files to copy from the class account this week. Get them all at once:
 
 
 Verify you got all the files and try to compile them as follows:
 ```
 -bash-4.3$ ls
-intbst.cpp  intbst.h  Makefile  testbst.cpp
--bash-4.3$ make
-g++ -std=c++11 -o testbst testbst.cpp intbst.cpp
+intbst.cpp  intbst.h  testbst.cpp
 ```
+The first thing you should do is create a simple Makefile that compiles intbst.cpp and testbst.cpp.
+
 A binary search tree class for integers, class IntBST is defined in intbst.h - please study this file for details of the class's features:
 
 The constructor, destructor, insert method and pre-order print method are already implemented in intbst.cpp. Notice the insert method will return false to indicate an attempt to insert a duplicate value; otherwise it inserts the value and returns true.
-In Step 3, you will implement the other two print methods, in-order and post-order. Then in Step 4 you will implement the sum, count and contains methods.
+In Step 2, you will implement the other two print methods, in-order and post-order. In Step 3 you will implement the sum, count and contains methods. In Step 4, you will implement the predecessor, successor, and remove methods. Step 4 will likely take you the most time BY FAR, so plan accordingly.
 The binary tree node structure is defined in the private area. The only instance variable is a node pointer, to point at the root node of the tree or at 0 if the tree is empty.
-Several utility functions are declared in the private area too. These functions can be recursive (by virtue of their Node* parameters), and the public methods may choose to use them or not. See how the destructor uses clear, for example, and the insert method uses the overloaded version of insert, each by passing the root pointer to the corresponding utility function.
+Several utility functions are declared in the private area too. These functions can be recursive (by virtue of their Node* parameters), and the public methods may choose to use them or not. See how the destructor uses clear, for example, and the insert method uses the overloaded version of insert, each by passing the root pointer to the corresponding utility function. Also take note of the definition of getNodeFor, which will be useful in several of the functions you need to implement. Consider implementing this function immediately after the print functions, and think about where you can reuse it.
 
-# Step 3: Implement in-order and post-order binary tree printing
+# Step 2: Implement in-order and post-order binary tree printing
 
 You should be able to run testbst now (assuming you compiled it in Step 2):
 ```
@@ -83,10 +83,12 @@ BST:
   post-order:
   sum: 0
   count: 0
-  contains 16? N
-  contains 128? N
-  contains 17? N
-  contains 512? N
+  contains 64? Y
+  contains 4? Y
+  contains 16? Y
+  contains 128? Y
+  contains 17? Y
+  contains 512? Y
 Empty BST:
   pre-order:
   in-order:
@@ -115,7 +117,7 @@ BST:
 
 By the way, you should be able to draw the tree now, both by tracing the order of the inserts, or by interpreting the three orders above. Take a minute to try that now on a piece of scratch paper. Show your drawing to your mentor to get it checked.
 
-# Step 4: Implement three more binary search tree functions
+# Step 3: Implement three more binary search tree functions
 
 First: switch roles between pilot and navigator if you did not already do that.
 
@@ -123,7 +125,7 @@ You may do these tasks in any order. Check the results of each part as you compl
 
 Implement the helper function for sum() - notice the public method just returns the result of the helper function. We suggest you use recursion to do so. Think about these questions before starting to code: What's the base case? What should be returned in the base case? What should be returned in the general (recursive) case?
 Implement the helper function for count() - this is very similar to the sum() function.
-Implement the public contains method, either recursively or iteratively - both are about the same level of difficulty in this case. If you decide to use recursion, then you must also implement and use the overloaded private contains function declared in intbst.h. You won't need the utility function to solve the problem iteratively. In either case, remember the tree is a binary search tree, and so your solution should run in O(log n) time.
+Implement the public contains method, either recursively or iteratively - both are about the same level of difficulty in this case. If you decide to use recursion, you can use getNodeFor() in your implementation of contains(). You won't need this utility function to solve the problem iteratively. In either case, remember the tree is a binary search tree, and so your solution should run in O(log n) time.
 Here are the results of all tests from our solution - you should verify that your results match:
 ```
 BST:
@@ -136,6 +138,7 @@ BST:
   contains 128? Y
   contains 17? N
   contains 512? Y
+  . . .
 Empty BST:
   pre-order:
   in-order:
