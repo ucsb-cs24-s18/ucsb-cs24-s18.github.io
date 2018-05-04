@@ -4,7 +4,7 @@ desc: "Analyzing the efficiency of program "
 ready: true
 pdfurl: /lectures/CS24_Lecture9.pdf
 annotatedpdfurl: /lectures/CS24_Lecture9_ann.pdf
-annotatedready: false
+annotatedready: true
 lecture_date: 2018-05-02
 ---
 
