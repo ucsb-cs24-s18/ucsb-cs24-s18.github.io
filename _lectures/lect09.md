@@ -8,6 +8,9 @@ annotatedready: true
 lecture_date: 2018-05-02
 ---
 
+## Code written in class
+[https://github.com/ucsb-cs24-s18/cs24-s18-lectures/tree/master/lec-09](https://github.com/ucsb-cs24-s18/cs24-s18-lectures/tree/master/lec-09)
+
 ## Topics
 
 
