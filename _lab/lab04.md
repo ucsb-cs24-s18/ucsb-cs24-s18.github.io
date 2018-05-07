@@ -165,7 +165,7 @@ A correct implementation of all functions should produce the following output fr
 BST:
   pre-order: 64 8 4 32 16 128 512 256
   in-order: 4 8 16 32 64 128 256 512
-  post-order: 4 8 16 32 128 256 512 64
+  post-order: 4 16 32 8 256 512 128 64
   sum: 1020
   count: 8
   contains 64? Y
