@@ -10,7 +10,7 @@
 <script src="/site.js"></script>
 <script src="/hwk.js"></script>
 
-    <title>h06 - Chapter 9: Recursive Thinking - </title>
+    <title>h06 - Chapter 1 - </title>
   </head>
     <body id="page-top">
       <div id="container" data-role="page">
@@ -49,26 +49,14 @@
   
     <li><a href="/hwk/h08/">h08</a></li>
   
+    <li><a href="/hwk/h09/">h09</a></li>
+  
   </ul>
  </nav>
 
 </div>
 
       
-      <div class="not-ready-warning">
-
-<h2>Warning</h2>
-
-<h3>This material has not yet been marked as "ready".</h3>
-
-It should be treated as a "draft", i.e. a "work in progress".
-
-If this is an assignment, and this message still appears after the
-"assigned" date, please post a question on Piazza requesting
-clarification.
-
-</div>
-
            
         <div id="content"  class="ui-content">
         <div class="hwk-header">
@@ -97,7 +85,7 @@ clarification.
 	  </th></tr></table>
 
 
-<h1>h06: Chapter 9: Recursive Thinking</h1>
+<h1>h06: Chapter 1</h1>
 
 	  <table class="asn_table">
 	    <tr>
@@ -106,8 +94,8 @@ clarification.
 	      <th class="asn_date" >due</th>
 	      <th class="asn_date" >points</th>
 	    </tr>
-	    <tr class="not-ready">
-	      <td class="asn_ready">false</td>
+	    <tr class="ready">
+	      <td class="asn_ready">true</td>
 	      <td class="asn_date" >Tue 05/08 11:00AM</td> 
 	      <td class="asn_date" >Tue 05/15 11:00AM</td>
 	      <td class="pointCount"></td>
@@ -136,52 +124,51 @@ in place of that, we drop the three lowest scores (if you have zeros, those are 
 </ul>
 </div>
 
-<p>Complete your reading of Chapter 9 (If you don’t have a copy of the textbook yet, there is one on reserve at the library under “COMP000-STAFF - Permanent Reserve”).</p>
+<p>Complete your reading of Chapter 1. If you don’t have a copy of the textbook yet, there is one on reserve at the library under “COMP000-STAFF - Permanent Reserve”).</p>
 
 <ol>
+1. (10 pts) What is the Big-O time complexity of the following code:
 
-1. (10 pts) Write a recursive function to check if an input string is a palindrome. Decide on the parameters and return type of the function as appropriate.
-<div style="margin-bottom:40em"></div>
-
-2. (10 pts) Consider the following definition of a doubly linked-list.
 <div>
-    <div class="highlighter-rouge"><pre class="highlight"><code>class LinkedList{
-	public:
-		LinkedList():head(0), tail(0){}
-		~LinkedList();
-		void reverse(); //reverses the order of elements in the linked list
-		void insert(int value);
-	private:
-	    struct Node{
-  			int data;
-  			Node* next;
-  			Node* prev;
-		};
-		Node* head;
-		Node* tail;
-		//Add your helper function here that recursively reverses the order of elements in the linked list
 
-
-};
+    <div class="highlighter-rouge"><pre class="highlight"><code>for(int i=0; i&lt;N; i+=2) {
+	...constant time operations...
+}
 </code></pre>
     </div>
   </div>
+Justify your answer.
+<div style="margin-bottom:5em"></div>
 
-Write the definition of a helper function in the provate section of the class provided above that recursively reverses the order of elements in the linked list. This function will be used by the reverse() method. The implementation of the function should be provided on the next page.
-<div style="margin-bottom:2em"></div>
+2. (10 pts) What is the Big-O time complexity of the following code:
 
+<div>
+    <div class="highlighter-rouge"><pre class="highlight"><code>for(int i=0; i&lt;N; i*=2) {
+	...constant time operations...
+}
+</code></pre>
+    </div>
+  </div>
+Justify your answer.
+<div style="margin-bottom:5em"></div>
 
+3. (20 pts) What is the Big-O time complexity of the following code: 
+
+<div>
+
+    <div class="highlighter-rouge"><pre class="highlight"><code>int x = 10;
+for(int i=0; i&lt;N; i*=2) {
+	for(int i=0; i&lt;N; i+=2) {
+		x++;
+	}
+}
+</code></pre>
+    </div>
+  </div>
+<div style="margin-bottom:8em"></div>
 <div class="pagebreak"></div>
 
-
-3. (10 pts) Consider the doubly linked list in the previous question. Implement the reverse method that uses a helper function to recursively reverse the order of elements in a linked list. You must implement the helper function as well.
-
-<div style="margin-bottom:50em"></div>
-
-
-4. (5 pts) Write a recursive function that finds the sum of the first 'n' odd positive integers. Find a variant expression and a threshold for this function.
-<div style="margin-bottom:4em"></div>
-
+4. (10 pts) Provide a link to your github repo for pa02. Analyze the Big-O complexity of the insert, delete and search methods of your implementation of the CardList (linked list class). Assume that Alice and Bob each have exactly N cards. Provide your analysis here. As a challenge problem, analyze the Big-O complexity of your entire game.
 
 
 </ol>

@@ -46,9 +46,9 @@
 
 
             
-            <tr class="not-ready" >
+            <tr class="ready" >
   <td class="asn_num"  ><a href="/pa/pa02/" data-ajax="false">pa02</a></td>
-  <td class="asn_ready">false</td>
+  <td class="asn_ready">true</td>
   <td class="asn_desc" >Linked-list implementation of a card game</td>
   <td class="asn_date" >Thu 04/26 09:00AM</td> 
   <td class="asn_date" >Fri 05/11 11:59PM</td>
@@ -64,9 +64,8 @@
   <ul>
     <li>Create a github repo following the correct naming convention.</li>
     <li>If you have a partner, add you partner as a collaborator to the repo. Partner should accept the invitations to complete this process</li>
-    <li>Join a team on submit.cs</li>
     <li>Get the starter code for this lab by doing a git pull in your starter-code repo and copying the files from the pa02 folder in this git repo:
-<a href="https://github.com/ucsb-cs24-w18/cs24-w18-lab-starter-code">https://github.com/ucsb-cs24-w18/cs24-w18-lab-starter-code</a></li>
+<a href="https://github.com/ucsb-cs24-w18/cs24-s18-lab-starter-code">https://github.com/ucsb-cs24-s18/cs24-s18-starter-code.git</a></li>
   </ul>
 
   <h1 id="goal-of-this-assignment">Goal of this assignment</h1>
@@ -81,15 +80,15 @@
 
   <h2 id="the-game">The game</h2>
 
-  <p>Alice and Bob are playing a game a bit like Go Fish, although neither of them is very good at it. Rather than randomly guessing what card the other person has, they take turns to find a matching card. Each player goes through their list of cards in order and asks the other player to list all of their cards in order until a match is found. The game ends once they do not have any cards in common. Note that they do not draw any cards during this process.</p>
+  <p>Alice and Bob are playing a game a bit like Go Fish, although neither of them is very good at it. Rather than randomly guessing what card the other person has, they take turns to find a matching card. Each player goes through their list of cards in order and asks the other player to list all of their cards in order until a match is found. The game ends once they do not have any cards in common. Note that they do not draw any new cards during this process.</p>
 
   <p>You have pointed out to Alice and Bob that this game is completely deterministic. They’re not sure what you mean, so you decide to demonstrate by showing that a computer can predict how a game will play out. To do this, you’ll be using a linked list!</p>
 
-  <h2 id="your-approach">Your approach</h2>
+  <h2 id="approach-overview">Approach Overview</h2>
 
   <p>At the start of the program, you will read in Alice and Bob’s starting hands from two files. The names of these files are provided as command line arguments with Alice’s file in <code class="highlighter-rouge">argv[1]</code> and Bob’s in <code class="highlighter-rouge">argv[2]</code>. The starter code opens the files for you as <code class="highlighter-rouge">ifstream</code> objects, which you can treat much like <code class="highlighter-rouge">cin</code>. You should read Alice and Bob’s cards into two linked lists, making sure to maintain the order in the file, that is the first card in the file should be at the head of the list.</p>
 
-  <p>Once you have the lists of cards, the game begins. Alice goes first and iterates over each card in her hand, checking whether Bob has that card. Once a matching card is found, you should print the line “Alice picked matching card <card suit="" as="" a="" character=""> &lt;card value as a number/character&gt;". The card should then be removed from both players hands. Make sure to delete any dynamically allocated memory when removing the cards from your lists!</card></p>
+  <p>Once you have the lists of cards, the game begins. Alice goes first (Important! Alice’s file is in <code class="highlighter-rouge">argv[1]</code>) and iterates over each card in her hand, checking whether Bob has that card. Once a matching card is found, you should print the line “Alice picked matching card <card suit="" as="" a="" character=""> &lt;card value as a number/character&gt;". The card should then be removed from both players hands. Make sure to delete any dynamically allocated memory when removing the cards from your lists!</card></p>
 
   <p>The process then repeats, except this time, Bob looks through his cards for the first one that Alice also has. Each player should begin their search where they left off in a previous round. Once there are no matching cards, you should print out the final hands of both players with the matching cards removed.</p>
 
@@ -135,23 +134,101 @@ d j
 </code></pre>
   </div>
 
-  <p>Note: a=ace, k=king, q=queen, j=jack</p>
+  <p>Note: 0=10, a=ace, k=king, q=queen, j=jack</p>
 
   <h2 id="requirements">Requirements</h2>
 
   <p>For this lab, you will have a lot of flexibility on your implementation (which just means we won’t be providing a code framework for you to fill in). However, there are a few requirements that your mentor will check for when they look at your code. Keep these in mind as you think about your solution:</p>
 
   <ul>
-    <li>You must use a linked list you implemented yourself to solve the problem, not another data structure or a linked list in the standard library.</li>
-    <li>Your solution must include at least one overloaded operator. This will probably be the operator on your Card class to check if two cards match i.e. they have the same suit and value.</li>
+    <li>You must use a linked list to store the sequence of cards for each player, not another data structure or a linked list in the standard library.</li>
+    <li>Your solution must include at least two overloaded operators. These will probably be the operator on your Card class to check if two cards match i.e. they have the same suit and value, and the operator on your Card class to output stream i.e. operator ‘«’ used in print statements like “std::cout « some_str”. (Details on below)</li>
     <li>Your linked list must implement a constructor, a de-constructor and other other methods as needed</li>
-    <li>You code should be readable</li>
-    <li>Your classes should define clear interfaces and hide implementation details as much as possible.</li>
+    <li>You must define clear interfaces (public functions for the linked-list), so that implementation details are hidden from the code that uses the linked-list, which is the checkpoint for this assignment.</li>
+    <li>Your program must properly free all memory it allocates, including your linked list nodes and any dynamically allocated data stored inside them. You must run valgrind on your code and get a clean report</li>
     <li>
-      <p>Your program must properly free all memory it allocates, including your linked list nodes and any dynamically allocated data stored inside them. We will also check this with valgrind when you turn in your code to submit.cs.</p>
+      <p>You code should be readable, which means reasonable comment and good formating like indentation.</p>
     </li>
-    <li>Extra credit: Appropriate use of recursion to write concise and elegant code without compromising on performance.</li>
+    <li>Star points: Appropriate use of recursion to write concise and elegant code without compromising on performance.</li>
   </ul>
+
+  <h2 id="detail-approach">Detail Approach</h2>
+
+  <ul>
+    <li>Spend time thinking through your design before implementing it.</li>
+    <li>Run your initial design by your mentor to get some initial feedback (as in pa01 this step is 20% of your grade)</li>
+    <li>Identify the objects in your game as well as their behaviors (public functions):
+      <ul>
+        <li>card, which represents a specific card. (Think about node in linked list)</li>
+        <li>hand, which represents a sequence, or a list, of cards dealt to each player. What does it do? i.e. It might let you know what the first card is. It can traverse all cards in this hand. It can tell if it contains a specific card. It can throw a card away given what that card is.</li>
+        <li>player, which represents a person who has a hand of cards! Can you let it have a name?</li>
+        <li>etc. You might create less than or more than three classes, which is totally OK, as long as they are meanful and helpful for object-oriented programming!</li>
+      </ul>
+    </li>
+    <li>Create appropriate classes - to do this you have to identify the behaviors and attributes of the different objects in your game.</li>
+    <li>
+      <p>While you have flexibility in terms of designing your classes in general, we require that you represent each player’s hand (aka list of cards) as a linked-list where each node stores a Card object instead of a simple integer value. In your design you may represent a Card as a class or as a struct.</p>
+    </li>
+    <li>
+      <p>To design the class that represents the list of cards (let’s call this CardList), think about how other parts of your program interact with this class. For example, in the algorithm for the game you have to repeatedly insert cards into your CardList, so your class should definitely have an insert method – what should be the parameter to insert?</p>
+    </li>
+    <li>
+      <p>Here are some other ways a player may interact with their list of cards:</p>
+
+      <ul>
+        <li>search: Let’s say Alice starts the game - one of the first things she needs to do is to check if her first card (h 3) is in Bob’s card list.  So Bob, at this moment, should call a function to search this card (h 3) in his list of cards. Obiviously, (h 3) is not in Bob’s list. So Alice goes to her next card (s 2) and asks Bob to search for (s 2). Still failed. … (many failures here) until Alice asks Bob to search for (c 3), Bob finds it! The main point here is that your cardlist class should implement a search function, and any player should be able to ‘ask’ another player to find a matching card by calling some appropriate method of a class.</li>
+        <li>delete: Once Alice and Bob have found a matching card (in this case (c 3)), they  should throw their (c 3) cards away. Both of them should call a ‘delete’ function to delete the card (c 3) in their lists of cards – what should be the parameter to the delete function, what should be the return value?</li>
+      </ul>
+    </li>
+  </ul>
+
+  <h2 id="overload-operator-">Overload operator “«”</h2>
+
+  <p>Overloading operator “«” is a useful feature in C++. It enables objects of various classes to customize their stream extraction behavior. (“«” is for output. “»” is for input with similar usage but not discussed here.)
+To specificly illuatrate how to overload operator “«”, here is an example.</p>
+
+  <div class="highlighter-rouge"><pre class="highlight"><code>#include &lt;iostream&gt; // including std::ostream
+#include &lt;string&gt;
+
+class Person {
+ public:
+  Person() { name = "I have no name"; }
+  
+  void setName(std::string hereisyourname) { name = hereisyourname; }
+  
+  friend std::ostream&amp; operator&lt;&lt; (std::ostream&amp; os, const Person&amp; random) {
+      os &lt;&lt; "My name is: " &lt;&lt; random.name;
+      return os; // !!!!! Don't forget this return !!!!!
+  }
+  
+ private:
+  std::string name;
+};
+
+int main()
+{
+  Person random;
+  
+  std::cout &lt;&lt; random &lt;&lt; std::endl;
+  
+  random.setName("Barbara");
+  
+  std::cout &lt;&lt; random &lt;&lt; std::endl;
+}
+</code></pre>
+  </div>
+
+  <p>A class Person is defined, and it has an overload insertion “«” function as a friend non-member function.
+Inside this overloading function, people can freely specify what information would be printed out when operator “«” is applied to this class, Person. Here we want it to print its name.</p>
+
+  <p>With overloading function, we can directly print Person like how we print those built-in data types i.e. int, double.</p>
+
+  <p>Here is the output.</p>
+
+  <div class="highlighter-rouge"><pre class="highlight"><code>My name is: I have no name
+My name is: Barbara
+</code></pre>
+  </div>
 
   <h1 id="submission-instructions">Submission instructions</h1>
 
@@ -162,28 +239,20 @@ In addition you must create a Makefile that compiles your program to an executab
 
   <p>You must submit exactly four files with the names: Makefile, main.cpp, cards.cpp, cards.h</p>
 
-  <h2 id="checkpoint-deadline-0216-at-midnight-20-points">Checkpoint deadline: 02/16 at midnight (20 points)</h2>
+  <h2 id="checkpoint-deadline-0503-at-midnight-20-points">Checkpoint deadline: 05/03 at midnight (20 points)</h2>
 
   <p>Complete an initial design of your classes and push your code to github by the checkpoint deadline. For example if you decide to use two classes to create the card game you must provide the declarations of both classes in cards.h and describe the public interface of each class. You must also complete implementing the code that reads each player’s cards from a file and stores it in a linked list as well as the code that prints each players hand. To get credit for the checkpoint your code must compile without error. This means that you must create stubs for any functions that you are yet to implement.</p>
 
   <p>Include the commit message “CHECKPOINT SUBMISSION” when pushing your code to github.</p>
 
-  <p>Submit PA4 at https://submit.cs.ucsb.edu/, or use the following command from a CS terminal:</p>
-
-  <div class="highlighter-rouge"><pre class="highlight"><code>~submit/submit -p 951 Makefile cards.cpp cards.h main.cpp
-</code></pre>
-  </div>
-
-  <p>You should see a score of 60/60</p>
-
-  <p>The remaining 40 points are broken down as:</p>
+  <p>Submit the files for PA2 on gradescope: main.cpp, cards.h, cards.cpp, Makefile. Be sure to wait for the results of all tests. If you score 60/60, and you’ve followed all of the other rules, then you’ll earn 60/60. The additional 40 points will be given by the mentor for good style and for showing off your initial design of the class</p>
 
   <ul>
     <li>20 pts for meeting the checkpoint requirements</li>
     <li>20 points for style and overall design following the guidelines in the requirements (above)</li>
   </ul>
 
-  <p>Created by Jack Alexander and Diba Mirza</p>
+  <p>Created by Jack Alexander, Jinjin Shao, and Diba Mirza</p>
 </div>
 
         </div><!-- content -->

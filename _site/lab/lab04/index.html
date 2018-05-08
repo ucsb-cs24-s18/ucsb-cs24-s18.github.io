@@ -46,9 +46,9 @@
 
 
             
-            <tr class="not-ready" >
+            <tr class="ready" >
   <td class="asn_num"  ><a href="/lab/lab04/" data-ajax="false">lab04</a></td>
-  <td class="asn_ready">false</td>
+  <td class="asn_ready">true</td>
   <td class="asn_desc" >Binary Search Tree</td>
   <td class="asn_date" >Tue 05/08 11:00AM</td> 
   <td class="asn_date" >Mon 05/21 11:59PM</td>
@@ -106,23 +106,23 @@ git pull
 cd ~/cs24/lab04_jgauch_alily/
 </code></pre>
   </div>
-  <p>There are four required files to copy from the class account this week. Get them all at once:</p>
+  <p>There are three required files to copy from the class account this week. Get them all at once:</p>
 
   <p>Verify you got all the files and try to compile them as follows:
 <code class="highlighter-rouge">
 -bash-4.3$ ls
-intbst.cpp  intbst.h  Makefile  testbst.cpp
--bash-4.3$ make
-g++ -std=c++11 -o testbst testbst.cpp intbst.cpp
+intbst.cpp  intbst.h  testbst.cpp
 </code>
-A binary search tree class for integers, class IntBST is defined in intbst.h - please study this file for details of the class’s features:</p>
+The first thing you should do is create a simple Makefile that compiles intbst.cpp and testbst.cpp.</p>
+
+  <p>A binary search tree class for integers, class IntBST is defined in intbst.h - please study this file for details of the class’s features:</p>
 
   <p>The constructor, destructor, insert method and pre-order print method are already implemented in intbst.cpp. Notice the insert method will return false to indicate an attempt to insert a duplicate value; otherwise it inserts the value and returns true.
-In Step 3, you will implement the other two print methods, in-order and post-order. Then in Step 4 you will implement the sum, count and contains methods.
+In Step 2, you will implement the other two print methods, in-order and post-order. In Step 3 you will implement the sum, count and contains methods. In Step 4, you will implement the predecessor, successor, and remove methods. Step 4 will likely take you the most time BY FAR, so plan accordingly.
 The binary tree node structure is defined in the private area. The only instance variable is a node pointer, to point at the root node of the tree or at 0 if the tree is empty.
-Several utility functions are declared in the private area too. These functions can be recursive (by virtue of their Node* parameters), and the public methods may choose to use them or not. See how the destructor uses clear, for example, and the insert method uses the overloaded version of insert, each by passing the root pointer to the corresponding utility function.</p>
+Several utility functions are declared in the private area too. These functions can be recursive (by virtue of their Node* parameters), and the public methods may choose to use them or not. See how the destructor uses clear, for example, and the insert method uses the overloaded version of insert, each by passing the root pointer to the corresponding utility function. Also take note of the definition of getNodeFor, which will be useful in several of the functions you need to implement. Consider implementing this function immediately after the print functions, and think about where you can reuse it.</p>
 
-  <h1 id="step-3-implement-in-order-and-post-order-binary-tree-printing">Step 3: Implement in-order and post-order binary tree printing</h1>
+  <h1 id="step-2-implement-in-order-and-post-order-binary-tree-printing">Step 2: Implement in-order and post-order binary tree printing</h1>
 
   <p>You should be able to run testbst now (assuming you compiled it in Step 2):
 ```
@@ -142,10 +142,13 @@ BST:
   post-order:
   sum: 0
   count: 0
-  contains 16? N
-  contains 128? N
+  contains 64? Y
+  contains 4? Y
+  contains 16? Y
+  contains 128? Y
   contains 17? N
-  contains 512? N
+  contains 512? Y
+  . . .
 Empty BST:
   pre-order:
   in-order:
@@ -173,7 +176,7 @@ BST:
 
 By the way, you should be able to draw the tree now, both by tracing the order of the inserts, or by interpreting the three orders above. Take a minute to try that now on a piece of scratch paper. Show your drawing to your mentor to get it checked.
 
-# Step 4: Implement three more binary search tree functions
+# Step 3: Implement three more binary search tree functions
 
 First: switch roles between pilot and navigator if you did not already do that.
 
@@ -181,7 +184,7 @@ You may do these tasks in any order. Check the results of each part as you compl
 
 Implement the helper function for sum() - notice the public method just returns the result of the helper function. We suggest you use recursion to do so. Think about these questions before starting to code: What's the base case? What should be returned in the base case? What should be returned in the general (recursive) case?
 Implement the helper function for count() - this is very similar to the sum() function.
-Implement the public contains method, either recursively or iteratively - both are about the same level of difficulty in this case. If you decide to use recursion, then you must also implement and use the overloaded private contains function declared in intbst.h. You won't need the utility function to solve the problem iteratively. In either case, remember the tree is a binary search tree, and so your solution should run in O(log n) time.
+Implement the public contains method, either recursively or iteratively - both are about the same level of difficulty in this case. If you decide to use recursion, you can use getNodeFor() in your implementation of contains(). You won't need this utility function to solve the problem iteratively. In either case, remember the tree is a binary search tree, and so your solution should run in O(log n) time.
 Here are the results of all tests from our solution - you should verify that your results match:
 </code></pre>
   </div>
@@ -191,10 +194,13 @@ Here are the results of all tests from our solution - you should verify that you
   post-order: 4 16 32 8 256 512 128 64
   sum: 1020
   count: 8
+  contains 64? Y
+  contains 4? Y
   contains 16? Y
   contains 128? Y
   contains 17? N
   contains 512? Y
+  . . .
 Empty BST:
   pre-order:
   in-order:
@@ -206,38 +212,61 @@ Empty BST:
 
   <p>Be aware, however, that more rigorous testing will be done when your work is submitted (a different program is used for testing your functions, some with random data).</p>
 
-  <h1 id="step-5-submit-your-revised-intbstcpp">Step 5: Submit your revised intbst.cpp</h1>
+  <h1 id="step-4-implement-predecessor-successor-and-remove">Step 4: Implement predecessor, successor, and remove</h1>
 
-  <p>Submit Lab08 at https://submit.cs.ucsb.edu/, or use the following command from a CS terminal:
-<code class="highlighter-rouge">
-~submit/submit -p 931 intbst.cpp
-</code>
-If you are working with a partner, be sure that both partners’ names are in a comment at the top of the source code files, and be sure to properly form a group for this project in the submit.cs system.</p>
+  <p>Your final task for this lab is to implement getPredecessor(), getSuccessor(), and remove(). The predecessor of a value is the next lowest value, while the successor is the next highest. Note that these functions should be implemented using the inherent structure of the binary tree, not by an exhaustive search for the next value. It will very likely be helpful to draw out the tree (the pre-order print can help you with this) when understanding how to implement getPredecessor() and getSuccessor(). If the element passed to the function is the first (for predecessor) or last (for successor) element in the tree, the function should return 0. It should also return 0 if the value is not present in the tree. Both of these functions will likely be harder to implement than any of the prior functions in this lab. However, correct implementations of getPredecessor() and getSuccessor look VERY similar, so you will likely be able to reuse a lot of your logic.</p>
 
-  <p>50/50 is a perfect score.</p>
+  <p>Finally, move on to remove(), which is likely the hardest algorithm you will be asked to implement this quarter. It is not excessively complicated in principle, but getting it completely right can take a while. Consider switching off pilot and navigator as you are debugging your implementation. You will probably find it helpful to use either getPredecessor() or getSuccessor() in remove(). You can also use remove() inside of itself, though it should NOT be a recursive function–the difference being that only one additional call of remove() should EVER occur. As with predecessors and successors, drawing the tree will be very helpful.</p>
 
-  <h1 id="evaluation-and-grading">Evaluation and Grading</h1>
+  <p>A correct implementation of all functions should produce the following output from testbst when selecting option 0:</p>
 
-  <p>Each student must accomplish the following to earn full credit [50 total points] for this lab:</p>
+  <div class="highlighter-rouge"><pre class="highlight"><code>BST:
+  pre-order: 64 8 4 32 16 128 512 256
+  in-order: 4 8 16 32 64 128 256 512
+  post-order: 4 16 32 8 256 512 128 64
+  sum: 1020
+  count: 8
+  contains 64? Y
+  contains 4? Y
+  contains 16? Y
+  contains 128? Y
+  contains 17? N
+  contains 512? Y
+  predecessor of 64 is: 32
+  predecessor of 512 is: 256
+  predecessor of 4 is: 0
+  successor of 64 is: 128
+  successor of 512 is: 0
+  successor of 4 is: 8
+  removing 4
+  removing 64
+  removing 128
+  contains 64? N
+  contains 4? N
+  contains 16? Y
+  contains 128? N
+  contains 17? N
+  contains 512? Y
+  pre-order: 256 8 32 16 512
+Empty BST:
+  pre-order:
+  in-order:
+  post-order:
+  sum: 0
+  count: 0
+  contains 16? N
+</code></pre>
+  </div>
 
-  <ul>
-    <li>
-      <p>[50 points] intbst.cpp is saved, it has your name(s) in a comment at the top, it compiles and executes properly, and scores 50/50 on the submit.cs system tests.</p>
-    </li>
-    <li>
-      <p>[0 to 50 points, at the TA’s discretion] The student arrived on time to their lab session, and worked diligently on CS24-related material until dismissed, git repo made available on github and committed and pushed code to github frequently</p>
-    </li>
-  </ul>
+  <h1 id="step-5-submit-your-revised-intbstcpp-and-intbsth">Step 5: Submit your revised intbst.cpp and intbst.h</h1>
+
+  <p>You are allowed to modify intbst.h, though you should not need to, so submit both intbst.cpp and intbst.h to Gradescope for a grade out of 100.</p>
 
   <h1 id="optional-extra-challenge">Optional Extra Challenge</h1>
 
-  <p>Work with copies of intbst.h, intbst.cpp and testbst.cpp in attempting these challenges. Maybe just create a subdirectory named challenge inside your git directory, and then copy the current versions of these files into there.</p>
+  <p>AFTER you have completed the main lab, you may modify it for extra credit by converting your BST to a generic data structure. For convenience, we will not change any of the file or data structure names, but your structure should be useable as IntBST<t> where T is a type that can be compared with &lt;, &gt;, etc. This could include double, char, or any other basic type. There is a separate Gradescope submission portal for this extra credit assignment. Make sure to have a full-credit submission on the main assignment's Gradescope before working on this part.</t></p>
 
-  <p>If you used recursion to implement the contains method, then try it again using iteration instead. Or if you solved this problem iteratively in the first place, then solve it recursively now. You should know how to do it both ways.
-More challenging: uncomment the remove method (and its helper functions if necessary) in intbst.h, implement it in intbst.cpp, and add tests for it in testbst.cpp.
-We suggest you solve the problem recursively using this remove algorithm, but you may try to solve it iteratively if you prefer.
-Test it thoroughly by editing testbst.cpp, and consider inserting more nodes if necessary. Be sure to test all situations (delete leaves, delete nodes with just a left child or just a right child, and delete nodes with two children).
-Generalize class IntBST to work for other data types. Think about how you might do that, then devise a plan and try to make all the necessary changes to the code. Test it with strings, for example.</p>
+  <p>Note that it is impossible to implement a generic type in separate .cpp and .h files, so you will move all of your code to the .h file and only submit the .h file.</p>
 
 </div>
 
