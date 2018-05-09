@@ -9,6 +9,10 @@ lecture_date:  2018-05-07
 
 ---
 
+## Code written in class
+[https://github.com/ucsb-cs24-s18/cs24-s18-lectures/tree/master/lec-10](https://github.com/ucsb-cs24-s18/cs24-s18-lectures/tree/master/lec-10)
+
+
 # Topics
 * Binary trees
 * Binary search trees (BST) - implementation
