@@ -4,7 +4,7 @@ desc: "BST contd - successor, delete, traversals, C++ templates - generic BSTs "
 ready: true
 pdfurl: /lectures/CS24_Lecture11.pdf
 annotatedpdfurl: /lectures/CS24_Lecture11_ann.pdf
-annotatedready: false
+annotatedready: true
 lecture_date: 2018-05-09
 ---
 
