@@ -116,7 +116,7 @@ BST:
 
   post-order: 4 16 32 8 256 512 128 64
 
-By the way, you should be able to draw the tree now, both by tracing the order of the inserts, or by interpreting the three orders above. Take a minute to try that now on a piece of scratch paper. Show your drawing to your mentor to get it checked.
+By the way, you should be able to draw the tree now, both by tracing the order of the inserts, or by interpreting the three orders above. Take a minute to try that now on a piece of scratch paper since it may be very helpful when implementing the remaining functions.
 
 # Step 3: Implement three more binary search tree functions
 
