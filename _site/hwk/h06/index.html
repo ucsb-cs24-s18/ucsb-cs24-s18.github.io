@@ -10,7 +10,7 @@
 <script src="/site.js"></script>
 <script src="/hwk.js"></script>
 
-    <title>h06 - Chapter 1 - </title>
+    <title>h06 - Chapter 1: Runing Time Analysis - </title>
   </head>
     <body id="page-top">
       <div id="container" data-role="page">
@@ -85,7 +85,7 @@
 	  </th></tr></table>
 
 
-<h1>h06: Chapter 1</h1>
+<h1>h06: Chapter 1: Runing Time Analysis</h1>
 
 	  <table class="asn_table">
 	    <tr>
@@ -124,7 +124,7 @@ in place of that, we drop the three lowest scores (if you have zeros, those are 
 </ul>
 </div>
 
-<p>Complete your reading of Chapter 1. If you don’t have a copy of the textbook yet, there is one on reserve at the library under “COMP000-STAFF - Permanent Reserve”).</p>
+<p>Complete your reading of Chapter 1, Section 1.2. If you don’t have a copy of the textbook yet, there is one on reserve at the library under “COMP000-STAFF - Permanent Reserve”).</p>
 
 <ol>
 1. (10 pts) What is the Big-O time complexity of the following code:
@@ -143,7 +143,7 @@ Justify your answer.
 2. (10 pts) What is the Big-O time complexity of the following code:
 
 <div>
-    <div class="highlighter-rouge"><pre class="highlight"><code>for(int i=0; i&lt;N; i*=2) {
+    <div class="highlighter-rouge"><pre class="highlight"><code>for(int i=1; i&lt;N; i*=2) {
 	...constant time operations...
 }
 </code></pre>
@@ -157,8 +157,8 @@ Justify your answer.
 <div>
 
     <div class="highlighter-rouge"><pre class="highlight"><code>int x = 10;
-for(int i=0; i&lt;N; i*=2) {
-	for(int i=0; i&lt;N; i+=2) {
+for(int i=1; i&lt;N; i*=2) {
+	for(int j=0; j&lt;N; j+=2) {
 		x++;
 	}
 }

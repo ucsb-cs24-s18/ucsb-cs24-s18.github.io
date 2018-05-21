@@ -1,7 +1,7 @@
 ---
 num: "lect13"
 desc: "Stacks and Queues (lab05) "
-ready: false
+ready: true
 pdfurl: /lectures/CS24_Lecture13.pdf
 annotatedpdfurl: /lectures/CS24_Lecture13_ann.pdf
 annotatedready: false
@@ -18,5 +18,5 @@ lecture_date: 2018-05-21
 	* Evaluating fully paranthesized infix expressions
 	* Evaluating postfix expressions
 
-If time permits, continue discussion on iterators
+
 

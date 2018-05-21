@@ -174,7 +174,7 @@ BST:
 
   post-order: 4 16 32 8 256 512 128 64
 
-By the way, you should be able to draw the tree now, both by tracing the order of the inserts, or by interpreting the three orders above. Take a minute to try that now on a piece of scratch paper. Show your drawing to your mentor to get it checked.
+By the way, you should be able to draw the tree now, both by tracing the order of the inserts, or by interpreting the three orders above. Take a minute to try that now on a piece of scratch paper since it may be very helpful when implementing the remaining functions.
 
 # Step 3: Implement three more binary search tree functions
 
@@ -266,7 +266,8 @@ Empty BST:
 
   <p>AFTER you have completed the main lab, you may modify it for extra credit by converting your BST to a generic data structure. For convenience, we will not change any of the file or data structure names, but your structure should be useable as IntBST<t> where T is a type that can be compared with &lt;, &gt;, etc. This could include double, char, or any other basic type. There is a separate Gradescope submission portal for this extra credit assignment. Make sure to have a full-credit submission on the main assignment's Gradescope before working on this part.</t></p>
 
-  <p>Note that it is impossible to implement a generic type in separate .cpp and .h files, so you will move all of your code to the .h file and only submit the .h file.</p>
+  <p>Note that you should implement a generic type in separate .template or .cpp file and include it in your header file as #include “intbst.template” or #include “intbst.cpp”. You may alternatively move the implementation to your header file, although that is not recommended.
+Submit files: intbst.*</p>
 
 </div>
 
