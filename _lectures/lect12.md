@@ -3,7 +3,7 @@ num: "lect12"
 desc: "Generic functions and classes with C++ templates, using the STL "
 ready: true
 pdfurl: /lectures/CS24_Lecture12.pdf
-annotatedpdfurl: /lectures/CS24_Lecture9_ann.pdf
+annotatedpdfurl: /lectures/CS24_Lecture12_ann.pdf
 annotatedready: true
 lecture_date:  2012-05-14
 ---
