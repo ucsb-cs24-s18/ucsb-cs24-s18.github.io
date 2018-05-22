@@ -4,10 +4,13 @@ desc: "Stacks and Queues (lab05) "
 ready: true
 pdfurl: /lectures/CS24_Lecture13.pdf
 annotatedpdfurl: /lectures/CS24_Lecture13_ann.pdf
-annotatedready: false
+annotatedready: true
 lecture_date: 2018-05-21
 ---
 
+# Code from lecture
+
+[Lecture 13 code on github](https://github.com/ucsb-cs24-s18/cs24-s18-lectures/tree/master/lec-13)
 
 ## Stacks
 * Stack operations
