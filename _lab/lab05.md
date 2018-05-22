@@ -1,7 +1,7 @@
 ---
 layout: lab
 num: lab05
-ready: false
+ready: true
 desc: "Evaluating expressions with stacks"
 assigned: 2018-05-22 09:00:00.00-7
 due: 2018-05-29 23:59:00.00-7
@@ -27,7 +27,7 @@ Select a pilot, log into the CSIL machines.
 
 ## Step 1a: Create a git repo, add your partner as collaborator
 
-* Create a repo for this lab on the pilot's github account (just like you did in lab00): To do this, open a browser and navigate to [www.github.com](www.github.com). Log into the pilot's github account. From the drop down menu on the left, select our class organization: ucsb-cs24-w18 and proceed to create a new repo. You may refer to the instructions in lab00. Follow this naming convention: If your github username is jgaucho and your partner's is alily, your should name your repo lab05_agaucho_alily (usernames appear in alphabetical order). Also you must set the visibity of your repo to be 'PRIVATE' when creating it. We will not repeat these instructions in subsequent labs.
+* Create a repo for this lab on the pilot's github account (just like you did in lab00): To do this, open a browser and navigate to [www.github.com](www.github.com). Log into the pilot's github account. From the drop down menu on the left, select our class organization: ucsb-cs24-s18 and proceed to create a new repo. You may refer to the instructions in lab00. Follow this naming convention: If your github username is jgaucho and your partner's is alily, your should name your repo lab05_agaucho_alily (usernames appear in alphabetical order). Also you must set the visibity of your repo to be 'PRIVATE' when creating it. We will not repeat these instructions in subsequent labs.
 
 * The pilot should add the navigator as a collaborator on github, and the navigator should accept the request to join the repo. See instructions in previous labs
 
@@ -37,13 +37,13 @@ Select a pilot, log into the CSIL machines.
 
 ```
 cd ~/cs24
-git clone git@github.com:ucsb-cs24-w18/lab05_jgaucho_alily.git
+git clone git@github.com:ucsb-cs24-s18/lab05_jgaucho_alily.git
 ```
 
 Now navigate to your starter-code directory (cloned in a previous lab) and do a git pull to get the latest version of the code
 
 ```
-cd ~/cs24/cs24-w18-lab-starter-code/
+cd ~/cs24/cs24-s18-lab-starter-code/
 git pull
 cd ~/cs24/lab05_jgauch_alily/
 ```
@@ -195,26 +195,24 @@ numbers.push(left + right);
 // done - print result:
 cout << numbers.top() << endl;
 ```
-Please select a different expression - make up a simple one, but not too simple, so you know you understand the steps. Don't make it so complicated that you won't have time to complete it before lab ends (besides, you want to work on the optional challenges for awhile). Show the expression you are evaluating in a comment at the top. Compile and test it so you can show the TA how it works.
+Please select a different expression - make up a simple one, but not too simple, so you know you understand the steps. Don't make it so complicated that you won't have time to complete it before lab ends (besides, you want to work on the optional challenges for awhile). Show the expression you are evaluating in a comment at the top. Compile and test it so you can show the mentors how it works.
 
 ## Step 5: Show off your work and get credit for the lab
 
-Get your TA's attention to inspect your work, and to record your lab completion.
+Get your mentor's attention to inspect your work, and to record your lab completion.
 Don't leave early though ... see challenge problems below.
 
 ## Step 6: Submit evalfull.cpp and usestack.cpp
 
-Submit Lab05 at https://submit.cs.ucsb.edu/, or use the following command from a CS terminal:
-
-~submit/submit -p 932 evalfull.cpp usestack.cpp
+Submit Lab05 at Gradescope.
 
 ## Evaluation and Grading
 
 Each student must accomplish the following to earn full credit for this lab:
-[50 points] usestack.cpp and evalfull.cpp are saved, with your name(s) in a comment at the top and other evidence of your work. Both of these files should compile and execute properly too.
+[55 points] usestack.cpp and evalfull.cpp are saved, with your name(s) in a comment at the top and other evidence of your work. Both of these files should compile and execute properly too.
 
 To be eligible for late turn-in with credit, you MUST have attended your entire lab period.
-[-0 to -50 points, at the TA's discretion] The student arrived on time to their lab session, and worked diligently on CS24-related material until dismissed.
+[-0 to -55 points, at the mentor's discretion] The student arrived on time to their lab session, and worked diligently on CS24-related material until dismissed.
 
 ## Optional Extra Challenge
 
