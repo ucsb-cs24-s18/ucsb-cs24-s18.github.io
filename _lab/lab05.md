@@ -204,7 +204,7 @@ Don't leave early though ... see challenge problems below.
 
 ## Step 6: Submit evalfull.cpp and usestack.cpp
 
-Submit Lab05 at Gradescope.
+Submit the files evalfull.cpp and usestack.cpp to the lab05 assignment on Gradescope.
 
 ## Evaluation and Grading
 
