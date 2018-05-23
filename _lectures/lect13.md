@@ -1,6 +1,6 @@
 ---
 num: "lect13"
-desc: "Stacks and Queues (lab05) "
+desc: "Stacks (lab05) "
 ready: true
 pdfurl: /lectures/CS24_Lecture13.pdf
 annotatedpdfurl: /lectures/CS24_Lecture13_ann.pdf
