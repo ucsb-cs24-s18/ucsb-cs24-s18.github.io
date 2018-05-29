@@ -1,8 +1,8 @@
 ---
 layout: lab
 num: lab06
-ready: false
-desc: "Evaluating expressions with stacks"
+ready: true
+desc: "Implementing a heap"
 assigned: 2018-05-22 09:00:00.00-7
 due: 2018-05-29 23:59:00.00-7
 ---
@@ -18,6 +18,22 @@ This lab may be done with a partner
 
 ## Step by Step Instructions
 
+# Step 0: Complete the TA/Mentor evaluations
+As you may know, we ran a pilot mentor program this quarter.
+We would like to get your feedback about the program to help us keep the aspects that worked well and identify areas for improvement.
+
+Completing the survey carries course credit (1% of your overall grade), so please be sure to complete it. This is an anonymous survey. To get credit please show the final screen  to the instructor TA/tutor
+
+Here is the link to the survey:
+[Please click on this link to complete](http://bit.ly/2018-Anonymous-Mentor-Evals)
+
+You may use the following webpage to identify the mentors should you need it to answer the final question on the survey:
+[https://ucsb-cs24-s18.github.io/info/staff/](https://ucsb-cs24-s18.github.io/info/staff/)
+
+To get credit show the final screen of the completed survey to your mentor and ask them to update your grade on gradescope.
+
+**The remainder of the lab is on the heap data structure. We will talk about this data structure on Wednesday's lecture, so while you are welcome to read the writeup and go over the starter code, please don't attempt this lab unless you are already familiar with using the heap data structure. Instead, wait until we have covered the material on Wed. You may use the lab time to work on pa02**
+
 ## Step 1: Create a lab06 git repo and get the starter code
 
 First get together with your lab partner. If your regular partner is more than 5 minutes late, let your mentor know.
@@ -32,7 +48,7 @@ Select a pilot, log into the CSIL machines.
 
 ## Step 1b: Clone your git repo and get the starter code
 
-* Clone your repo in your cs24 directory on CSIL. If your repo is called lab05_jgaucho_alily, type the following commands:
+* Clone your repo in your cs24 directory on CSIL. If your repo is called lab06_jgaucho_alily, type the following commands:
 
 ```
 cd ~/cs24
@@ -75,5 +91,4 @@ Submit the files heap.cpp, heap.h, and Makefile to the lab06 assignment on Grade
 Each student must accomplish the following to earn full credit for this lab:
 [70 points] heap.cpp and heap.h are saved, with your name(s) in a comment at the top and other evidence of your work. Both of these files should compile and execute properly too.
 
-To be eligible for late turn-in with credit, you MUST have attended your entire lab period.
-[-0 to -55 points, at the mentor's discretion] The student arrived on time to their lab session, and worked diligently on CS24-related material until dismissed.
+
