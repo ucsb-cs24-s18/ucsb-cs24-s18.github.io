@@ -70,11 +70,9 @@ Thus <strong>attendance is required</strong>, and <strong>reading the assigned r
     <td>Below 60</td>
 
 </table>
+
 <strong>Curving: </strong>The grade  scale above represents the <em>minimum</em> letter grade you will be assigned&#8212;at the instructor's discretion, the grading scale  may be altered <em>in the students' favor</em> if this will be better reflect the students' mastery of the material. Thus, <em>if</em> there is a &quot;curve&quot;, it will be applied at the <em>end</em>, not to individual assignments.</p>
 <p><strong>A+ grades: </strong>These may be awarded to the very best performing students in the class—but the cutoff for A+ grades will be determined at the end of the course at the discretion of the instructor (there is no pre-determined cutoff---an average of 97 or more doesn't guarantee you an A+ grade.)
-
-<strong><em>Everything</em> is cumulative—that's just how CS is.</strong></p>
-<p>Finally—note that just as in a math class, everything we do builds on all the work that came before. So, <em>everything</em> is <em>cumulative</em>—so, you can't afford to miss any classes unless absolutely necessary. Miss two lectures in a 10-week two-lecture per week course, and you've already skipped exactly 10% of the course&mdash;it wouldn't be surprising if your performance (i.e. final grade) in the course dipped by a similar amount.
 
 
 # Resources
@@ -83,7 +81,7 @@ Thus <strong>attendance is required</strong>, and <strong>reading the assigned r
 
 * Required textbook: Michael Main and Walter Savitch. Data Structures and Other Objects Using C++ (4th edition), Addison-Wesley, 2011.
 
-* Recommended textbook: Problem Solving with C++, Walter Savitch, Edition 9. Available for purchase at the UCSB book store
+* Recommended textbook: Problem Solving with C++, Walter Savitch, Edition 10 (edition 9 also works). Available for purchase at the UCSB book store
 
 * Peer Instruction : iClickers: The course lectures will follow a Peer Instruction format, a teaching model which places stronger emphasis on classroom discussion and student interaction. As part of this you will need to own an iClicker register it on the [Gauchospace](). Be sure to register your clicker by the end of the first week.
 
