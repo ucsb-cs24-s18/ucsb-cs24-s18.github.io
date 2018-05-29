@@ -3,8 +3,8 @@ layout: lab
 num: lab06
 ready: true
 desc: "Implementing a heap"
-assigned: 2018-05-22 09:00:00.00-7
-due: 2018-05-29 23:59:00.00-7
+assigned: 2018-05-30 09:00:00.00-7
+due: 2018-06-05 23:59:00.00-7
 ---
 
 # Goals for this lab
