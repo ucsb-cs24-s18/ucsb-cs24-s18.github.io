@@ -30,7 +30,7 @@ Here is the link to the survey:
 You may use the following webpage to identify the mentors should you need it to answer the final question on the survey:
 [https://ucsb-cs24-s18.github.io/info/staff/](https://ucsb-cs24-s18.github.io/info/staff/)
 
-To get credit show the final screen of the completed survey to your mentor and ask them to update your grade on gradescope.
+To get credit upload a screenshot of the final page of the completed survey on gradescope (lab06) and also show it to your mentor. You mentor should update your score manually on gradescope.
 
 **The remainder of the lab is on the heap data structure. We will talk about this data structure on Wednesday's lecture, so while you are welcome to read the writeup and go over the starter code, please don't attempt this lab unless you are already familiar with using the heap data structure. Instead, wait until we have covered the material on Wed. You may use the lab time to work on pa03**
 
