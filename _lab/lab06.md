@@ -32,7 +32,7 @@ You may use the following webpage to identify the mentors should you need it to 
 
 To get credit show the final screen of the completed survey to your mentor and ask them to update your grade on gradescope.
 
-**The remainder of the lab is on the heap data structure. We will talk about this data structure on Wednesday's lecture, so while you are welcome to read the writeup and go over the starter code, please don't attempt this lab unless you are already familiar with using the heap data structure. Instead, wait until we have covered the material on Wed. You may use the lab time to work on pa02**
+**The remainder of the lab is on the heap data structure. We will talk about this data structure on Wednesday's lecture, so while you are welcome to read the writeup and go over the starter code, please don't attempt this lab unless you are already familiar with using the heap data structure. Instead, wait until we have covered the material on Wed. You may use the lab time to work on pa03**
 
 ## Step 1: Create a lab06 git repo and get the starter code
 
