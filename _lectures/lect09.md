@@ -1,6 +1,6 @@
 ---
 num: "lect09"
-desc: "Analyzing the efficiency of program "
+desc: "Analyzing the efficiency of programs "
 ready: true
 pdfurl: /lectures/CS24_Lecture9.pdf
 annotatedpdfurl: /lectures/CS24_Lecture9_ann.pdf
