@@ -1,7 +1,7 @@
 ---
 num: "lect16"
-desc: "Selecting data structures"
-ready: false
+desc: "Priotity Queues, Selecting data structures"
+ready: true
 pdfurl: /lectures/CS24_Lecture16.pdf
 annotatedpdfurl: /lectures/CS24_Lecture16_ann.pdf
 annotatedready: false

@@ -4,11 +4,11 @@ desc: "Heaps"
 ready: true
 pdfurl: /lectures/CS24_Lecture15.pdf
 annotatedpdfurl: /lectures/CS24_Lecture15_ann.pdf
-annotatedready: false
+annotatedready: true
 lecture_date: 2018-05-30
 
 ---
-# Code from lecture
+# Topics
 
 * Two different views of the heap : tree and array 
 * Operations supported by heaps
